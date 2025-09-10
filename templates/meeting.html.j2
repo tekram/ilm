@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} – Meeting Summary</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; margin: 2rem; line-height: 1.6; color: #111; }
+      a { color: #0366d6; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      header { margin-bottom: 1rem; }
+      .meta { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
+      .content { max-width: 900px; }
+      .content h1, .content h2, .content h3 { margin-top: 1.5em; margin-bottom: 0.75em; }
+      .content h1 { font-size: 1.5em; }
+      .content h2 { font-size: 1.3em; }
+      .content h3 { font-size: 1.1em; }
+      .content p { margin: 0.75em 0; }
+      .content ul, .content ol { margin: 0.75em 0; padding-left: 1.5em; }
+      .content li { margin: 0.25em 0; }
+      .content pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; margin: 1em 0; }
+      .content code { background: #f6f8fa; padding: 0.1rem 0.3rem; }
+      .content blockquote { border-left: 3px solid #d1d5da; padding-left: 1rem; margin: 1em 0; color: #555; }
+      .content hr { border: none; border-top: 1px solid #e1e4e8; margin: 2em 0; }
+      .summary-content { 
+        font-size: 1rem; 
+        line-height: 1.7;
+      }
+      /* Specific styling for converted markdown elements */
+      .summary-content h2 { margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e1e4e8; padding-bottom: 0.3em; }
+      .summary-content h3 { margin-top: 1.5em; margin-bottom: 0.75em; color: #24292e; }
+      .summary-content h4 { margin-top: 1.25em; margin-bottom: 0.5em; color: #586069; font-size: 1.05em; }
+      .summary-content ul { margin: 1em 0; padding-left: 2em; }
+      .summary-content li { margin: 0.5em 0; }
+      .summary-content p { margin: 1em 0; }
+      .summary-content strong { font-weight: 600; color: #24292e; }
+      .summary-content hr { margin: 2em 0; border: none; border-top: 2px solid #e1e4e8; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">← All Meetings</a>
+      <h1>{{ title }}</h1>
+      <div class="meta">Start: {{ start_time }}</div>
+    </header>
+    <main class="content">
+      <!-- Convert markdown to HTML -->
+      <div class="summary-content">{{ content_md | markdown_to_html | safe }}</div>
+    </main>
+  </body>
+  </html>
+
+
