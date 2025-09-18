@@ -4,7 +4,7 @@ import json
 import os
 import re
 from dataclasses import dataclass, asdict
-from typing import List
+from typing import List, Dict, Optional
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -15,13 +15,15 @@ class MeetingPage:
     title: str
     start_time: str
     filename: str  # relative to docs/
+    meeting_type: str = "default"  # for backward compatibility
 
 
 class SiteGenerator:
-    def __init__(self, templates_dir: str, docs_dir: str, meetings_dir: str) -> None:
+    def __init__(self, templates_dir: str, docs_dir: str, meetings_dir: str = None, meeting_types: Dict = None) -> None:
         self.templates_dir = templates_dir
         self.docs_dir = docs_dir
-        self.meetings_dir = meetings_dir
+        self.meetings_dir = meetings_dir  # legacy - kept for compatibility
+        self.meeting_types = meeting_types or {}
         self.env = Environment(
             loader=FileSystemLoader(self.templates_dir),
             autoescape=select_autoescape(["html", "xml"]),
@@ -29,7 +31,14 @@ class SiteGenerator:
         # Add custom markdown filter
         self.env.filters['markdown_to_html'] = self._markdown_to_html
         os.makedirs(self.docs_dir, exist_ok=True)
-        os.makedirs(self.meetings_dir, exist_ok=True)
+        if self.meetings_dir:
+            os.makedirs(self.meetings_dir, exist_ok=True)
+        
+        # Create directories for each meeting type
+        for meeting_type in self.meeting_types.values():
+            type_dir = os.path.join(self.docs_dir, meeting_type.output_dir)
+            meetings_dir = os.path.join(type_dir, "meetings")
+            os.makedirs(meetings_dir, exist_ok=True)
 
     def write_meeting_page(self, meeting: MeetingPage, summary_markdown: str) -> None:
         template = self.env.get_template("meeting.html.j2")
@@ -40,11 +49,51 @@ class SiteGenerator:
             f.write(html)
 
     def build_index(self, pages: List[MeetingPage]) -> None:
-        template = self.env.get_template("index.html.j2")
-        html = template.render(pages=pages)
-        out_path = os.path.join(self.docs_dir, "index.html")
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write(html)
+        """Build the main index page with navigation to meeting type indexes"""
+        if self.meeting_types:
+            # Multi-type mode: build main index with links to type-specific indexes
+            template = self.env.get_template("main_index.html.j2")
+            html = template.render(meeting_types=self.meeting_types)
+            out_path = os.path.join(self.docs_dir, "index.html")
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.write(html)
+        else:
+            # Legacy mode: single index with all pages
+            template = self.env.get_template("index.html.j2")
+            html = template.render(pages=pages)
+            out_path = os.path.join(self.docs_dir, "index.html")
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.write(html)
+    
+    def build_type_indexes(self, pages: List[MeetingPage]) -> None:
+        """Build separate index pages for each meeting type"""
+        if not self.meeting_types:
+            return
+            
+        # Group pages by meeting type
+        pages_by_type = {}
+        for page in pages:
+            meeting_type = page.meeting_type
+            if meeting_type not in pages_by_type:
+                pages_by_type[meeting_type] = []
+            pages_by_type[meeting_type].append(page)
+        
+        # Build index for each type
+        template = self.env.get_template("type_index.html.j2")
+        for type_name, type_config in self.meeting_types.items():
+            type_pages = pages_by_type.get(type_name, [])
+            # Sort newest first
+            type_pages.sort(key=lambda p: p.start_time, reverse=True)
+            
+            html = template.render(
+                pages=type_pages, 
+                meeting_type=type_config,
+                type_name=type_name
+            )
+            
+            out_path = os.path.join(self.docs_dir, type_config.output_dir, "index.html")
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.write(html)
 
     def write_manifest(self, pages: List[MeetingPage]) -> None:
         manifest_path = os.path.join(self.docs_dir, "manifest.json")

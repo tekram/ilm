@@ -74,22 +74,33 @@ class LlmSummarizer:
 
     def _chat(self, user_prompt: str) -> str:
         if self.provider == "openai":
-            resp = self._openai.chat.completions.create(
-                model=self._openai_model,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": (
-                            "You are a concise, domain-aware meeting summarizer. The lessons are in Arabic on Islamic law (fiqh). "
-                            "Translate and summarize into clear English. Output ONLY clean Markdown text - no HTML tags, no DOCTYPE, no <html> tags. "
-                            "Use ## for main headings, ### for subheadings, - for bullet points. Emphasize key rulings, definitions, evidences "
-                            "(Qur'an and hadith with brief citations if present), differences of opinion, and practical action items."
-                        ),
-                    },
-                    {"role": "user", "content": user_prompt},
-                ],
-                temperature=0.2,
-            )
+            model_name = self._openai_model
+            messages = [
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a concise, domain-aware meeting summarizer. The lessons are in Arabic on Islamic law (fiqh). "
+                        "Translate and summarize into clear English. Output ONLY clean Markdown text - no HTML tags, no DOCTYPE, no <html> tags. "
+                        "Use ## for main headings, ### for subheadings, - for bullet points. Emphasize key rulings, definitions, evidences "
+                        "(Qur'an and hadith with brief citations if present), differences of opinion, and practical action items."
+                    ),
+                },
+                {"role": "user", "content": user_prompt},
+            ]
+
+            # Some newer models (e.g., gpt-5-* family) only accept default parameters
+            # and reject explicit temperature values. Omit temperature for those.
+            if str(model_name).lower().startswith("gpt-5"):
+                resp = self._openai.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                )
+            else:
+                resp = self._openai.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=0.2,
+                )
             return resp.choices[0].message.content or ""
 
         if self.provider == "gemini":

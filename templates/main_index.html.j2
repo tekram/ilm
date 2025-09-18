@@ -38,18 +38,12 @@
     <h1>Islamic Learning Materials</h1>
     <p class="subtitle">Summaries and transcripts from various Islamic studies lessons</p>
     
-    
+    {% for type_name, meeting_type in meeting_types.items() %}
     <div class="meeting-type">
-      <h3>Tuhfa Al-Muhtaaj</h3>
-      <p>Islamic jurisprudence lessons from Tuhfa Al-Muhtaaj</p>
-      <a href="tuhfa-al-muhtaaj/index.html">View Tuhfa Al-Muhtaaj Sessions →</a>
+      <h3>{{ meeting_type.display_name }}</h3>
+      <p>{{ meeting_type.description }}</p>
+      <a href="{{ meeting_type.output_dir }}/index.html">View {{ meeting_type.display_name }} Sessions →</a>
     </div>
-    
-    <div class="meeting-type">
-      <h3>Manthoma</h3>
-      <p>Manthoma lessons</p>
-      <a href="manthoma/index.html">View Manthoma Sessions →</a>
-    </div>
-    
+    {% endfor %}
   </body>
 </html>

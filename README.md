@@ -3,13 +3,14 @@
 This project processes transcripts (from Zoom cloud recordings or local files), summarizes them with an LLM (OpenAI, Gemini, or local Ollama), and generates static HTML pages in `docs/` for GitHub Pages.
 
 ### What it does
+- **Multi-Meeting Type Support**: Organizes different types of meetings (e.g., Tuhfa Al-Muhtaaj, Manthoma) with separate indexes
 - **Zoom Mode**: Fetches Zoom cloud recording transcripts via Server-to-Server OAuth
   - Prefers AI Companion summaries when available, falls back to transcripts
-- **Local Mode**: Processes transcript files from a local directory
+- **Local Mode**: Processes transcript files from organized local directories
   - Supports .txt, .vtt, .srt, and .transcript files
-- Summarizes each transcript using an LLM
-- Creates one HTML page per meeting/transcript summary in `docs/meetings/`
-- Rebuilds `docs/index.html` with links to all summaries
+- Summarizes each transcript using an LLM (OpenAI GPT-4o-mini by default)
+- Creates organized HTML pages with navigation between meeting types
+- Rebuilds main index and type-specific indexes
 - Tracks processed files to avoid reprocessing
 
 ### Prerequisites
@@ -64,22 +65,33 @@ pip install -r requirements.txt
 
 4. Run the pipeline
 
-**For Zoom recordings:**
+**For all meeting types (recommended):**
 ```powershell
-python -m src.main --days 7
+python -m src.main --all-types
 ```
 
-**For local transcript files:**
+**For specific meeting type:**
 ```powershell
+python -m src.main --meeting-type tuhfa-al-muhtaaj
+python -m src.main --meeting-type manthoma
+```
+
+**Legacy modes (still supported):**
+```powershell
+# Zoom recordings
+python -m src.main --days 7
+
+# Local transcript files
 python -m src.main --local-dir "C:\path\to\transcripts"
 ```
 
 This will:
+- **Multi-type mode**: Process organized transcript files from `recordings/[meeting-type]/` directories
 - **Zoom mode**: Fetch recordings for the last 7 days, extract transcripts (VTT → plain text) or use AI Companion SUMMARY if available
 - **Local mode**: Process all supported transcript files (.txt, .vtt, .srt, .transcript) from the specified directory
-- Summarize with the selected LLM
-- Write pages into `docs/meetings/` and rebuild `docs/index.html`
-- Skip already-processed files using the manifest and stable page IDs
+- Summarize with OpenAI GPT-4o-mini (hardcoded API key)
+- Write organized pages with separate indexes for each meeting type
+- Skip already-processed files using the enhanced manifest
 
 ### Filtering meetings by topic
 Filter to specific meeting titles using CLI arguments:
@@ -115,45 +127,60 @@ To run automatically, add a GitHub Actions workflow that runs `python -m src.mai
 # Activate venv
 .\.venv\Scripts\Activate.ps1
 
-# Zoom mode - Run with topics filter
-python -m src.main --topics "Team Weekly Sync" --topics "Product Council"
-# Run using partial matches
-python -m src.main --topics "Weekly" --match contains
+# Multi-type mode (recommended)
+python -m src.main --all-types                    # Process all meeting types
+python -m src.main --meeting-type tuhfa-al-muhtaaj # Process only Tuhfa Al-Muhtaaj
+python -m src.main --meeting-type manthoma         # Process only Manthoma
 
-# Zoom mode - Custom date range
+# Multi-type mode with topic filtering
+python -m src.main --all-types --topics "Partnership" --match contains
+
+# Legacy Zoom mode - Run with topics filter
+python -m src.main --topics "Team Weekly Sync" --topics "Product Council"
+# Legacy Zoom mode - Custom date range
 python -m src.main --from 2024-01-01 --to 2024-01-31
 
-# Local mode - Process local transcript files
+# Legacy local mode - Process local transcript files
 python -m src.main --local-dir "C:\transcripts"
-# Local mode with topic filtering (based on filename)
-python -m src.main --local-dir "C:\transcripts" --topics "Weekly" --match contains
 
-# Clean summaries and rebuild (works for both modes)
-Remove-Item -Recurse -Force docs\meetings\*
+# Clean summaries and rebuild
+Remove-Item -Recurse -Force docs\tuhfa-al-muhtaaj\meetings\*
+Remove-Item -Recurse -Force docs\manthoma\meetings\*
 Remove-Item -Force docs\manifest.json
-# Then run either:
-python -m src.main --days 30  # Zoom mode
-# OR:
-python -m src.main --local-dir "C:\transcripts"  # Local mode
+python -m src.main --all-types  # Rebuild everything
 ```
 
-### Local File Processing
+### Multi-Type File Processing
 
-When using `--local-dir`, the script:
-- Scans the directory for transcript files with extensions: `.txt`, `.vtt`, `.srt`, `.transcript`
+The system now organizes transcript files by meeting type:
+
+**Current structure:**
+```
+recordings/
+├── tuhfa-al-muhtaaj/     # Islamic jurisprudence lessons
+│   ├── GMT20250529-170107_Recording.transcript.vtt
+│   ├── GMT20250612-170429_Recording.transcript.vtt
+│   └── ...
+└── manthoma/             # Manthoma lessons  
+    ├── GMT20241217-165921_Recording.transcript.vtt
+    └── ...
+
+docs/
+├── index.html            # Main landing page
+├── tuhfa-al-muhtaaj/
+│   ├── index.html        # Tuhfa Al-Muhtaaj sessions
+│   └── meetings/         # Individual session pages
+└── manthoma/
+    ├── index.html        # Manthoma sessions
+    └── meetings/         # Individual session pages
+```
+
+**Processing behavior:**
+- Scans each meeting type directory for transcript files: `.txt`, `.vtt`, `.srt`, `.transcript`
 - Converts VTT files to plain text automatically
-- Generates meeting titles from filenames (removes common patterns, capitalizes)
+- Generates meeting titles from filenames and LLM analysis
 - Uses file modification time as the meeting timestamp
-- Creates stable IDs based on filename and timestamp to avoid reprocessing
-- Supports the same topic filtering as Zoom mode (applied to generated titles)
-
-**Example local file structure:**
-```
-C:\transcripts\
-├── weekly-standup-2024-01-15.txt
-├── product-review-meeting.vtt
-├── team-retrospective.transcript
-└── client-call-notes.txt
-```
+- Creates stable IDs with meeting type prefix to avoid reprocessing
+- Supports topic filtering across all meeting types
 
 
