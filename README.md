@@ -74,6 +74,7 @@ python -m src.main --all-types
 ```powershell
 python -m src.main --meeting-type tuhfa-al-muhtaaj
 python -m src.main --meeting-type manthoma
+python -m src.main --meeting-type majma-al-fatawa-bilhind
 ```
 
 **Legacy modes (still supported):**
@@ -131,6 +132,7 @@ To run automatically, add a GitHub Actions workflow that runs `python -m src.mai
 python -m src.main --all-types                    # Process all meeting types
 python -m src.main --meeting-type tuhfa-al-muhtaaj # Process only Tuhfa Al-Muhtaaj
 python -m src.main --meeting-type manthoma         # Process only Manthoma
+python -m src.main --meeting-type majma-al-fatawa-bilhind # Process only Majma Al-Fatawa Bilhind
 
 # Multi-type mode with topic filtering
 python -m src.main --all-types --topics "Partnership" --match contains
@@ -146,6 +148,7 @@ python -m src.main --local-dir "C:\transcripts"
 # Clean summaries and rebuild
 Remove-Item -Recurse -Force docs\tuhfa-al-muhtaaj\meetings\*
 Remove-Item -Recurse -Force docs\manthoma\meetings\*
+Remove-Item -Recurse -Force docs\majma-al-fatawa-bilhind\meetings\*
 Remove-Item -Force docs\manifest.json
 python -m src.main --all-types  # Rebuild everything
 ```
@@ -161,8 +164,10 @@ recordings/
 │   ├── GMT20250529-170107_Recording.transcript.vtt
 │   ├── GMT20250612-170429_Recording.transcript.vtt
 │   └── ...
-└── manthoma/             # Manthoma lessons  
-    ├── GMT20241217-165921_Recording.transcript.vtt
+├── manthoma/             # Manthoma lessons  
+│   ├── GMT20241217-165921_Recording.transcript.vtt
+│   └── ...
+└── majma-al-fatawa-bilhind/  # Majma Al-Fatawa Bilhind sessions
     └── ...
 
 docs/
@@ -170,8 +175,11 @@ docs/
 ├── tuhfa-al-muhtaaj/
 │   ├── index.html        # Tuhfa Al-Muhtaaj sessions
 │   └── meetings/         # Individual session pages
-└── manthoma/
-    ├── index.html        # Manthoma sessions
+├── manthoma/
+│   ├── index.html        # Manthoma sessions
+│   └── meetings/         # Individual session pages
+└── majma-al-fatawa-bilhind/
+    ├── index.html        # Majma Al-Fatawa Bilhind sessions
     └── meetings/         # Individual session pages
 ```
 
