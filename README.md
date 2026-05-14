@@ -191,4 +191,20 @@ docs/
 - Creates stable IDs with meeting type prefix to avoid reprocessing
 - Supports topic filtering across all meeting types
 
+### Bilingual Question Pages
 
+Use the `scripts/generate_questions.py` helper to turn plain-text prompts into an English/Arabic question library.
+
+**Source content**
+- Add one `.txt` file per question to `content/questions/`.
+- Follow the section order documented in `content/questions/README.md` (Title, English Question, English Answer, Arabic Question, Arabic Answer).
+- Keep files encoded as UTF-8 so Arabic text renders correctly.
+
+**Generate the site**
+```powershell
+python scripts/generate_questions.py
+```
+- Use `--source` or `--output` to override the defaults if you keep the content elsewhere.
+- Outputs land in `public/`, with dedicated pages in `public/questions/` and an index at `public/index.html`.
+
+Re-run the generator whenever you add or edit question files; it rewrites the index and both language pages for each question.

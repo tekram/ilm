@@ -93,6 +93,13 @@ def load_config() -> AppConfig:
             description="Manthoma lessons",
             source_dir="manthoma", 
             output_dir="manthoma"
+        ),
+        "majma-al-fatawa-bilhind": MeetingTypeConfig(
+            name="majma-al-fatawa-bilhind",
+            display_name="Majma Al-Fatawa Bilhind",
+            description="Majma Al-Fatawa Bilhind sessions",
+            source_dir="majma-al-fatawa-bilhind",
+            output_dir="majma-al-fatawa-bilhind"
         )
     }
 

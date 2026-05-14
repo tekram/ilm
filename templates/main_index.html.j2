@@ -69,4 +69,127 @@
         letter-spacing: 1.2px;
         text-transform: uppercase;
         color: #787671;
-       
+        margin-bottom: 28px;
+      }
+
+      /* ── Type Cards ── */
+      .type-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+
+      .type-card {
+        background: #ffffff;
+        border: 1px solid #e5e3df;
+        border-radius: 12px;
+        padding: 28px 28px 24px;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: box-shadow 0.15s ease, border-color 0.15s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .type-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        border-radius: 12px 12px 0 0;
+      }
+      .type-card:hover {
+        box-shadow: rgba(15, 15, 15, 0.08) 0px 4px 12px;
+        border-color: #c8c4be;
+        text-decoration: none;
+      }
+
+      /* per-type accent stripes */
+      .type-card--lavender::before { background: #7b3ff2; }
+      .type-card--mint::before     { background: #1aae39; }
+      .type-card--sky::before      { background: #2a9d99; }
+      .type-card--peach::before    { background: #dd5b00; }
+
+      .type-card--lavender { background: #f4f0fc; }
+      .type-card--mint     { background: #f0faf3; }
+      .type-card--sky      { background: #edf6fa; }
+      .type-card--peach    { background: #fff3eb; }
+
+      .type-card-icon {
+        font-size: 24px;
+        margin-bottom: 14px;
+        display: block;
+      }
+      .type-card h2 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+        color: #1a1a1a;
+        margin-bottom: 8px;
+      }
+      .type-card p {
+        font-size: 14px;
+        color: #5d5b54;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .type-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #5645d4;
+      }
+      .type-card-link::after {
+        content: '→';
+        transition: transform 0.15s ease;
+      }
+      .type-card:hover .type-card-link::after {
+        transform: translateX(3px);
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="hero">
+      <span class="hero-eyebrow">Islamic Studies</span>
+      <h1>Islamic Learning Materials</h1>
+      <p>Summaries and transcripts from various Islamic studies lessons</p>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <p class="section-label">Study Circles</p>
+        <div class="type-grid">
+          {% set tints = ['lavender', 'mint', 'sky', 'peach'] %}
+          {% set icons = ['📖', '🌿', '🕌', '✨'] %}
+          {% for type_name, meeting_type in meeting_types.items() %}
+          {% set tint = tints[loop.index0 % 4] %}
+          {% set icon = icons[loop.index0 % 4] %}
+          <a href="{{ meeting_type.output_dir }}/index.html" class="type-card type-card--{{ tint }}">
+            <span class="type-card-icon">{{ icon }}</span>
+            <h2>{{ meeting_type.display_name }}</h2>
+            <p>{{ meeting_type.description }}</p>
+            <span class="type-card-link">View sessions</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Islamic Learning Materials &mdash; lesson notes &amp; summaries
+    </footer>
+
+  </body>
+</html>
