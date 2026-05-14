@@ -59,4 +59,176 @@
       }
       .hero p {
         font-size: 15px;
-        color: #a4a0c8
+        color: #a4a0c8;
+        line-height: 1.5;
+      }
+
+      /* ── Container ── */
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 32px 72px;
+      }
+
+      /* ── Sessions ── */
+      .sessions-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #787671;
+        margin-bottom: 20px;
+      }
+
+      .session-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .session-item {
+        background: #ffffff;
+        border: 1px solid #e5e3df;
+        border-radius: 10px;
+        transition: box-shadow 0.12s ease, border-color 0.12s ease;
+      }
+      .session-item:hover {
+        box-shadow: rgba(15, 15, 15, 0.06) 0px 3px 10px;
+        border-color: #c8c4be;
+      }
+
+      .session-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 20px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .session-title {
+        font-size: 15px;
+        font-weight: 500;
+        color: #1a1a1a;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+      .session-date {
+        font-size: 13px;
+        color: #787671;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      .session-arrow {
+        font-size: 14px;
+        color: #c8c4be;
+        transition: transform 0.12s ease, color 0.12s ease;
+      }
+      .session-item:hover .session-arrow {
+        transform: translateX(3px);
+        color: #5645d4;
+      }
+
+      .empty-state {
+        padding: 48px 0;
+        text-align: center;
+        color: #a4a097;
+        font-size: 15px;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .hero, .site-header { padding-left: 20px; padding-right: 20px; }
+        .container { padding-left: 20px; padding-right: 20px; }
+        .session-link { padding: 14px 16px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <span class="current">Majma Al-Fatawa Bilhind</span>
+    </header>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <h1>Majma Al-Fatawa Bilhind</h1>
+        <p>Majma Al-Fatawa Bilhind sessions</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="sessions-label">
+        4 sessions
+      </p>
+
+      <ul class="session-list">
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260512-160053_Recording.transcript-20260513013705.html" class="session-link">
+            <span class="session-title">Mosque Expansion, Waqf Materials, Health Insurance & Genetic Testing - May 12, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-05-12</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260505-160026_Recording.transcript-20260505160026.html" class="session-link">
+            <span class="session-title">Waqf Scope and Bank Card Rulings - May 05, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-05-05</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20251007-170008_Recording.transcript-20251014112044.html" class="session-link">
+            <span class="session-title">Sale of Inherited Property - October 07, 2025</span>
+            <span class="session-meta">
+              <span class="session-date">2025-10-07</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20250930-170031_Recording.transcript-20251014112040.html" class="session-link">
+            <span class="session-title">Usufruct Bequest Rules - September 30, 2025</span>
+            <span class="session-meta">
+              <span class="session-date">2025-09-30</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← All Study Circles</a>
+    </footer>
+
+  </body>
+</html>
