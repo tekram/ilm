@@ -56,4 +56,9 @@ No test suite (test file is empty).
 
 **Meeting types** are defined in config and map to subdirectories in both `recordings/` and `docs/`. Adding a new meeting type requires updating config and creating the directory pair.
 
+**Day-of-week rule for assigning meeting type** (derive the day from the date in the filename, e.g. `GMT20260512` → 2026-05-12):
+- **Tuesday** → `majma-al-fatawa-bilhind`
+- **Thursday** → `tuhfa-al-muhtaaj`
+- If the day does not match either, check the existing `recordings/` subfolders or ask the user.
+
 **Manifest deduplication:** Each processed file gets a stable ID (meeting-type prefix + filename). Already-processed IDs are skipped on subsequent runs. Delete manifest entries or the manifest file to force reprocessing.
