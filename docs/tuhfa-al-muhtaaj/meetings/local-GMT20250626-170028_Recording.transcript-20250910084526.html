@@ -4,53 +4,218 @@
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guarantee and Suretyship Formulations - June 26, 2025 – Meeting Summary</title>
+    <title>Guarantee and Suretyship Formulations - June 26, 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-      html { background: #fff; color: #111; color-scheme: light; }
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; margin: 2rem; line-height: 1.6; color: #111; }
-      a { color: #0366d6; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      header { margin-bottom: 1rem; }
-      .meta { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
-      .content { max-width: 900px; }
-      .content h1, .content h2, .content h3 { margin-top: 1.5em; margin-bottom: 0.75em; }
-      .content h1 { font-size: 1.5em; }
-      .content h2 { font-size: 1.3em; }
-      .content h3 { font-size: 1.1em; }
-      .content p { margin: 0.75em 0; }
-      .content ul, .content ol { margin: 0.75em 0; padding-left: 1.5em; }
-      .content li { margin: 0.25em 0; }
-      .content pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; margin: 1em 0; }
-      .content code { background: #f6f8fa; padding: 0.1rem 0.3rem; }
-      .content blockquote { border-left: 3px solid #d1d5da; padding-left: 1rem; margin: 1em 0; color: #555; }
-      .content hr { border: none; border-top: 1px solid #e1e4e8; margin: 2em 0; }
-      .summary-content { 
-        font-size: 1rem; 
-        line-height: 1.7;
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
       }
-      /* Specific styling for converted markdown elements */
-      .summary-content h2 { margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e1e4e8; padding-bottom: 0.3em; }
-      .summary-content h3 { margin-top: 1.5em; margin-bottom: 0.75em; color: #24292e; }
-      .summary-content ul { margin: 1em 0; padding-left: 2em; }
-      .summary-content li { margin: 0.5em 0; }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
       .summary-content p { margin: 1em 0; }
-      .summary-content strong { font-weight: 600; color: #24292e; }
-      .summary-content hr { margin: 2em 0; border: none; border-top: 2px solid #e1e4e8; }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li { margin: 0.45em 0; }
+      .summary-content strong { font-weight: 600; color: #1a1a1a; }
+      .summary-content em { color: #5d5b54; }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code { background: none; padding: 0; }
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child { margin-top: 0; }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <a href="../index.html">← All Meetings</a>
-      <h1>Guarantee and Suretyship Formulations - June 26, 2025</h1>
-      <div class="meta">Start: 2025-06-26T17:00:28</div>
+
+    <header class="site-header">
+      <a href="../../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Guarantee and Suretyship Formulations - June 26, 2025</span>
     </header>
-    <main class="content">
-      <!-- Convert markdown to HTML -->
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Guarantee and Suretyship Formulations - June 26, 2025</h1>
+        <div class="session-meta">
+          <span class="meta-chip">&#128197; 2025-06-26</span>
+          <span class="meta-chip">&#128336; 17:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
       <div class="summary-content"><h2>Comprehensive Summary of Islamic Jurisprudence Lessons on Guarantee (Dhaman), Suretyship (Kafalah), Debt, and Repayment</h2>
 <hr>
 <h3>1. Definitions and Fundamental Concepts</h3>
 <ul>
-<li><strong>Guarantee (Dhaman):</strong> A contractual commitment involving money or debt, where the guarantor assumes responsibility for another’s financial obligation.</li>
+<li><strong>Guarantee (Dhaman):</strong> A contractual commitment involving money or debt, where the guarantor assumes responsibility for another's financial obligation.</li>
 <li><strong>Suretyship (Kafalah):</strong> A commitment concerning a person or object, such as guaranteeing the presence or delivery of someone or something.</li>
 <li>Guarantee generally applies to monetary obligations; suretyship applies to persons or specific items.</li>
 <li>Guarantee is a joining of one liability to another, distinct from a pledge (rahn), which involves an asset as security.</li>
@@ -66,7 +231,7 @@
 <li>"I am surety for so-and-so" (تكفلت ببدني لفلان)</li>
 <li><strong>Implied or Indirect Expressions (Kinayah):</strong> May be valid if the intention and context clearly indicate guarantee, but explicit wording is preferred.</li>
 <li><strong>Promises vs. Contracts:</strong> Imperfect verb forms (e.g., "I will pay") are considered promises, not binding contracts unless accompanied by clear commitment or intention.</li>
-<li><strong>Ambiguity (Iham):</strong> Should be resolved in favor of establishing the guarantee if possible, considering the speaker’s intention.</li>
+<li><strong>Ambiguity (Iham):</strong> Should be resolved in favor of establishing the guarantee if possible, considering the speaker's intention.</li>
 <li><strong>Prohibition of Conditional Withdrawal:</strong> Guarantee cannot be conditioned on options or delays that allow unilateral revocation without creditor consent.</li>
 <li><strong>Timing:</strong> Guarantee can be immediate or deferred but cannot be conditional on uncertain future events.</li>
 </ul>
@@ -75,7 +240,7 @@
 <ul>
 <li>Classical scholars such as Ibn Hajar, Al-Adra'i, Al-Balqini, Al-Mutawalli, and Ibn Taymiyyah emphasize:</li>
 <li>Necessity of clear wording and intention.</li>
-<li>Guarantee is a voluntary commitment (tabarru‘) invoked by necessity.</li>
+<li>Guarantee is a voluntary commitment (tabarru') invoked by necessity.</li>
 <li>Guarantee is generally indivisible; debt remains singular even with multiple guarantors.</li>
 <li>Release of the guarantor does not automatically release the principal debtor, but release of the debtor releases the guarantor.</li>
 <li>Differences exist regarding:</li>
@@ -90,29 +255,29 @@
 <li>The debt remains one and indivisible.</li>
 <li>Each guarantor is liable for the entire debt, but practically the debt is divided according to shares or agreement.</li>
 <li>Creditors should not demand full payment from all guarantors simultaneously.</li>
-<li>If one guarantor pays, the others’ liability reduces accordingly.</li>
+<li>If one guarantor pays, the others' liability reduces accordingly.</li>
 <li>Joint mortgage on shared property covers the entire debt jointly, not just individual shares.</li>
 <li>Scholars differ on whether guarantee can be divided proportionally or must be treated as indivisible.</li>
 </ul>
 <hr>
 <h3>5. Guarantee and Debt Postponement</h3>
 <ul>
-<li>Guarantee can be immediate or deferred to the debt’s due date.</li>
-<li>Extending the debt’s due date after guarantee does not release the guarantor; liability follows the new due date.</li>
+<li>Guarantee can be immediate or deferred to the debt's due date.</li>
+<li>Extending the debt's due date after guarantee does not release the guarantor; liability follows the new due date.</li>
 <li>The guarantor is not obligated to accelerate payment unless the debtor agrees.</li>
-<li>Death of the principal debtor before the earliest due date delays guarantor’s liability; after that date, guarantor’s obligation becomes immediate.</li>
+<li>Death of the principal debtor before the earliest due date delays guarantor's liability; after that date, guarantor's obligation becomes immediate.</li>
 <li>Guarantor and debtor (or heirs) can be jointly or separately demanded to pay.</li>
 </ul>
 <hr>
 <h3>6. Rights and Obligations of Guarantor and Principal Debtor</h3>
 <ul>
-<li>Guarantor who pays the debt with the principal’s permission has the right to reclaim the amount.</li>
+<li>Guarantor who pays the debt with the principal's permission has the right to reclaim the amount.</li>
 <li>Payment without permission generally does not grant the right to reclaim.</li>
 <li>If payment is made from zakat funds allocated for debtors (sahm al-gharimin), reclaiming is not allowed.</li>
-<li>Guarantor cannot detain debtor’s property unlawfully; detention is only permissible to ensure payment.</li>
+<li>Guarantor cannot detain debtor's property unlawfully; detention is only permissible to ensure payment.</li>
 <li>Guarantor cannot demand payment from debtor before creditor demands payment from guarantor.</li>
-<li>Release (ibra’) of the guarantor does not release the debtor; release of the debtor releases the guarantor.</li>
-<li>Guarantor’s liability continues until debt is fully discharged or lawfully terminated.</li>
+<li>Release (ibra') of the guarantor does not release the debtor; release of the debtor releases the guarantor.</li>
+<li>Guarantor's liability continues until debt is fully discharged or lawfully terminated.</li>
 </ul>
 <hr>
 <h3>7. Debt Payment, Intention, and Reclaiming</h3>
@@ -127,7 +292,7 @@
 <li><strong>Payment Without Guarantee or Permission:</strong> No right to reclaim unless under compulsion or necessity.</li>
 <li><strong>Witnessing Payment:</strong></li>
 <li>Payment should be witnessed by two just persons or equivalent testimony to be valid.</li>
-<li>Without witnesses or debtor’s acknowledgment, guarantor remains liable.</li>
+<li>Without witnesses or debtor's acknowledgment, guarantor remains liable.</li>
 <li><strong>Disputes:</strong> Evidence and testimony are crucial to confirm payment and discharge guarantee.</li>
 </ul>
 <hr>
@@ -147,10 +312,10 @@
 <li>Clarify whether guarantee is immediate or deferred; document any extensions of debt due date.</li>
 <li>When multiple guarantors exist, specify shares and avoid joint full liability claims.</li>
 <li>Obtain <strong>permission and clear terms</strong> before paying debt on behalf of others to secure right of reimbursement.</li>
-<li>Always <strong>witness payments</strong> or obtain debtor’s acknowledgment to protect guarantor’s liability.</li>
-<li>Document any <strong>release (ibra’)</strong> of guarantors or debtors clearly.</li>
-<li>Avoid unlawful detention of debtor’s property; follow legal procedures.</li>
-<li>Consider local customs (‘urf) in financial dealings to determine rights and obligations.</li>
+<li>Always <strong>witness payments</strong> or obtain debtor's acknowledgment to protect guarantor's liability.</li>
+<li>Document any <strong>release (ibra')</strong> of guarantors or debtors clearly.</li>
+<li>Avoid unlawful detention of debtor's property; follow legal procedures.</li>
+<li>Consider local customs ('urf) in financial dealings to determine rights and obligations.</li>
 <li>Heirs of deceased debtors or guarantors should be informed of liabilities and rights.</li>
 </ul>
 <hr>
@@ -173,7 +338,11 @@
 <p><em>"May Allah protect you, may He keep you safe."</em></p>
 <hr>
 <p>This comprehensive summary integrates key rulings, definitions, evidences, scholarly opinions, and practical guidelines on guarantee, suretyship, debt, repayment, and related jurisprudential issues in Islamic law.</p></div>
-    </main>
-  </body>
-  </html>
+    </div>
 
+    <footer>
+      <a href="../../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">&larr; Back to sessions</a>
+    </footer>
+
+  </body>
+</html>

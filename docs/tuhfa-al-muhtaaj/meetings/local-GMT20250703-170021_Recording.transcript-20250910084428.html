@@ -4,48 +4,213 @@
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Partnership in Islamic Law - July 03, 2025 – Meeting Summary</title>
+    <title>Partnership in Islamic Law - July 03, 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-      html { background: #fff; color: #111; color-scheme: light; }
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; margin: 2rem; line-height: 1.6; color: #111; }
-      a { color: #0366d6; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      header { margin-bottom: 1rem; }
-      .meta { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
-      .content { max-width: 900px; }
-      .content h1, .content h2, .content h3 { margin-top: 1.5em; margin-bottom: 0.75em; }
-      .content h1 { font-size: 1.5em; }
-      .content h2 { font-size: 1.3em; }
-      .content h3 { font-size: 1.1em; }
-      .content p { margin: 0.75em 0; }
-      .content ul, .content ol { margin: 0.75em 0; padding-left: 1.5em; }
-      .content li { margin: 0.25em 0; }
-      .content pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; margin: 1em 0; }
-      .content code { background: #f6f8fa; padding: 0.1rem 0.3rem; }
-      .content blockquote { border-left: 3px solid #d1d5da; padding-left: 1rem; margin: 1em 0; color: #555; }
-      .content hr { border: none; border-top: 1px solid #e1e4e8; margin: 2em 0; }
-      .summary-content { 
-        font-size: 1rem; 
-        line-height: 1.7;
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
       }
-      /* Specific styling for converted markdown elements */
-      .summary-content h2 { margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e1e4e8; padding-bottom: 0.3em; }
-      .summary-content h3 { margin-top: 1.5em; margin-bottom: 0.75em; color: #24292e; }
-      .summary-content ul { margin: 1em 0; padding-left: 2em; }
-      .summary-content li { margin: 0.5em 0; }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
       .summary-content p { margin: 1em 0; }
-      .summary-content strong { font-weight: 600; color: #24292e; }
-      .summary-content hr { margin: 2em 0; border: none; border-top: 2px solid #e1e4e8; }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li { margin: 0.45em 0; }
+      .summary-content strong { font-weight: 600; color: #1a1a1a; }
+      .summary-content em { color: #5d5b54; }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code { background: none; padding: 0; }
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child { margin-top: 0; }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <a href="../index.html">← All Meetings</a>
-      <h1>Partnership in Islamic Law - July 03, 2025</h1>
-      <div class="meta">Start: 2025-07-03T17:00:21</div>
+
+    <header class="site-header">
+      <a href="../../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Partnership in Islamic Law - July 03, 2025</span>
     </header>
-    <main class="content">
-      <!-- Convert markdown to HTML -->
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Partnership in Islamic Law - July 03, 2025</h1>
+        <div class="session-meta">
+          <span class="meta-chip">&#128197; 2025-07-03</span>
+          <span class="meta-chip">&#128336; 17:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
       <div class="summary-content"><h2>Comprehensive Summary of Islamic Partnership (Shirkah) Lessons</h2>
 <hr>
 <h3>1. Definition and Legal Nature of Partnership (Shirkah)</h3>
@@ -74,15 +239,15 @@
 </ul>
 <hr>
 <h3>3. Types of Partnerships and Their Validity</h3>
-<p>| Type                         | Description                                                                                   | Validity & Scholarly Opinions                                                                                  |</p>
+<p>| Type                         | Description                                                                                   | Validity &amp; Scholarly Opinions                                                                                  |</p>
 <p>|------------------------------|-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|</p>
 <p>| <strong>Shirkah al-Abdan</strong> (Partnership of Work) | Partners jointly contribute labor or craft (e.g., craftsmen, professionals).                 | Valid when partners work together; Malikis require unity of craft; Hanafis permit broader forms.               |</p>
 <p>| <strong>Shirkah al-Mufawadah</strong> (Equal Partnership) | Partners contribute equally and share profits/losses equally.                              | Validity disputed:</p>
 <ul>
-<li>Hanafi & Maliki permit it.</li>
-<li>Hanbali & Shafi’i reject it due to uncertainty (gharar).                     |</li>
+<li>Hanafi &amp; Maliki permit it.</li>
+<li>Hanbali &amp; Shafi'i reject it due to uncertainty (gharar).                     |</li>
 </ul>
-<p>| <strong>Shirkah al-‘Inan</strong> (Partnership of Capital) | Partners contribute capital (equal or unequal) and share profits/losses accordingly.       | Universally accepted as valid; requires mutual consent to manage and dispose of assets.                        |</p>
+<p>| <strong>Shirkah al-'Inan</strong> (Partnership of Capital) | Partners contribute capital (equal or unequal) and share profits/losses accordingly.       | Universally accepted as valid; requires mutual consent to manage and dispose of assets.                        |</p>
 <p>| <strong>Shirkah al-Wujooh</strong> (Partnership of Credit/Reputation) | Partners use creditworthiness to buy goods on credit; profits shared without mixing money. | Valid if money is not physically transferred; invalid if funds are mixed. Malikis reject this form.             |</p>
 <hr>
 <h3>4. Conditions and Pillars of Partnership</h3>
@@ -115,10 +280,10 @@
 <li>Guardians may enter partnerships on behalf of wards if conditions of trust and competence are met.</li>
 </ul>
 <hr>
-<h3>5. Specific Rulings on Shirkah al-‘Inan (Partnership of Capital)</h3>
+<h3>5. Specific Rulings on Shirkah al-'Inan (Partnership of Capital)</h3>
 <ul>
 <li><strong>Mutual Control:</strong></li>
-<li>The term "‘Inan" symbolizes reins, indicating mutual control and consent in managing partnership assets.</li>
+<li>The term "'Inan" symbolizes reins, indicating mutual control and consent in managing partnership assets.</li>
 </ul>
 <ul>
 <li><strong>Scope:</strong></li>
@@ -129,7 +294,7 @@
 <li>Each partner acts as an agent (wakil) for the other in managing partnership affairs.</li>
 </ul>
 <ul>
-<li><strong>Invalidity Due to Owner’s Domination:</strong></li>
+<li><strong>Invalidity Due to Owner's Domination:</strong></li>
 <li>If the capital owner retains control without handing over money to the partner, partnership is invalid and sinful.</li>
 </ul>
 <ul>
@@ -158,7 +323,7 @@
 <ul>
 <li><strong>School Differences:</strong></li>
 <li>Malikis allow partnerships in different goods if value is agreed upon at contract time.</li>
-<li>Shafi‘is require stricter conditions.</li>
+<li>Shafi'is require stricter conditions.</li>
 </ul>
 <hr>
 <h3>7. Practical Examples and Applications</h3>
@@ -189,7 +354,7 @@
 <p>| <strong>Hanafi</strong>   | Permits all types including Shirkah al-Mufawadah; requires mixing capital. |</p>
 <p>| <strong>Maliki</strong>   | Permits all except Shirkah al-Wujooh; allows partnerships in different goods by value. |</p>
 <p>| <strong>Hanbali</strong>  | Permits all except Shirkah al-Mufawadah.                                  |</p>
-<p>| <strong>Shafi‘i</strong>  | Rejects Shirkah al-Mufawadah; requires stricter conditions on mixing.      |</p>
+<p>| <strong>Shafi'i</strong>  | Rejects Shirkah al-Mufawadah; requires stricter conditions on mixing.      |</p>
 <hr>
 <h3>9. Practical Action Items for Forming Partnerships</h3>
 <ul>
@@ -198,7 +363,7 @@
 <li>Verify <strong>legal competence</strong> of partners to act on each other's behalf.</li>
 <li>Avoid partnerships based on mere negotiation or credit without shared capital.</li>
 <li>Use <strong>permissible contractual tricks</strong> to avoid invalid contracts, avoiding deception and riba.</li>
-<li>Exercise caution when involving <strong>minors or restricted persons’ money</strong>; ensure benefit and trustworthiness.</li>
+<li>Exercise caution when involving <strong>minors or restricted persons' money</strong>; ensure benefit and trustworthiness.</li>
 <li>Clearly define <strong>profit-sharing ratios</strong> based on capital, not labor, unless agreed.</li>
 <li>Obtain explicit permission for any <strong>unpaid labor contributions</strong>.</li>
 <li>Avoid <strong>destruction of property</strong> without legitimate purpose.</li>
@@ -216,7 +381,11 @@
 </ul>
 <hr>
 <p><strong>End of Summary</strong></p></div>
-    </main>
-  </body>
-  </html>
+    </div>
 
+    <footer>
+      <a href="../../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">&larr; Back to sessions</a>
+    </footer>
+
+  </body>
+</html>

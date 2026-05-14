@@ -4,61 +4,226 @@
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Suretyship and Guarantee in Islamic Law - June 19, 2025 – Meeting Summary</title>
+    <title>Suretyship and Guarantee in Islamic Law - June 19, 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-      html { background: #fff; color: #111; color-scheme: light; }
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; margin: 2rem; line-height: 1.6; color: #111; }
-      a { color: #0366d6; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      header { margin-bottom: 1rem; }
-      .meta { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
-      .content { max-width: 900px; }
-      .content h1, .content h2, .content h3 { margin-top: 1.5em; margin-bottom: 0.75em; }
-      .content h1 { font-size: 1.5em; }
-      .content h2 { font-size: 1.3em; }
-      .content h3 { font-size: 1.1em; }
-      .content p { margin: 0.75em 0; }
-      .content ul, .content ol { margin: 0.75em 0; padding-left: 1.5em; }
-      .content li { margin: 0.25em 0; }
-      .content pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; margin: 1em 0; }
-      .content code { background: #f6f8fa; padding: 0.1rem 0.3rem; }
-      .content blockquote { border-left: 3px solid #d1d5da; padding-left: 1rem; margin: 1em 0; color: #555; }
-      .content hr { border: none; border-top: 1px solid #e1e4e8; margin: 2em 0; }
-      .summary-content { 
-        font-size: 1rem; 
-        line-height: 1.7;
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
       }
-      /* Specific styling for converted markdown elements */
-      .summary-content h2 { margin-top: 2em; margin-bottom: 1em; border-bottom: 2px solid #e1e4e8; padding-bottom: 0.3em; }
-      .summary-content h3 { margin-top: 1.5em; margin-bottom: 0.75em; color: #24292e; }
-      .summary-content ul { margin: 1em 0; padding-left: 2em; }
-      .summary-content li { margin: 0.5em 0; }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
       .summary-content p { margin: 1em 0; }
-      .summary-content strong { font-weight: 600; color: #24292e; }
-      .summary-content hr { margin: 2em 0; border: none; border-top: 2px solid #e1e4e8; }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li { margin: 0.45em 0; }
+      .summary-content strong { font-weight: 600; color: #1a1a1a; }
+      .summary-content em { color: #5d5b54; }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code { background: none; padding: 0; }
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child { margin-top: 0; }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <a href="../index.html">← All Meetings</a>
-      <h1>Suretyship and Guarantee in Islamic Law - June 19, 2025</h1>
-      <div class="meta">Start: 2025-06-19T16:58:14</div>
+
+    <header class="site-header">
+      <a href="../../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Suretyship and Guarantee in Islamic Law - June 19, 2025</span>
     </header>
-    <main class="content">
-      <!-- Convert markdown to HTML -->
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Suretyship and Guarantee in Islamic Law - June 19, 2025</h1>
+        <div class="session-meta">
+          <span class="meta-chip">&#128197; 2025-06-19</span>
+          <span class="meta-chip">&#128336; 16:58</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
       <div class="summary-content"><h1>Summary of Islamic Jurisprudence Lessons on Kafalah (Guarantee) and Related Topics</h1>
 <hr>
 <h2>1. The Ruling and Concept of Physical Guarantee (Kafalat al-Badan)</h2>
 <h3>Definition</h3>
 <ul>
 <li><strong>Kafalat al-Badan</strong> is a guarantee involving the physical presence or delivery of a person (or part thereof) when required by legal authority.</li>
-<li>It differs from financial guarantees by focusing on the person’s attendance or bodily presence.</li>
+<li>It differs from financial guarantees by focusing on the person's attendance or bodily presence.</li>
 </ul>
 <h3>Key Rulings</h3>
 <ul>
 <li>Valid when guaranteeing a person who can be physically brought forward (e.g., slaves, dependents, servants).</li>
 <li>Generally <strong>invalid or weak when guaranteeing a free person</strong> due to lack of control over them (Shafi'i view).</li>
-<li>The guarantor is responsible for ensuring the guaranteed person’s presence at the specified place and time.</li>
+<li>The guarantor is responsible for ensuring the guaranteed person's presence at the specified place and time.</li>
 <li>The guarantee remains valid for minors or mentally incapacitated persons if their guardian consents.</li>
 <li>The guarantor is discharged upon actual delivery of the person to the creditor or authority.</li>
 <li>The place of delivery must be specified and practical; impossible or unspecified places invalidate the guarantee.</li>
@@ -94,7 +259,7 @@
 <li>Guarantees on non-binding or revocable obligations (e.g., voluntary rewards) are invalid.</li>
 <li>The guarantor must know the nature and amount of the obligation when guaranteeing money.</li>
 <li>Guaranteeing attendance or presence before court or authority is valid.</li>
-<li>Guaranteeing the deceased’s presence for identification or testimony is permissible under conditions.</li>
+<li>Guaranteeing the deceased's presence for identification or testimony is permissible under conditions.</li>
 </ul>
 <h3>Linguistic and Juristic Nuances</h3>
 <ul>
@@ -109,7 +274,7 @@
 <li>Delivery of the guaranteed person or item to the creditor or authorized agent at the agreed place.</li>
 <li>Delivery must be free of obstacles or barriers.</li>
 <li>If the creditor refuses delivery without valid reason, the guarantor is not discharged.</li>
-<li>Delivery outside the agreed place requires creditor’s consent.</li>
+<li>Delivery outside the agreed place requires creditor's consent.</li>
 <li>The guarantor is only obligated to deliver once per request unless otherwise stipulated.</li>
 <li>If the guaranteed party is detained or imprisoned legitimately at the place of delivery, the guarantor is not obliged to free them.</li>
 <li>If the guarantor genuinely does not know the whereabouts of the guaranteed person, they are excused after swearing an oath.</li>
@@ -118,7 +283,7 @@
 <ul>
 <li>Minors and mentally incapacitated persons require guardian consent for delivery.</li>
 <li>Delivery without explicit statement of discharge is insufficient.</li>
-<li>Travel expenses for bringing the guaranteed person are the guarantor’s responsibility.</li>
+<li>Travel expenses for bringing the guaranteed person are the guarantor's responsibility.</li>
 </ul>
 <hr>
 <h2>4. Obligations Regarding Bringing the Debtor (إحضار المكفول)</h2>
@@ -129,7 +294,7 @@
 <li>The guarantor must bear travel expenses and provisions.</li>
 <li>If the debtor is imprisoned wrongfully or outside the place of delivery, the guarantor must free and bring him.</li>
 <li>If the debtor disappears or is missing for a long time, the guarantor may be released after proving impossibility.</li>
-<li>The guarantor’s liability ends upon the debtor’s death.</li>
+<li>The guarantor's liability ends upon the debtor's death.</li>
 </ul>
 <hr>
 <h2>5. Practical Guidelines for Guarantors</h2>
@@ -183,7 +348,7 @@
 <h2>9. Teaching Recommendations for Islamic Jurisprudence Texts</h2>
 <ul>
 <li>Use <strong>"Al-Mukhtasar al-Lateef"</strong> with commentaries by Alawi bin Abdulkadir Al-ʿIdrus or Sheikh Ahmad Al-Nisf for beginners.</li>
-<li>Avoid overly complex commentaries like Al-Ramli’s for initial teaching.</li>
+<li>Avoid overly complex commentaries like Al-Ramli's for initial teaching.</li>
 <li>Verify edition accuracy to prevent typographical errors.</li>
 </ul>
 <hr>
@@ -196,7 +361,7 @@
 <li>Bear travel expenses unless exempted.</li>
 <li>Keep evidence of delivery and acceptance.</li>
 <li>Seek judicial help if delivery is refused or obstructed.</li>
-<li>Understand limits of liability (e.g., debtor’s death or disappearance).</li>
+<li>Understand limits of liability (e.g., debtor's death or disappearance).</li>
 </ul>
 <ul>
 <li><strong>For Teachers and Students:</strong></li>
@@ -213,7 +378,11 @@
 <hr>
 <h1>Conclusion</h1>
 <p>These lessons provide a comprehensive understanding of the Islamic legal rulings on kafalah (guarantee), especially physical guarantee (kafalat al-badan), including definitions, conditions, evidences, differences of opinion, and practical guidelines. They also address related topics such as travel distance for qasr prayers and contemporary ethical considerations in political conflicts, emphasizing adherence to Islamic jurisprudence and unity among Muslims.</p></div>
-    </main>
-  </body>
-  </html>
+    </div>
 
+    <footer>
+      <a href="../../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">&larr; Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
