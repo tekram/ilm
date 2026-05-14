@@ -5,29 +5,72 @@
     <meta name="color-scheme" content="light" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Meeting Summaries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-      html { background: #fff; color: #111; color-scheme: light; }
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; margin: 2rem; line-height: 1.6; color: #111; }
-      a { color: #0366d6; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      h1 { margin-bottom: 1rem; }
-      ul { list-style: none; padding: 0; }
-      li { margin: 0.5rem 0; }
-      .muted { color: #555; }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .site-header a:hover { color: #fff; }
+      .container { max-width: 760px; margin: 0 auto; padding: 40px 32px 72px; }
+      h1 { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 28px; }
+      .session-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+      .session-item {
+        background: #fff;
+        border: 1px solid #e5e3df;
+        border-radius: 10px;
+        transition: box-shadow 0.12s ease, border-color 0.12s ease;
+      }
+      .session-item:hover { box-shadow: rgba(15,15,15,0.06) 0 3px 10px; border-color: #c8c4be; }
+      .session-item a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        text-decoration: none;
+        color: #1a1a1a;
+        font-size: 15px;
+        font-weight: 500;
+        gap: 12px;
+      }
+      .session-item a::after { content: '›'; color: #c8c4be; font-size: 18px; flex-shrink: 0; }
+      .session-item:hover a::after { color: #5645d4; }
+      .empty { color: #a4a097; padding: 32px 0; }
     </style>
   </head>
   <body>
-    <h1>Meeting Summaries</h1>
-    <ul>
-      {% for p in pages %}
-      <li>
-        <a href="{{ p.filename }}">{{ p.title }}</a>
-      </li>
-      {% else %}
-      <li class="muted">No meetings yet.</li>
-      {% endfor %}
-    </ul>
+    <header class="site-header">
+      <a href="../index.html">← Islamic Learning Materials</a>
+    </header>
+    <div class="container">
+      <h1>Meeting Summaries</h1>
+      <ul class="session-list">
+        {% for p in pages %}
+        <li class="session-item"><a href="{{ p.filename }}">{{ p.title }}</a></li>
+        {% else %}
+        <li class="empty">No meetings yet.</li>
+        {% endfor %}
+      </ul>
+    </div>
   </body>
-  </html>
-
-
+</html>
