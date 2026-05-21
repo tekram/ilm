@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Waqf Interpretation, Nadhr, Hajj Symposium Rulings & Brain Death - May 19, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Waqf Interpretation, Nadhr, Hajj Symposium Rulings & Brain Death - May 19, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Waqf Interpretation, Nadhr, Hajj Symposium Rulings & Brain Death - May 19, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-05-19</span>
+          
+          <span class="meta-chip">🕐 15:58</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>A fatāwā-assembly session covering several distinct cases. It opens with a long question on the interpretation of a waqf instrument — the force of the conjunction <em>wāw</em> in waqf wording, whether sequential numbering of trustees implies order, and the scope of the supervisors' authority. The session then moves to the strength of <em>nadhr</em> (vow) as a transfer mechanism and the conditions that invalidate it. It then surveys the resolutions of the Sixth Fiqh Symposium of the Indian Fiqh Academy (held at Dār al-ʿUlūm, Maẓhar Fūr, Aʿẓam Garh, March–April 2007) on (a) the timing of stoning the Jamarāt, (b) the reality of brain death and disconnecting life support, (c) mercy killing, and (d) network/MLM marketing — with the lecturer noting where these resolutions diverge from the Shāfiʿī position. Closing questions cover <em>takbīr</em> in the first ten days of Dhū al-Ḥijja, congregational voluntary night prayers, and prostration after the prescribed prayers.</p>
+<hr>
+<h2>1. Interpretation of a Waqf Instrument</h2>
+<h3>Background / Question</h3>
+<p>A man endows ("I, the poor servant of God, son of so-and-so, have set in waqf and locked up all that I own…") his entire estate inherited from his father, plus property received by <em>nadhr</em>, plus all he owns in a named locality — palms, <em>dhubūr</em> (cultivated land plots), houses, real-estate, furniture, "everything called wealth," animate and inanimate, old and new — upon "my children and my children's children, however they propagate, and upon my wife so-and-so during her lifetime." He then directs that the yield of a named well (and others) be divided in halves: one half to repair "our house in the named locality," the other half divided among the heirs, "the male like the share of two females." He names three supervisors: <em>number 1</em> his son, <em>number 2</em> his wife, <em>number 3</em> his daughter. The questioner asks: does the <em>wāw</em> here mean simultaneous joint sharing or sequential succession? Does the post-clause "and I have made the yield…" tilt the reading? Does "I have made the supervisors over the <em>ṣalāḥ</em> of that…" refer to the whole waqf or just the house? Do the numbered designations entail order between the supervisors?</p>
+<h3>Ruling</h3>
+<ul>
+<li>If the endower is sound, legally responsible, and free, the waqf is valid in all that he owns in the named locality. If made during <em>maraḍ al-mawt</em> (terminal illness), it is valid only in the legal one-third.</li>
+<li>The yield is divided into halves: one half to upkeep the named house, the other half among the beneficiaries in the <strong>2:1 ratio for males vs. females</strong>, and this 2:1 distribution is carried through <strong>all generations</strong>, not just the endower's direct heirs. The phrase "between the heirs" is not the technical legal heirs of the endower; it refers to the customary inheritance ratio.</li>
+<li>The <em>wāw</em> in "my children and my children's children, however they propagate, and my wife…" is for <strong>absolute joining</strong> (<em>muṭlaq al-jamʿ</em>), as is its original meaning — i.e., joint sharing — <strong>not</strong> order. Abū Makhrama clarified this in a parallel case. Al-ʿAbbādī's view that <em>wāw</em> means order is weak, even though al-Māwardī said the majority hold so.</li>
+<li>The post-clause "and I have made what is yielded…" is not a contextual indicator (<em>qarīna</em>) that overrides this. Even if it were such a <em>qarīna</em>, it would still not override, because the school does not even treat "generation after generation" or "lineage after lineage" — which is <strong>explicit</strong> in sequence — as sequence (since <em>baʿd</em> can mean "<em>maʿa</em>", "with"; the Qur'an: "<em>wa-l-arḍa baʿda dhālika daḥāhā</em>" is read as "<em>maʿa</em>"). All the more so for the questioner's weaker indication.</li>
+<li>On the phrase "I have made the supervisors over the <em>ṣalāḥ</em> of that": two readings.</li>
+<li>First, the phrase is <strong>explicit</strong> in installing them as full superintendents (<em>nāẓir</em>) over the whole waqf — discharging supervision, maintaining the asset, leasing, distributing yield, and so on. On this reading no intention is needed.</li>
+<li>Second, it is metaphorical, because local custom uses <em>ṣalāḥ</em> and <em>ʿimāra</em> for upkeep only, not for asset-preservation and distribution. On this reading intention is required.</li>
+<li>On the first reading or the second with intention, does the demonstrative pronoun <em>dhālik</em> refer to the <strong>entire waqf</strong> or just the <strong>house</strong>? The grammatical rule "the definite repeated is the same as the first; the indefinite repeated is different" (illustrated by <em>maʿa l-ʿusri yusran</em>) supports limiting it to the house. The Shaykh's preferred view, however, is that it refers to the whole, taking <em>ṣalāḥ</em> broadly.</li>
+<li><strong>Practical recommendation:</strong> in either case, the three named supervisors should obtain a confirming appointment from the local court — by way of certainty and precaution — and treat the numbered designations (<em>nimr 1</em>, <em>nimr 2</em>, <em>nimr 3</em>) as binding <strong>order</strong> among themselves, since in the local convention of that language those numerals are explicit in sequencing (like <em>thumma</em>).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Abū Makhrama, al-ʿAbbādī, al-Māwardī, <em>Jamʿ al-Jawāmiʿ</em> (the 27th issue: <em>al-wāw li-muṭlaq al-jamʿ</em>; objections that it is for order, or for accompaniment), al-Suyūṭī's verse rendering, the <em>Alfiyya</em>, the <em>Tuḥfa</em> tradition on waqf wording, the Shaykh's own analysis.</p>
+<hr>
+<h2>2. Nadhr (Vow) as a Mode of Transfer</h2>
+<h3>Background / Question</h3>
+<p>The waqf question above mentioned that some of the endower's wealth had been received "by <em>nadhr</em>". A student asks why <em>nadhr</em> is used in such cases.</p>
+<h3>Ruling</h3>
+<ul>
+<li><em>Nadhr</em> is the <strong>strongest</strong> form of transferring ownership — stronger than sale, gift, will, and even waqf (the latter is debated on whether acceptance is required; for <em>nadhr</em> it is agreed acceptance is not required).</li>
+<li>Most important advantage: <strong>valid in both the known and the unknown</strong>. A <em>nadhr</em> of "all that comes to me" is valid; a gift of "all that comes to me" is invalid for <em>jahāla</em>.</li>
+<li>It is also widely used as a <strong>fallback security</strong> in modern land sales. After a sale of a plot, the parties add: "and as a precaution, so-and-so vows to so-and-so all of this land and what is in it, and so-and-so vows to so-and-so the sum of X." If the sale fails, the vow stands; if the sale stands, the vow does not take effect.</li>
+<li>A <em>nadhr</em> may be <strong>rejected</strong> by the named recipient and so revert to the vower's ownership.</li>
+<li>The <em>nadhr</em> is <strong>invalidated</strong> by:</li>
+<li><strong>Stating an exchange-value</strong>: "I vow to you this in exchange for that" — the vow becomes a <em>muʿāwaḍa</em> and is void, because <em>nadhr</em> must be <em>tabarruʿ</em>.</li>
+<li><strong>An explicit condition</strong> of return: "I vow to you this on condition that you serve me" — void.</li>
+<li>A <em>nadhr</em> <strong>may</strong> be suspended on a condition by way of <em>taʿlīq</em> (cause, not exchange): "if you serve me a year, I have vowed to you X" — valid, because the <em>lām</em> in "<em>li-khidmatihi lī</em>" is causal.</li>
+<li>On <em>ibrāʾ</em> of <em>mahr</em> in exchange for a share of the marital house: "if you release me from my mahr, then half the house is yours" — this is a suspended transfer of ownership, which is not a recognized form unless cast as either a <em>muʿāwaḍa</em> (exchange) or a <em>taʿlīq nadhr</em>.</li>
+<li>The explicit phrases (<em>ṣarīḥ</em>) of <em>nadhr</em> include "<em>lillāhi ʿalayya kadhā</em>" and the <em>muʿtamad</em> also recognizes "<em>ʿalayya kadhā</em>" as explicit, per the <em>Tuḥfa</em>. Without the lafẓ of <em>Allāh</em>, the phrase "<em>ʿalayya kadhā</em>" is treated as a <em>kināya</em> in some sources, but in the chapter on <em>nadhr</em> the relied-upon view per <em>ʿUmdat al-Sālik</em> and verified against <em>al-Minhāj</em>: this is <em>ṣarīḥ</em>.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>ʿUmdat al-Sālik</em>, <em>al-Minhāj</em>, the <em>Tuḥfa</em> chapter on <em>nadhr</em>.</p>
+<hr>
+<h2>3. Sixth Fiqh Symposium of the Indian Fiqh Academy: Decisions 67–70</h2>
+<h3>Background / Question</h3>
+<p>The session reviews the resolutions of the Sixth Fiqh Symposium of the Mujammaʿ al-Fiqh al-Islāmī (India), held at Dār al-ʿUlūm of the Islamic University at Maẓhar Fūr, ʿAẓam Garh (10–13 Rabīʿ al-Awwal 1428 / 30 March – 2 April 2007), attended by some 200 Indian scholars together with Dr. ʿUmar Ḥasan Kāsūlī (Brunei) and Shaykh ʿAbd al-Qādir al-ʿĀrifī (Zāhidān, Iran). Four topics were taken up. The Shaykh comments resolution by resolution from the Shāfiʿī viewpoint.</p>
+<h3>Ruling — Resolution 67: timing of stoning the Jamarāt (Ḥanafī-leaning text)</h3>
+<ul>
+<li>The Symposium urges pilgrims to follow the most cautious sunna in performing this rite, given its once-in-a-lifetime nature.</li>
+<li>The Symposium says that on the <strong>10th</strong> of Dhū al-Ḥijja, stoning before sunrise (after true Fajr) is <em>makrūh</em> for the general public; women, the disabled, the weak, and the sick may stone in that window without <em>karāha</em>.</li>
+<li><strong>Shāfiʿī correction:</strong> in the Shāfiʿī school, the time of <em>Jamrat al-ʿAqaba</em> on the 10th enters from the <strong>midpoint of the night</strong>, and the <em>sunna</em> is the prioritizing of the weak and women, not a position of <em>karāha</em> upon men. The relied-upon Shāfiʿī sources find no <em>karāha</em> for the general public when the weak stone in that window.</li>
+<li>The Symposium adds: it is impermissible for anyone to stone <strong>before midnight</strong> of the 10th — because the time has not yet entered. <em>(Agrees with Shāfiʿī starting point in substance.)</em></li>
+<li>For the <strong>11th and 12th</strong>: the Symposium fixes the start time at <em>zawāl</em> (sun's zenith) and extends until <strong>the true Fajr of the following day</strong>, urging stoning within these windows.</li>
+<li><strong>Shāfiʿī correction:</strong> these days' stoning enters at <em>zawāl</em> and extends until <strong>sunset of the last day of Tashrīq</strong>, not Fajr — and one may aggregate all days' stoning into the last day of Tashrīq if not detached, in order: first day's pebbles to the first pillar, then the second, then the third, then the second day's, then the third day's.</li>
+<li>The Symposium adds: stoning before <em>zawāl</em> in the days of Tashrīq is permitted for a <strong>severe necessity</strong> by Abū Ḥanīfa's view; no <em>dam</em> is owed in that case.</li>
+<li>Discussion: "severe necessity" was clarified to mean only what risks <strong>loss of life or limb</strong>, not mere need.</li>
+<li>The Symposium states: on the <strong>11th and 12th after sunset</strong> there is no <em>karāha</em> given current crowding.</li>
+<li><strong>Shāfiʿī correction:</strong> no <em>karāha</em> at all in our school, regardless of crowding, because the time runs from <em>zawāl</em> until sunset of the last day of Tashrīq, day and night included.</li>
+<li>The Symposium states: if a pilgrim stays in Mina past sunset of the 12th and into Fajr of the 13th, he is obligated to stone on the 13th. <strong>This is the Ḥanafī position;</strong> in our school the situation differs.</li>
+<li><strong>Resolution on <em>mabīt</strong></em>: it is <em>sunna</em> to spend the nights of Mina there; failure to do so means giving up a major <em>sunna</em> of Hajj — students should note that the Symposium treats <em>mabīt</em> of the days of Tashrīq as <em>wājib</em> in their school, while <em>mabīt</em> before ʿArafa is <em>sunna</em> and <em>mabīt</em> after ʿArafa (Tashrīq nights) is <em>wājib</em> per our school.</li>
+</ul>
+<h3>Ruling — Resolution 68: brain death and life support</h3>
+<ul>
+<li>If breathing has <strong>completely ceased</strong> and the signs of death are present, death is established. From that moment: will is executed, inheritance opens, <em>ʿidda</em> begins, etc.</li>
+<li>If the patient is on a ventilator and doctors have <strong>not</strong> despaired and there is hope of recovery, the family <strong>may not disconnect</strong> unless continued treatment exceeds the patient's wealth and the heirs cannot bear the costs and have no other option.</li>
+<li>Discussion (Shaykh's nuance): even with the patient's own money, treatment may be ceased if there are signs that the patient himself prefers his money preserved for his heirs over an extended ventilator dependence — the principle of <em>ẓann al-riḍā</em>. The heirs are obligated to cover only what is customary; extraordinary intervention may not be legally compelled.</li>
+<li>If doctors have <strong>lost hope</strong> of return to natural breathing, the family <strong>may</strong> disconnect — paralleled by the Academy's earlier resolution on <strong>brain death</strong> (cessation of brain function with medical certainty of no return) which they classified as death and on which removing life support is permitted.</li>
+<li>Distinguished case: a <strong>premature infant in a humidicrib</strong>. Prognosis is generally good, and the obligation to maintain the child is stronger; if the parent or guardian can afford it, the care is obligatory — unlike adult intensive support whose outcome is uncertain.</li>
+</ul>
+<h3>Ruling — Resolution 69: mercy killing</h3>
+<ul>
+<li>Active intervention that causes the patient's death — even to relieve unbearable pain, even to release the family from the burden of care — is <strong>murder</strong>, and is prohibited.</li>
+<li>Withholding treatment a patient can in fact have, with the intention of hastening death, is also prohibited — even without administering a lethal drug.</li>
+<li>Our school does <strong>not</strong> permit mercy killing even of an <strong>animal</strong> for its relief; the Mālikīs permit killing an animal for relief.</li>
+<li>The Shaykh notes a position attributed to ʿAbd al-Ḥamīd al-Sharwānī permitting mercy killing of a human under <strong>three</strong> combined conditions: (a) unbearable, customarily intolerable pain, (b) certain imminent death (e.g., within half an hour), (c) the patient's consent. The Shaykh expresses reservation; this remains to be verified in <em>Ḥāshiyat ʿAbd al-Ḥamīd</em>.</li>
+</ul>
+<h3>Ruling — Resolution 70: Multi-Level / Network Marketing (MLM)</h3>
+<ul>
+<li>The current widespread forms of network marketing combine several <em>sharʿī</em> problems:</li>
+<li><em>ghishsh</em> (deception);</li>
+<li><em>gharar</em> (excessive uncertainty);</li>
+<li>conditioning the sale on a separate matter unrelated to the sale's object;</li>
+<li>combining <strong>two contracts in one</strong>, <strong>two sales in one</strong>;</li>
+<li>features resembling <em>qimār</em> (gambling);</li>
+<li>the buyer is not really seeking the product but the <strong>enticing recurring commissions</strong>.</li>
+<li>Therefore joining such schemes is prohibited; pushing others into them and then drawing commissions from down-line is prohibited; Muslims should not engage in such trade.</li>
+<li><strong>Discussion:</strong> the Shaykh notes that since Shāfiʿīs and Ḥanafīs do not treat ḥiyal as inherently impermissible, an MLM structure stripped of <em>gharar</em>, <em>ghishsh</em>, and conditional linkage between purchase and commission could in principle be valid. One of the major MLM companies recently approached the Shaykh's father seeking a Shāfiʿī solution; he conditioned cooperation on first dropping the conditional structure linking purchase and commission. After some delay they returned agreeing to look at alternative product structures — a first such concession from any major company.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Resolutions 67–70 of the Sixth Fiqh Symposium of the Mujammaʿ al-Fiqh al-Islāmī (India); the resolution of the Islamic Fiqh Academy on brain death; <em>Ḥāshiyat ʿAbd al-Ḥamīd al-Sharwānī</em>; the Shaykh's own remarks on <em>Tuḥfa</em> timings.</p>
+<hr>
+<h2>4. Closing Questions</h2>
+<h3>Background / Question</h3>
+<p>Three questions from attendees on the first ten days of Dhū al-Ḥijja, on congregational voluntary night prayers, and on prostration after the prescribed prayers.</p>
+<h3>Ruling — Public takbīr during the first ten days of Dhū al-Ḥijja</h3>
+<ul>
+<li>Some scholars and madhāhib (and some of the salaf, and a view among the Ḥanbalīs) hold that <em>takbīr</em> is <em>sunna</em> publicly from the beginning of Dhū al-Ḥijja.</li>
+<li>In our school, <em>takbīr</em> in the first ten days is not the relied-upon <em>sunna</em>; the <em>takbīr mursal</em> is on the days of Tashrīq only.</li>
+<li><strong>Application:</strong> in a place where the prevailing madhhab supports public <em>takbīr</em> from the start of Dhū al-Ḥijja, leave it alone; if visiting such a place, join them and take the dispensation. In a place that follows the Shāfiʿī school (e.g., Tarīm, Ḥaḍramawt, southern Yemen), introducing the practice would mix madhāhib and provoke fitna; it should not be done.</li>
+</ul>
+<h3>Ruling — Congregational performance of voluntary night prayers</h3>
+<ul>
+<li>The relied-upon Shāfiʿī position is that congregational performance of voluntary night prayer is <strong>not</strong> <em>makrūh</em>; it is preferred individually, but not disliked when in congregation.</li>
+<li>If congregating helps people to actually pray the <em>qiyām</em> — which they would otherwise abandon out of laziness — any <em>karāha</em> in other madhāhib is set aside by the good intention. The blessed days and nights merit the encouragement.</li>
+</ul>
+<h3>Ruling — Sajda after the prescribed prayers</h3>
+<ul>
+<li>No prostration is legitimate <strong>except</strong> the prostration of recitation (<em>sujūd al-tilāwa</em>) and the prostration of thanksgiving (<em>sujūd al-shukr</em>).</li>
+<li>Routine prostration after each obligatory prayer is <strong>not permitted</strong> in our school. <em>Sujūd al-shukr</em> requires a <strong>sudden, fresh blessing</strong> — completion of one's daily prayer is not such a blessing, nor are the ordinary, ongoing blessings of God's favor (otherwise one would remain in prostration for life).</li>
+<li><em>Sajda after Witr</em> is debated; the relied-upon view is that it is <strong>not</strong> performed. Two-cycle followed by repeating the Witr is also avoided (called <em>naqḍ al-Witr</em>).</li>
+<li>If someone wishes to express thanks after a prayer, the proper response is to begin a separate <em>ṣalāt al-shukr</em>, not an independent prostration.</li>
+<li>In Ḥanafī fiqh there may be wider scope for <em>sujūd al-shukr</em> — confirmed in some cases as expanding (Shaykh undertook to verify the reference). If the doer follows that madhhab, leave him; if he is Shāfiʿī, instruct him by way of <em>irshād</em> (guidance), not <em>inkār</em> (rebuke).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>The <em>Minhāj</em> and its commentaries; <em>ʿUmdat al-Sālik</em>; the Shāfiʿī chapter on stoning and <em>mabīt</em>; the Shaykh's own forthcoming references on <em>sajda baʿd al-witr</em> in the Ḥanafī tradition.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
