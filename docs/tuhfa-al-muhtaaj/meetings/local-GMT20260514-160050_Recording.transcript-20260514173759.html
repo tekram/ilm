@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ijarah: Bathhouse Fees, Time vs. Work Pricing & Teaching Quran - May 14, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Ijarah: Bathhouse Fees, Time vs. Work Pricing & Teaching Quran - May 14, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Ijarah: Bathhouse Fees, Time vs. Work Pricing & Teaching Quran - May 14, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-05-14</span>
+          
+          <span class="meta-chip">🕐 16:00</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>Continuation of the Tuhfat al-Muhtaj discussion on the conditions of the benefit (<em>manfaʿa</em>) in lease contracts (<em>ijārah</em>). The session covers how the benefit must be made known by measurement, the special case of the public bathhouse (<em>ḥammām</em>), the two ways of fixing a lease (by time or by work), what to do when prayer-times fall inside leased hours, the rules for hiring someone to teach Qur'an, hiring for general service (<em>khidma</em>), and the conditions for hiring for construction work and for leasing the surface of a waqf building.</p>
+<hr>
+<h2>1. Conditions of the Leased Benefit (manfaʿa)</h2>
+<h3>Background / Question</h3>
+<p>The author moves to the remaining conditions of the benefit and how it is to be quantified.</p>
+<h3>Ruling</h3>
+<ul>
+<li>The object of the contract must be known: the specific item known by sight in <em>ijārat al-ʿayn</em>, and known by description in <em>ijārat al-dhimma</em>.</li>
+<li>The benefit itself must be known by measurement, exactly as in sale.</li>
+<li>Unlike sale, mere visual inspection of the place from which the benefit comes does <strong>not</strong> dispense with measuring the benefit. Sight suffices for the object of a sale because it encompasses it, but the benefit is an i'tibāri (notional) matter directed at the future, so it must be made known on its own.</li>
+<li>The directions of a leased property must be specified; it is invalid to lease one of two absent slaves, or for an unknown duration or unknown work.</li>
+<li>Where the property has only one customary use (e.g. an <em>ithāq</em>/saddle-bag), an unqualified contract is carried to that use; otherwise the use must be stated.</li>
+</ul>
+<hr>
+<h2>2. Entering the Public Bathhouse (Hammam) for a Fee</h2>
+<h3>Background / Question</h3>
+<p>A standing problem: how can entering a <em>ḥammām</em> for an unknown duration and an unknown amount of water be valid, when <em>ijārah</em> requires the benefit to be known?</p>
+<h3>Ruling</h3>
+<ul>
+<li>Entering the bath for a fee is permitted by <em>ijmāʿ</em> despite ignorance of the duration of stay and of how much water and other resources will be used.</li>
+<li>The fee is in exchange for the <strong>apparatus</strong> (the tools used inside the bath), not for the water itself.</li>
+<li>The vessel used to pour water is <strong>not</strong> guaranteed against loss on the entrant (it is in his hand by way of <em>ibāḥa</em>, permission, not as the contracted object).</li>
+<li>The entrant's <strong>clothes</strong> are not guaranteed by the bathkeeper unless the entrant entrusts them and the keeper accepts that responsibility — even by a nod of the head (cf. the chapter on <em>wadīʿa</em>).</li>
+<li>Anecdote from Shaykh Faḍl b. ʿAbd al-Raḥmān at a lesson in Masjid Bābtīn: when a visitor placed his bag in front of the gathered students and went to make wuḍūʾ, those students who silently signaled assent had effectively accepted custody and could not leave until he returned.</li>
+</ul>
+<h3>Practical application — open buffet</h3>
+<ul>
+<li>By analogy to the bath, the modern open buffet is valid: the entry-fee is in exchange for admission and the food is permitted to the entrant by way of <em>ibāḥa</em>. If even water (an unmeasured benefit) was tolerated, food is <em>a fortiori</em> permitted. If, hypothetically, water were contracted as the object and then refused, that would invalidate the deal.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Ḥajar al-Haytamī (Tuḥfa), the chapter on <em>wadīʿa</em>, anecdotal report from Shaykh Faḍl b. ʿAbd al-Raḥmān.</p>
+<hr>
+<h2>3. Two Methods of Measuring the Benefit: by Time, or by Work</h2>
+<h3>Background / Question</h3>
+<p>How is the contracted benefit to be quantified once the requirements of section 1 are met?</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>By time alone</strong> — the rule for any benefit not regulable by a discrete work. The duration must be known. Examples given: nursing this child for a month; plastering, applying <em>kuḥl</em> / <em>iqtiḥāl</em> / <em>mudāwāh</em> for a day; lease of a house, land, vessel, or garment.</li>
+<li>For a house leased for habitation, the wording matters: "to dwell in it" is valid; "on condition that you dwell in it" makes the dwelling a binding condition.</li>
+<li>The lease must run <strong>contiguously</strong> from the moment the contract is concluded: its beginning is the moment the contract is finalized.</li>
+<li>"I leased it to you each month for a dinar" — <strong>invalid</strong> (period unknown). "This month and every month for a dinar" — valid for the first month only.</li>
+<li>"I leased you a month of this year" while more than a month remains — invalid for ambiguity. If only a month is left, valid. "I leased you this year, every month for a dirham" — valid because the whole year (a known unit) is anchoring the contract.</li>
+<li><strong>Exception</strong>: an imām hired to give the <em>adhān</em> from his own money must specify the period; if it is paid from <em>bayt al-māl</em> it need not be specified, because such a payment is <em>rizq</em> (subsistence), not <em>ujra</em> (wage). The same logic likely applies to the <em>khuṭba</em>; the <em>imāma</em> itself cannot be hired for, because it requires <em>niyya</em> — any payment for it is <em>rizq</em>.</li>
+</ul>
+<h3>Minimum duration of habitation lease</h3>
+<ul>
+<li>Al-Māwardī once said: a day or more; he also said: not less than three days. Both are weak.</li>
+<li>Stronger view (al-Adhraʿī): even part of a known day is valid; a traveler may legitimately need to rent a hotel room for two hours awaiting a flight.</li>
+<li><strong>Criterion</strong>: the benefit during that period must have customary value in the locale.</li>
+</ul>
+<h3>Measurement by work</h3>
+<ul>
+<li>E.g. a specified or described mount, ridden or for carrying a load, to Mecca, or ridden for a month — but the direction must be stated.</li>
+<li>For sewing: the garment, its length, width, and the type of stitching (Roman = double stitch, Persian = single stitch) must be stated when custom varies.</li>
+<li>Per al-Bujairami: hiring someone for sewing alone, <strong>before</strong> the cloth is cut, is an invalid lease, since sewing depends on cutting; hiring for both cutting and sewing, or for cutting alone, is valid.</li>
+</ul>
+<h3>Combining time and work</h3>
+<ul>
+<li>"Sew this garment in this particular day" — <strong>invalid</strong> in the strongest view, because work may finish early or late.</li>
+<li>If the intent is to measure by <strong>work only</strong> and time is mentioned merely to urge promptness, then valid (al-Subkī from Buwayṭī).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Tuḥfa, al-Bujairami, al-Māwardī, al-Adhraʿī, al-Subkī, al-Buwayṭī.</p>
+<hr>
+<h2>4. Prayer Times and Other Personal Needs Inside the Leased Period</h2>
+<h3>Background / Question</h3>
+<p>Are the times of the obligatory prayer, eating, relieving oneself, and going to the mosque deducted from the leased work-time?</p>
+<h3>Ruling</h3>
+<ul>
+<li>Excluded from the leased period: the time needed for the obligatory prayer (even Friday), provided the worker does not fear loss to his employment by going; the time of purification, the regular <em>sunna mu'akkada</em> attached to it, eating, and relieving oneself — at the minimum needed.</li>
+<li>Only the obligatory prayer is meant; the worker may not leave for purely voluntary prayers if the time of the obligatory has not yet narrowed.</li>
+<li>Buying food for one's meal: if the worker can prepare it in advance or have someone bring it as a gift, no time is allotted; otherwise the minimum needed is allowed.</li>
+<li>Going to the mosque is <strong>not</strong> generally deducted, unless very close and the imām does not lengthen the prayer.</li>
+<li>The imām is required to <strong>shorten</strong> the prayer while still completing it: he confines himself to the minimum perfection and does not draw out the recitation (cf. the case of a confined congregation).</li>
+<li>An <em>ijārah</em> contract can lawfully be an <strong>excuse</strong> for missing Jumuʿa and the congregational prayer; the <em>imāma</em> is <em>farḍ kifāya</em>, Jumuʿa is <em>farḍ ʿayn</em>, so the bar is higher for Jumuʿa.</li>
+<li>The contemporary issue of employees stopping work to pray during the workday: this is licit only if the contract specifies it, or if circumstances clearly indicate the employer's consent (e.g., the manager prays with the staff). Mere custom is not enough if consent has not been signaled; even brief diversions of leased time (such as pausing a lesson at the <em>adhān</em>, as in the lessons of Ḥabīb ʿUmar and others) need either explicit or clear implicit permission.</li>
+<li>Whether to <strong>stipulate</strong> prayer-time as an exclusion in the contract is disputed. Al-Zarkashī said this invalidates the lease (the excluded time is unknown). The relied-upon view per the <em>Nihāya</em> and the Shaykh's fatwa is that the lease is valid and the unwarranted condition is void; if the worker hires himself out on condition of not praying, the <em>aṣaḥḥ</em> is that the lease is valid and the condition is annulled.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-Zarkashī (<em>Qawāʿid</em>), Ibn Qāsim's gloss, the <em>Nihāya</em>, al-Ramlī.</p>
+<hr>
+<h2>5. Hiring for the Teaching of Qur'an</h2>
+<h3>Background / Question</h3>
+<p>How is teaching Qur'an quantified — by time, by amount, or both?</p>
+<h3>Ruling</h3>
+<ul>
+<li>Teaching Qur'an may be measured by <strong>time</strong> (e.g. a month), analogous to sewing. Variation in ease or difficulty of memorisation is not a problem because Qur'an has no fixed quantitative measure as such.</li>
+<li>This applies only if <strong>part</strong> of the Qur'an is meant (i.e. anything that may be called "<em>qurʾān</em>"). If the <strong>whole</strong> Qur'an is intended, both time and work must be specified, because absolute "<em>al-Qurʾān</em>" (per al-Shāfiʿī) refers only to the whole.</li>
+<li><strong>Inclusion of Fridays</strong> in the contracted period is disputed:</li>
+<li>Comparable to leasing a mount for the road where dismounting on certain days is customary — does the renter owe those days?</li>
+<li>Al-Bulqīnī (relied upon in the <em>Nihāya</em>) said Fridays are <strong>not</strong> included, by analogy to Saturday for a Jew (al-Ghazālī's fatwa: a Saturday is excluded from a Jew's monthly lease by customary practice) and Sunday for a Christian.</li>
+<li>The objection that the Jew/Christian custom is one of <em>taḥrīm</em> of work while Friday is not is weak; the relied-upon view excludes Friday for custom.</li>
+<li>A fortiori, the two Eids and the days of Tashrīq are excluded, as are governmental holidays (Independence Day, Unity Day, etc.) where such customs prevail.</li>
+<li>Side note on Friday: from Ibn Ḥajar's <em>al-Fatāwā al-Kubrā</em> — ceasing teaching on Friday is fitting because Friday is the believers' Eid; the day calls for purification, ghusl, removing impurities, going to the masjid, all of which leaves no room for ordinary occupation. Al-Ḥabīb al-Ḥaddād (in <em>Risālat al-Muʿāwana</em>) likewise recommends devoting Friday to acts of the next life, even suspending teaching.</li>
+<li><strong>Specification by content</strong>: complete surahs, or verses (e.g. "the first ten of such a surah").</li>
+<li>Al-Qāḍī required there be <em>kulfa</em> (effort) in the teaching — e.g. a Fātiḥa that the learner could grasp in only half a day, not in two short attempts. The <em>shaykhayn</em> affirm: the criterion is effort, even a single letter, if the learner finds difficulty pronouncing it.</li>
+<li>Al-Māwardī said: not less than <strong>three verses</strong>, because designating "<em>qurʾān</em>" implies <em>iʿjāz</em>. The accepted view is the opposite: the basis is benefit, and less than three verses can be of benefit. <em>Iʿjāz</em> is not the criterion here.</li>
+<li>No need to specify a particular <em>qirāʾa</em> (e.g. Nāfiʿ), but if one is specified, it is binding. If the teacher uses a different <em>qirāʾa</em> anyway, he still gets the wage of the two recitations, since the contracted basic work was performed.</li>
+<li><strong>Forgetting</strong> by the learner during the lesson: the strongest view is that recourse is to prevailing custom regarding re-teaching; absent custom, the matter should be specified in the contract or the lease is void. If the learner forgets after the lesson, the soundest view is to break it down to less than a verse: if the teacher has taught some of a verse and the learner forgets it before the rest is finished, the teacher must re-teach it.</li>
+<li><strong>The learner</strong> must be specified, and must be Muslim or hoped to convert. (Distinguished from selling a <em>muṣḥaf</em> to a non-Muslim hoped to convert, which is prohibited — the desecration risk on failure of conversion outweighs the loss of the teaching arrangement.)</li>
+<li>The learner must be seen and his memorization tested to gauge the lesson's difficulty.</li>
+<li>An interesting derivative: if the contract specifies "memorising" rather than "teaching," is it valid? The most apparent view is that it <strong>is</strong> valid, because the goal of <em>taʿlīm</em> is <em>ḥifẓ</em>. If the period ends and the student has not memorised but the teacher did his work, the contract is not vitiated — comparable to a student who memorises and then forgets.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, <em>Nihāya</em>, al-Shāfiʿī, al-Bulqīnī, al-Ghazālī, al-Qāḍī, al-Māwardī, the Rāfiʿī (on <em>ṣadāq</em>), Ibn Ḥajar's <em>al-Fatāwā al-Kubrā</em>, <em>Risālat al-Muʿāwana wa-l-Muẓāhara</em> of al-Ḥabīb al-Ḥaddād.</p>
+<hr>
+<h2>6. Hiring for General Service (Khidma)</h2>
+<h3>Background / Question</h3>
+<p>What is included when one is hired for "service" without specification?</p>
+<h3>Ruling</h3>
+<ul>
+<li>Hiring for service is valid. If the service is specified, it is followed; otherwise, customary practice befitting the servant and the master applies.</li>
+<li>Al-Harawī itemised what is included by default: washing and sewing clothes, baking, cooking, lighting fire in the oven, feeding the mount, milking the milk-animal, serving the wife, spreading the bedding, and carrying water for drinking or wuḍūʾ.</li>
+<li>Al-Ṣaʿlūkī, from his teachers, excluded feeding the mount and milking from the default service.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-Harawī, al-Ṣaʿlūkī.</p>
+<hr>
+<h2>7. Hiring for Building (Binaaʾ) and Leasing the Surface of a Building</h2>
+<h3>Background / Question</h3>
+<p>What must be specified when hiring for construction, and may a waqf surface be leased for someone to build upon?</p>
+<h3>Ruling</h3>
+<ul>
+<li>For a construction lease, whether priced by work or by time, the following must be specified:</li>
+<li>the location of the wall;</li>
+<li>the length (distance between the two corners);</li>
+<li>the width (distance between the two faces of the wall);</li>
+<li>the <em>samka</em> (height) — if priced by work;</li>
+<li>the material (stone, mud, cement, etc.);</li>
+<li>the method of building (stacked, sloped/<em>musannam</em>, or hollow).</li>
+<li>This holds whether the price is set by work or by time, per al-ʿImrānī, adopted by al-Adhraʿī, on analogy to sewing: where sewing measured by time still needs the garment specified, so too here. Digging differs because the purpose there is uniform.</li>
+<li>If the <strong>surface</strong> on which to build is itself leased:</li>
+<li>on a roof — all of the above details are required;</li>
+<li>on land — all except the height and the material/method of building, since land bears anything.</li>
+<li><strong>Waqf surfaces</strong>: Ibn Rifʿa's fatwa permits leasing the upper surface (<em>ʿulū</em>) of a waqf shop to build on it <strong>only if</strong> (a) there was already a building on it at the time of the <em>waqf</em>, (b) restoring that building is impossible now or in future, and (c) the new construction does not harm the lower portion. If there was originally no building, the matter is determined by interest assessment: it is forbidden if it changes the waqf despite its possible preservation; permitted if no harm and rental loss to the original waqf surface is compensated.</li>
+<li>Counter-argument: this is contrary to the transmitted rule that if construction or planting is uprooted from waqf land, the land is not leased for someone to build or plant on it, but is benefitted with cultivation or the like until the original state can be restored — because allowing the new construction may lead to a claim of ownership over the lower portion.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-ʿImrānī, al-Adhraʿī, Ibn Rifʿa.</p>
+<hr>
+<p>The lesson stopped at the author's transition into "If the land became fit … the determining of the benefit" — to be continued next week.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
