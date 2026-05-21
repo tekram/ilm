@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ijarah of Land and Mounts: Use-Specification, Carried Loads & Trespass on Property - May 21, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Ijarah of Land and Mounts: Use-Specification, Carried Loads & Trespass on Property - May 21, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Ijarah of Land and Mounts: Use-Specification, Carried Loads & Trespass on Property - May 21, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-05-21</span>
+          
+          <span class="meta-chip">🕐 15:58</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>Continuation of the Tuḥfat al-Muḥtāj chapter on the conditions of the leased benefit (<em>manfaʿa</em>), beginning where last week stopped at the words <em>"and when the land is fit (ṣaluḥat)"</em>. The session covers what must be specified when leasing land for building, planting, or sowing; what the lessee owes in a year of drought when the land cannot be cultivated; the related question of liability when someone places his property on another's land or vehicle without permission; the conditions for leasing a riding mount (knowledge of rider, howdah, daily food, attached gear); the rules for leasing a described (<em>dhimma</em>) mount for riding; the rules for leasing for carriage (knowledge of the load by sight, weight, measure, species, container); and the question of when the species and description of the mount must be specified for carriage.</p>
+<hr>
+<h2>1. Specifying the Use When Leasing Land</h2>
+<h3>Background / Question</h3>
+<p>When land is fit for building, planting trees (<em>ghirās</em>), and sowing crops (<em>zarʿ</em>), or for two of the three — what must be specified in the lease for it to be valid?</p>
+<h3>Ruling</h3>
+<ul>
+<li>The type of use must be specified in the lease, because the harm caused by each use differs.</li>
+<li>It is sufficient to say "for sowing" (<em>li-l-zirāʿa</em>) or "for you to sow it," <strong>without</strong> specifying what is sown — in the strongest view (<em>al-aṣaḥḥ</em>). The lessee may sow whatever he wishes, because varieties of crops do not differ much. The contract is therefore not restricted to the least-harmful crop.</li>
+<li>The Shaykhayn extended the same rule to "for you to plant" and "for you to build": the kinds of plants or building materials (stone, mud, cement) need not be specified; the lessee plants or builds as he wishes. Objections that these vary widely are dismissed; the <em>Tuḥfa</em>'s author warns the reader not to confuse this with the parallel rule for sharecropping (<em>muzāraʿa</em>).</li>
+<li>If the land is suited to only one of the three uses, no specification is needed.</li>
+<li>Modern question: do <strong>zoning permits</strong> (residential / commercial / agricultural) issued by the state suffice as a specification, such that anyone using the land outside its permitted purpose is a transgressor? The Shaykh's view: probably <strong>not</strong>; the type of <em>manfaʿa</em> must be stated in the contract itself; custom or municipal regulation does not substitute, <em>wa-Llāhu aʿlam</em>.</li>
+</ul>
+<h3>Year of Drought (<em>sanat al-jadb</em>)</h3>
+<ul>
+<li>If the land was leased only for sowing, and a drought year intervenes such that nothing can be grown, the lessee still owes the <strong>rent of the like (<em>ujrat al-mithl</em>) for the period of possession</strong>, since some benefit was still possible (e.g., tying animals there).</li>
+<li>Whoever ruled to the contrary on the basis that "there is no rent at this time" was mistaken — and equally so the analogy that some draw to the houses of Mina (which are not rented outside the Hajj season). What matters in penalizing the usurper (<em>ghāṣib</em>) is <strong>possibility</strong> of benefit, not actual use.</li>
+<li>A nuanced second view: building <strong>implements</strong> placed in Mina are not subject to rent at all, because their owner is himself a transgressor in placing them where he ought not — to charge him rent would imply approving his blocking of others from the common public benefit.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, the Shaykhayn, Ibn al-Ṣabbāgh (forthcoming), Ibn al-Rifʿa.</p>
+<hr>
+<h2>2. Application: Property Placed on Another's Property Without Permission</h2>
+<h3>Background / Question</h3>
+<p>A side discussion arose from the <em>ālāt Minā</em> case: if someone places his property on yours without permission — a tray of eggs on your car, or a motorcycle parked inside your courtyard after you've locked up — what may you do?</p>
+<h3>Ruling</h3>
+<ul>
+<li>The placer is a transgressor (<em>mutaʿaddī bi-l-waḍʿ</em>). The owner of the place is essentially a <em>ṣāʾil</em> defending his own property and may <strong>remove</strong> the trespassing item, depositing it at the nearest suitable place.</li>
+<li><strong>No liability</strong> falls on the remover if the item is then damaged or stolen, because he is not an entrusted person (<em>muʾtaman</em>), not a borrower (<em>mustaʿīr</em>), and not a hired agent (<em>ajīr</em>). He is merely defending his property.</li>
+<li>The remover may <strong>also</strong> charge rent for the period during which his property was occupied by the trespasser, parallel to the <em>ghāṣib</em> who owes both the value of the destroyed item and the rent of the period. Combining the right to remove with the right to charge rent is licit: the rent is for the past period of occupation; removal is for ending the trespass — the two concerns are different.</li>
+<li>A discussant raised an objection: if rent is owed for the occupation, is the occupier not implicitly a tenant? The reply: he is a <em>trespasser</em>, not a tenant; the owner is owed compensation for past occupation just as the <em>ghāṣib</em> of a house owes both rent and value if the house is destroyed.</li>
+<li>Even if the owner of the place keeps the item (does <strong>not</strong> remove it), he may still charge rent for the past period, because his silence does not equal consent — silence is not assent for an active transgression.</li>
+<li>Contrast: a prayer-mat placed in a mosque by someone else is not the mover's to displace, because the mosque is not owned. There the mover may be liable if he removes it.</li>
+<li>The Shaykh's framing: the obligation to charge rent does not negate the right to recover the value of the lost or destroyed item; the <em>ghāṣib</em> owes both. In the same way, the trespasser owes for occupation and remains liable if the item is damaged in his trespass; but the <strong>defender's</strong> removal is not negligent action.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Drawn from the <em>Tuḥfa</em>'s framing of the <em>ālāt Minā</em> case; the chapter on <em>ghasb</em>.</p>
+<hr>
+<h2>3. "Use It as You Wish": Land, Animal, Human</h2>
+<h3>Background / Question</h3>
+<p>What is the rule when the lessor says "I have leased it to you for you to use it as you wish"?</p>
+<h3>Ruling</h3>
+<ul>
+<li>For <strong>land</strong> that is fit for building, planting, and sowing: "<em>ājartuka li-tantafiʿa bi-hā bi-mā shiʾta</em>" is valid; the lessee may use it for any of the three because he has accepted the most harmful use. (The reading of the text <em>li-yantafiʿa bi-hā al-muʾjar</em> — i.e., the lessee himself — is what is established in the commentaries of al-Ramlī.)</li>
+<li>For a riding <strong>animal</strong> (<em>dābba</em>), Ibn al-Ṣabbāgh stipulated for agricultural lease that the lessee <strong>must rest</strong> the animal when custom requires; abusing the animal is forbidden even on its owner. The land, by contrast, has no analogous prohibition of abuse. Still, Ibn al-Ṣabbāgh's point about agricultural land — that it should be rested when custom demands, to avoid the soil becoming saline (<em>sabikha</em>) — has merit.</li>
+<li>For a <strong>human</strong>, this open-ended formulation is <strong>invalid</strong>. A human is unlike land or animal in that his capacities are highly varied and bounded; one cannot say "use this man for anything you wish," because that exposes him to building, sowing, planting — many of which he is not fit for. The ambiguity (<em>jahāla</em>) is too great.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-Ramlī, Ibn al-Ṣabbāgh, the <em>Rashīdī</em>/<em>Sharwānī</em> gloss.</p>
+<hr>
+<h2>4. Choice Between Sowing and Planting</h2>
+<h3>Background / Question</h3>
+<p>What of the formulation "if you wish sow, if you wish plant"?</p>
+<h3>Ruling</h3>
+<ul>
+<li>"<em>In shiʾta fa-zraʿ wa-in shiʾta fa-ghris</em>" — <strong>valid</strong>, and the lessee chooses between the two; he may do either, because he has accepted the more harmful (planting trees).</li>
+<li>"<em>Li-tazraʿa wa-taghris</em>" or "<em>li-tazraʿa-hā wa-tughrisa-hā</em>" — <strong>invalid</strong>, because the proportion of each is not specified.</li>
+<li>Al-Qaffāl: "Sow half and plant half" — <strong>invalid</strong> until the lessee specifies which half is for which; the spatial division must be set.</li>
+<li>"<em>Li-tazraʿa-hā aw tughrisa-hā</em>" — <strong>invalid</strong> likewise, on the <em>Tuḥfa</em>'s reading, because it makes one of the two binding without specification. Even if the intent is "whichever you wish," the explicit wording governs over the unstated intent.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-Qaffāl, <em>al-Rawḍ</em> (in the <em>Sharḥ</em>), <em>al-Taqrīr</em>.</p>
+<hr>
+<h2>5. Leasing a Mount (<em>Dābba</em>) for Riding</h2>
+<h3>Background / Question</h3>
+<p>What must be known when one leases a riding mount, whether by <em>ʿayn</em> (a specific animal) or <em>dhimma</em> (an animal described in the contract)?</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>Knowledge of the rider</strong> is required, by sight or by full description sufficient to estimate his weight — body size and build (heavy or thin).</li>
+<li>Al-Bulqīnī's view that "weight together with description" is required is <strong>weak</strong>. The decisive factor is <strong>weight</strong>; modern scales now make this directly knowable.</li>
+<li>Description and weight are required jointly only for the <strong>howdah</strong> (<em>maḥmal</em>), because once a specific howdah is set, it does not change, but a rider's weight may change with fattening or weight loss. So weight alone suffices for the rider; for the howdah, both description and weight (or seeing it and testing it by hand) are required.</li>
+<li>The relied-upon view requires the howdah to be <strong>seen AND tested by hand</strong> when possible — because to the eye it may appear hollow, but to the hand it may turn out to be solid or weighty.</li>
+<li>This same rule applies to whatever the rider travels with: saddle (<em>sarj</em>), packsaddle (<em>īkāf</em>), companion-mount (<em>zāmila</em>) — when the variation among them is significant and there is no settled custom. If a stable custom regulates them, the contract is carried to that custom.</li>
+<li>If the rider brings his <strong>own</strong> equipment, this is fine; the lessor's only obligation is to provide what is suitable for the animal.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-Bulqīnī, al-Adhraʿī, Ibn al-Rifʿa.</p>
+<hr>
+<h2>6. The <em>Maʿālīq</em> (Hanging Items) and Daily Food</h2>
+<h3>Background / Question</h3>
+<p>If the rider stipulates that the mount also carry the <em>maʿālīq</em> — the small items hung along on a journey (water-skin, food, cooking pot, basin, jug, mat, pillow, etc.) — what is the rule?</p>
+<h3>Ruling</h3>
+<ul>
+<li>Stipulating <em>maʿālīq</em> in the absolute, without seeing them and testing them by hand or describing them with their weight, <strong>voids the contract</strong> on the strongest view, because people vary widely in how much they bring.</li>
+<li>The rider's <strong>daily food</strong> along the journey need not be specified by amount; he eats his customary portion.</li>
+<li>If on a given day the rider happens not to eat — because of hospitality from another, illness, or distraction — he is <strong>not</strong> obliged to discharge what he would have eaten from the animal's load. Such occurrences are common.</li>
+<li>If the <em>maʿālīq</em> are not stipulated in the contract at all, the rider has no right to load them — not even a light item like a small water-skin customarily carried, because people vary in this too.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, al-Māwardī.</p>
+<hr>
+<h2>7. Specific (<em>ʿAyn</em>) vs. Described (<em>Dhimma</em>) Leases of Mounts</h2>
+<h3>Background / Question</h3>
+<p>What specifications are required in each form of mount lease?</p>
+<h3>Ruling — Leasing a specific animal (<em>ʿayn</em>)</h3>
+<ul>
+<li>The animal must be <strong>specified</strong> (not left ambiguous). One of "specified-vs-ambiguous" or "known-vs-unknown" descriptions does not substitute for the other.</li>
+<li>Whether <strong>seeing</strong> the animal is required follows the disagreement on sale of an absent object (<em>bayʿ al-ghāʾib</em>); the relied-upon view requires it.</li>
+<li>The animal must be <strong>capable</strong> of the load or ride for which it is hired.</li>
+</ul>
+<h3>Ruling — Leasing in <em>dhimma</em></h3>
+<ul>
+<li>The contract must state:</li>
+<li><strong>Species</strong> (camel, donkey, etc.);</li>
+<li><strong>Kind</strong> (e.g., <em>bukhtī</em> — a specific variety of camel; though some species names indicate kind too);</li>
+<li><strong>Male or female</strong> — the male is stronger, the female is easier to ride;</li>
+<li><strong>Mode of gait</strong>: <em>baḥr</em> (long stride), <em>qaṭūf</em> (slow), or <em>muhamlij</em> (smooth but quick). The lessee specifies this because slowness causes delay, speed causes hardship and possibly nausea for the rider.</li>
+</ul>
+<h3>Ruling — Both forms</h3>
+<ul>
+<li>The <strong>distance per day</strong> must be specified.</li>
+<li>Whether travel is by <strong>day, by night, or both</strong>.</li>
+<li>Where the party <strong>stops</strong> — settled places (where food and water can be bought) or desert (where neither is available, so provisions must be carried).</li>
+<li>Exceeding or falling short of the stipulated route is permitted for a <strong>specific feared harm</strong> (e.g., gunfire on the route between Sana'a and elsewhere): the time of delay caused by such fear is <strong>not</strong> counted against the lessee.</li>
+<li>If the road has <strong>customary stations</strong>, the rider descends at them in measure; if not, stations must be specified or the contract is set by <strong>time alone</strong>.</li>
+<li>If the road is dangerous and unpredictable, time-based pricing is also not feasible. Al-Adhraʿī's response (paraphrasing <em>al-Shāmil</em>): from a specified city to another by necessity is allowed.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, <em>al-Shāmil</em>, al-Adhraʿī, the discussion of <em>bayʿ al-ghāʾib</em>.</p>
+<hr>
+<h2>8. Leasing for Carriage (<em>Ijārah li-l-Ḥaml</em>)</h2>
+<h3>Background / Question</h3>
+<p>What must be known about the <strong>load</strong> when leasing for carriage, and what about the <strong>animal</strong> itself?</p>
+<h3>Ruling — Knowledge of the load (<em>maḥmūl</em>)</h3>
+<ul>
+<li>If the load is <strong>present</strong>, the lessor sees it; if it is hidden in a container or in darkness, he tests it <strong>by hand</strong> to estimate its weight.</li>
+<li>If absent (or present but in a container), it is specified by <strong>measure</strong> (<em>kayl</em>) or <strong>weight</strong> (<em>wazn</em>); weight is preferred for everything because it is more precise.</li>
+<li>The load's <strong>species</strong> (genus) must be known because its effect on the animal varies. Even when measure is constant — salt vs. millet — weight and heaviness vary; even when weight is constant, density varies.</li>
+<li>"Carry on it whatever you wish" — <strong>invalid</strong> (unlike "sow on it whatever you wish" for land, because land bears anything).</li>
+<li>If priced by weight (e.g., 100 <em>raṭl</em> of wheat) or measure (e.g., 10 <em>qafīz</em> of whatever you wish), the <strong>container</strong> is <strong>not</strong> included in the weight; its weight or description must be separately known. Sacks (<em>gharāʾir</em>) of comparable size satisfy custom; otherwise the container's species must also be specified.</li>
+<li>If priced "100 <em>manns</em> including container" — the species of the container must be stated, or "100 <em>manns</em> of whatever you wish."</li>
+<li>If "100 <em>raṭl</em>" alone is said, <strong>the container is excluded</strong> from the weight.</li>
+</ul>
+<h3>Ruling — Knowledge of the animal</h3>
+<ul>
+<li><strong>The species and description of the animal need NOT be specified</strong> in a carriage lease in <em>dhimma</em>, because the lessor is committed only to transporting the load, and the load arrives unaffected by which animal carries it.</li>
+<li><strong>Exceptions</strong> that require specifying the animal's species and description:</li>
+<li>The road has mud (<em>waḥl</em>) and not every animal can pass it;</li>
+<li>The load is fragile — glass, pottery, etc. — and animals vary in stability;</li>
+<li>For riding lease, where the rider's experience varies — always required.</li>
+<li>For mere carriage with no special concern, the speed of the animal is not detailed because customary stations bring the caravan together. A weak animal would be considered a <strong>defect</strong> (<em>ʿayb</em>) the lessee can complain about.</li>
+<li>Al-Zarkashī held that the animal must be specified when the lease is <strong>time-based</strong>, because actual distance varies with the animal. The Shaykh's preferred view is that for carriage by amount of distance, this is unnecessary except in the cases just listed.</li>
+</ul>
+<h3>Modern application: car rental</h3>
+<ul>
+<li>Car rental companies typically leave the use to <strong>custom</strong> and do not stipulate. Cars are not like animals in this respect — they tolerate substantial variation in load without significant harm. Custom can substitute for strict specification only where it actually prevents disputes; where it leads to disputes, the strict rules return.</li>
+<li>The Shaykh's view: for ordinary car rental, custom is sufficient; for an unusual or extraordinary use, the rules of the load and animal must be applied.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Tuḥfa</em>, <em>al-Sharḥ</em> of al-Ramlī, al-Zarkashī, Ibn al-Rifʿa.</p>
+<hr>
+<p>Lesson stopped at the end of this fasl on the conditions of <em>manfaʿa</em> — to be continued next week.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
