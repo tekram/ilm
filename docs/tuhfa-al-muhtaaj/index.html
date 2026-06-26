@@ -11,414 +11,67 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html { background: #fafaf9; color: #37352f; color-scheme: light; }
-      body {
-        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: 1.55;
-        color: #37352f;
-        background: #fafaf9;
-      }
-
-      /* ── Header ── */
-      .site-header {
-        background: #0a1530;
-        padding: 0 32px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .site-header a {
-        color: #a4a0c8;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 0.12s;
-      }
+      body { font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif; font-size: 16px; line-height: 1.55; color: #37352f; background: #fafaf9; }
+      .site-header { background: #0a1530; padding: 0 32px; height: 56px; display: flex; align-items: center; gap: 8px; }
+      .site-header a { color: #a4a0c8; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.12s; }
       .site-header a:hover { color: #ffffff; }
       .site-header .sep { color: #3a4a72; font-size: 14px; }
       .site-header .current { color: #d0ccf0; font-size: 14px; font-weight: 500; }
-
-      /* ── Hero ── */
-      .hero {
-        background: #0a1530;
-        color: #ffffff;
-        padding: 36px 32px 48px;
-      }
-      .hero-inner {
-        max-width: 860px;
-        margin: 0 auto;
-      }
-      .hero h1 {
-        font-size: clamp(24px, 4vw, 36px);
-        font-weight: 600;
-        line-height: 1.15;
-        letter-spacing: -0.5px;
-        color: #ffffff;
-        margin-bottom: 10px;
-      }
-      .hero p {
-        font-size: 15px;
-        color: #a4a0c8;
-        line-height: 1.5;
-      }
-
-      /* ── Container ── */
-      .container {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 40px 32px 72px;
-      }
-
-      /* ── Sessions ── */
-      .sessions-label {
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        color: #787671;
-        margin-bottom: 20px;
-      }
-
-      .session-list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .session-item {
-        background: #ffffff;
-        border: 1px solid #e5e3df;
-        border-radius: 10px;
-        transition: box-shadow 0.12s ease, border-color 0.12s ease;
-      }
-      .session-item:hover {
-        box-shadow: rgba(15, 15, 15, 0.06) 0px 3px 10px;
-        border-color: #c8c4be;
-      }
-
-      .session-link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding: 16px 20px;
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .session-title {
-        font-size: 15px;
-        font-weight: 500;
-        color: #1a1a1a;
-        flex: 1;
-        min-width: 0;
-      }
-
-      .session-meta {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-      }
-      .session-date {
-        font-size: 13px;
-        color: #787671;
-        white-space: nowrap;
-        font-variant-numeric: tabular-nums;
-      }
-      .session-arrow {
-        font-size: 14px;
-        color: #c8c4be;
-        transition: transform 0.12s ease, color 0.12s ease;
-      }
-      .session-item:hover .session-arrow {
-        transform: translateX(3px);
-        color: #5645d4;
-      }
-
-      .empty-state {
-        padding: 48px 0;
-        text-align: center;
-        color: #a4a097;
-        font-size: 15px;
-      }
-
-      /* ── Footer ── */
-      footer {
-        border-top: 1px solid #e5e3df;
-        padding: 28px 32px;
-        text-align: center;
-        font-size: 13px;
-        color: #a4a097;
-      }
-
-      @media (max-width: 560px) {
-        .hero, .site-header { padding-left: 20px; padding-right: 20px; }
-        .container { padding-left: 20px; padding-right: 20px; }
-        .session-link { padding: 14px 16px; }
-      }
+      .hero { background: #0a1530; color: #ffffff; padding: 36px 32px 48px; }
+      .hero-inner { max-width: 860px; margin: 0 auto; }
+      .hero h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 600; line-height: 1.15; letter-spacing: -0.5px; color: #ffffff; margin-bottom: 10px; }
+      .hero p { font-size: 15px; color: #a4a0c8; line-height: 1.5; }
+      .container { max-width: 860px; margin: 0 auto; padding: 40px 32px 72px; }
+      .sessions-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #787671; margin-bottom: 20px; }
+      .session-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+      .session-item { background: #ffffff; border: 1px solid #e5e3df; border-radius: 10px; transition: box-shadow 0.12s ease, border-color 0.12s ease; }
+      .session-item:hover { box-shadow: rgba(15, 15, 15, 0.06) 0px 3px 10px; border-color: #c8c4be; }
+      .session-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; text-decoration: none; color: inherit; }
+      .session-title { font-size: 15px; font-weight: 500; color: #1a1a1a; flex: 1; min-width: 0; }
+      .session-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+      .session-date { font-size: 13px; color: #787671; white-space: nowrap; font-variant-numeric: tabular-nums; }
+      .session-arrow { font-size: 14px; color: #c8c4be; transition: transform 0.12s ease, color 0.12s ease; }
+      .session-item:hover .session-arrow { transform: translateX(3px); color: #5645d4; }
+      footer { border-top: 1px solid #e5e3df; padding: 28px 32px; text-align: center; font-size: 13px; color: #a4a097; }
+      @media (max-width: 560px) { .hero, .site-header { padding-left: 20px; padding-right: 20px; } .container { padding-left: 20px; padding-right: 20px; } .session-link { padding: 14px 16px; } }
     </style>
   </head>
   <body>
-
     <header class="site-header">
       <a href="../index.html">Islamic Learning Materials</a>
       <span class="sep">/</span>
       <span class="current">Tuhfa Al-Muhtaaj</span>
     </header>
-
-    <div class="hero">
-      <div class="hero-inner">
-        <h1>Tuhfa Al-Muhtaaj</h1>
-        <p>Islamic jurisprudence lessons from Tuhfa Al-Muhtaaj</p>
-      </div>
-    </div>
-
+    <div class="hero"><div class="hero-inner"><h1>Tuhfa Al-Muhtaaj</h1><p>Islamic jurisprudence lessons from Tuhfa Al-Muhtaaj</p></div></div>
     <div class="container">
-      <p class="sessions-label">
-        23 sessions
-      </p>
-
+      <p class="sessions-label">24 sessions</p>
       <ul class="session-list">
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260618-160147_Recording.transcript-20260625170224.html" class="session-link">
-            <span class="session-title">Ijarah for Worship Acts: Jihad, Prayer, Quran Recitation &amp; Visiting the Prophet's Grave - June 18, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-06-18</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260521-155816_Recording.transcript-20260521180400.html" class="session-link">
-            <span class="session-title">Ijarah of Land and Mounts: Use-Specification, Carried Loads &amp; Trespass on Property - May 21, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-05-21</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260514-160050_Recording.transcript-20260514173759.html" class="session-link">
-            <span class="session-title">Ijarah: Bathhouse Fees, Time vs. Work Pricing &amp; Teaching Quran - May 14, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-05-14</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260507-160114_Recording.transcript-20260514152925.html" class="session-link">
-            <span class="session-title">Ijarah: Conditions for Valid Benefits, Future Leases &amp; Promoting Zionist Brands - May 07, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-05-07</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260430-160019_Recording.transcript-20260430160019.html" class="session-link">
-            <span class="session-title">Kitab al-Ijarah: Foundations, Contract Forms, and Wage Conditions - April 30, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-04-30</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260423-160027_Recording.transcript-20260423160027.html" class="session-link">
-            <span class="session-title">Musaqat Rulings, Commercial Incentives, and Miscellaneous Fiqh Questions - April 23, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-04-23</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20260402-160412_Recording.transcript-20260402160412.html" class="session-link">
-            <span class="session-title">Musaqat: Conditions, Obligations &amp; Rulings on Irrigation Contracts - April 02, 2026</span>
-            <span class="session-meta">
-              <span class="session-date">2026-04-02</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250911-165830_Recording.transcript-20250911132320.html" class="session-link">
-            <span class="session-title">Acknowledgment and Legal Testimony in Fiqh - September 11, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-09-11</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250904-170151_Recording.transcript-20250910084433.html" class="session-link">
-            <span class="session-title">Agency and Trustee Responsibilities in Transact... - September 04, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-09-04</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250902-170026_Recording.transcript-20250909112119.html" class="session-link">
-            <span class="session-title">## Sale of Land with Trees and Water Rights - September 02, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-09-02</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250828-170039_Recording.transcript-20250910084439.html" class="session-link">
-            <span class="session-title">Agency (Wakala) Rules and Termination - August 28, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-08-28</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250821-153232_Recording.transcript-20250910084444.html" class="session-link">
-            <span class="session-title">## Agency and Trustee Liability in Islamic Law - August 21, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-08-21</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250814-170158_Recording.transcript-20250910084455.html" class="session-link">
-            <span class="session-title">## Agency and Power of Attorney Rules - August 14, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-08-14</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250807-170050_Recording.transcript-20250918100201.html" class="session-link">
-            <span class="session-title">Agency and Sale Rules - August 07, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-08-07</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250731-165943_Recording.transcript-20250918100206.html" class="session-link">
-            <span class="session-title">Agency in Contracts - July 31, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-07-31</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250724-170027_Recording.transcript-20250918100211.html" class="session-link">
-            <span class="session-title">Rules of Agency - July 24, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-07-24</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250717-170015_Recording.transcript-20250918100217.html" class="session-link">
-            <span class="session-title">Agency and Representation - July 17, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-07-17</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250710-170017_Recording.transcript-20250918100223.html" class="session-link">
-            <span class="session-title">Commercial Partnership Rules - July 10, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-07-10</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250703-170021_Recording.transcript-20250910084428.html" class="session-link">
-            <span class="session-title">Partnership in Islamic Law - July 03, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-07-03</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250626-170028_Recording.transcript-20250910084526.html" class="session-link">
-            <span class="session-title">Guarantee and Suretyship Formulations - June 26, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-06-26</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250619-165814_Recording.transcript-20250910084518.html" class="session-link">
-            <span class="session-title">Suretyship and Guarantee in Islamic Law - June 19, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-06-19</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250612-170429_Recording.transcript-20250910084513.html" class="session-link">
-            <span class="session-title">Contractual Guarantees and Obligations in Sales - June 12, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-06-12</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
-        <li class="session-item">
-          <a href="meetings/local-GMT20250529-170107_Recording.transcript-20250910084504.html" class="session-link">
-            <span class="session-title">Comprehensive Guarantee (Kafalah) Rules - May 29, 2025</span>
-            <span class="session-meta">
-              <span class="session-date">2025-05-29</span>
-              <span class="session-arrow">›</span>
-            </span>
-          </a>
-        </li>
-        
+        <li class="session-item"><a href="meetings/local-GMT20260625-160054_Recording.transcript-20260625224602.html" class="session-link"><span class="session-title">Ijarah for Nursing &amp; Childcare, Physician Liability, Landlord Duties &amp; Talfiq Q&amp;A - June 25, 2026</span><span class="session-meta"><span class="session-date">2026-06-25</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260618-160147_Recording.transcript-20260625170224.html" class="session-link"><span class="session-title">Ijarah for Worship Acts: Jihad, Prayer, Quran Recitation &amp; Visiting the Prophet's Grave - June 18, 2026</span><span class="session-meta"><span class="session-date">2026-06-18</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260521-155816_Recording.transcript-20260521180400.html" class="session-link"><span class="session-title">Ijarah of Land and Mounts: Use-Specification, Carried Loads &amp; Trespass on Property - May 21, 2026</span><span class="session-meta"><span class="session-date">2026-05-21</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260514-160050_Recording.transcript-20260514173759.html" class="session-link"><span class="session-title">Ijarah: Bathhouse Fees, Time vs. Work Pricing &amp; Teaching Quran - May 14, 2026</span><span class="session-meta"><span class="session-date">2026-05-14</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260507-160114_Recording.transcript-20260514152925.html" class="session-link"><span class="session-title">Ijarah: Conditions for Valid Benefits, Future Leases &amp; Promoting Zionist Brands - May 07, 2026</span><span class="session-meta"><span class="session-date">2026-05-07</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260430-160019_Recording.transcript-20260430160019.html" class="session-link"><span class="session-title">Kitab al-Ijarah: Foundations, Contract Forms, and Wage Conditions - April 30, 2026</span><span class="session-meta"><span class="session-date">2026-04-30</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260423-160027_Recording.transcript-20260423160027.html" class="session-link"><span class="session-title">Musaqat Rulings, Commercial Incentives, and Miscellaneous Fiqh Questions - April 23, 2026</span><span class="session-meta"><span class="session-date">2026-04-23</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20260402-160412_Recording.transcript-20260402160412.html" class="session-link"><span class="session-title">Musaqat: Conditions, Obligations &amp; Rulings on Irrigation Contracts - April 02, 2026</span><span class="session-meta"><span class="session-date">2026-04-02</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250911-165830_Recording.transcript-20250911132320.html" class="session-link"><span class="session-title">Acknowledgment and Legal Testimony in Fiqh - September 11, 2025</span><span class="session-meta"><span class="session-date">2025-09-11</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250904-170151_Recording.transcript-20250910084433.html" class="session-link"><span class="session-title">Agency and Trustee Responsibilities in Transact... - September 04, 2025</span><span class="session-meta"><span class="session-date">2025-09-04</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250902-170026_Recording.transcript-20250909112119.html" class="session-link"><span class="session-title">## Sale of Land with Trees and Water Rights - September 02, 2025</span><span class="session-meta"><span class="session-date">2025-09-02</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250828-170039_Recording.transcript-20250910084439.html" class="session-link"><span class="session-title">Agency (Wakala) Rules and Termination - August 28, 2025</span><span class="session-meta"><span class="session-date">2025-08-28</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250821-153232_Recording.transcript-20250910084444.html" class="session-link"><span class="session-title">## Agency and Trustee Liability in Islamic Law - August 21, 2025</span><span class="session-meta"><span class="session-date">2025-08-21</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250814-170158_Recording.transcript-20250910084455.html" class="session-link"><span class="session-title">## Agency and Power of Attorney Rules - August 14, 2025</span><span class="session-meta"><span class="session-date">2025-08-14</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250807-170050_Recording.transcript-20250918100201.html" class="session-link"><span class="session-title">Agency and Sale Rules - August 07, 2025</span><span class="session-meta"><span class="session-date">2025-08-07</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250731-165943_Recording.transcript-20250918100206.html" class="session-link"><span class="session-title">Agency in Contracts - July 31, 2025</span><span class="session-meta"><span class="session-date">2025-07-31</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250724-170027_Recording.transcript-20250918100211.html" class="session-link"><span class="session-title">Rules of Agency - July 24, 2025</span><span class="session-meta"><span class="session-date">2025-07-24</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250717-170015_Recording.transcript-20250918100217.html" class="session-link"><span class="session-title">Agency and Representation - July 17, 2025</span><span class="session-meta"><span class="session-date">2025-07-17</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250710-170017_Recording.transcript-20250918100223.html" class="session-link"><span class="session-title">Commercial Partnership Rules - July 10, 2025</span><span class="session-meta"><span class="session-date">2025-07-10</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250703-170021_Recording.transcript-20250910084428.html" class="session-link"><span class="session-title">Partnership in Islamic Law - July 03, 2025</span><span class="session-meta"><span class="session-date">2025-07-03</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250626-170028_Recording.transcript-20250910084526.html" class="session-link"><span class="session-title">Guarantee and Suretyship Formulations - June 26, 2025</span><span class="session-meta"><span class="session-date">2025-06-26</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250619-165814_Recording.transcript-20250910084518.html" class="session-link"><span class="session-title">Suretyship and Guarantee in Islamic Law - June 19, 2025</span><span class="session-meta"><span class="session-date">2025-06-19</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250612-170429_Recording.transcript-20250910084513.html" class="session-link"><span class="session-title">Contractual Guarantees and Obligations in Sales - June 12, 2025</span><span class="session-meta"><span class="session-date">2025-06-12</span><span class="session-arrow">›</span></span></a></li>
+        <li class="session-item"><a href="meetings/local-GMT20250529-170107_Recording.transcript-20250910084504.html" class="session-link"><span class="session-title">Comprehensive Guarantee (Kafalah) Rules - May 29, 2025</span><span class="session-meta"><span class="session-date">2025-05-29</span><span class="session-arrow">›</span></span></a></li>
       </ul>
     </div>
-
-    <footer>
-      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← All Study Circles</a>
-    </footer>
-
+    <footer><a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← All Study Circles</a></footer>
   </body>
 </html>
