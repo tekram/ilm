@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitāb al-Farāʾiḍ: Six Inheritance Problems; Resolution 87 on Work & Employment — July 14, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Kitāb al-Farāʾiḍ: Six Inheritance Problems; Resolution 87 on Work & Employment — July 14, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Kitāb al-Farāʾiḍ: Six Inheritance Problems; Resolution 87 on Work & Employment — July 14, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-07-14</span>
+          
+          <span class="meta-chip">🕐 15:58</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content">
+<h2>Session Overview</h2>
+<p>This session covered two topics: Kitāb al-Farāʾiḍ (Inheritance Law), presenting six solved inheritance problems from the Majmaʿ fatwa corpus, and Resolution 87 (3/20) on permissibility of various forms of employment for Muslims.</p>
+<hr>
+<h2>Part I — Kitāb al-Farāʾiḍ: Six Inheritance Problems</h2>
+<p>The Shaykh and the group worked through six inheritance scenarios, each demonstrating key principles of farāʾiḍ calculation.</p>
+<h3>Problem 1: Paternal Aunt of the Mother, Female Cousins, and Sons of Paternal Uncles</h3>
+<p><strong>Background.</strong> A man dies leaving: (1) his mother's paternal aunt (ʿammat ummihi), (2) two karāʾim (female cousins from the father's side), and (3) the sons of his paternal uncles (awlād al-ʿamm al-ashqāʾ).</p>
+<p><strong>Ruling.</strong> Base (aṣl) = 3. The two karāʾim receive 2/3 (= 2 shares), divided equally. The sons of the paternal uncles receive the remaining 1/3 as ʿaṣaba. The mother's paternal aunt is not an heir at all — she falls among the more distant relatives (dhawū al-arḥām) who do not inherit when closer heirs are present. The Shaykh clarified that awlād al-ʿamm here means the sons (not daughters), since daughters of paternal uncles are not among the entitled heirs.</p>
+<h3>Problem 2: Girl Dies — Mother, Paternal Grandmother, Maternal Grandfather's Father, Three Paternal Aunts, No ʿAṣaba</h3>
+<p><strong>Background.</strong> A girl dies leaving: her mother, her paternal grandmother (umm al-ab), the father of her maternal grandfather (ab umm abīhā), three paternal aunts (ʿammāt), and no ʿaṣaba.</p>
+<p><strong>Ruling.</strong> The entire estate goes to the mother by farḍ (1/3) and radd (the remainder returned to her). None of the other relatives are entitled: the paternal grandmother is excluded by the mother; the maternal grandfather's father and the paternal aunts are all dhawū al-arḥām who only inherit in the absence of those entitled to farḍ and radd. Since the mother takes by both farḍ and radd, nothing remains for them.</p>
+<h3>Problem 3: Son's Daughter, Two Daughters' Daughters, No ʿAṣaba</h3>
+<p><strong>Background.</strong> A woman dies leaving: a son's daughter (bint ibn), two daughters' daughters (banat bint), and no ʿaṣaba.</p>
+<p><strong>Ruling.</strong> The entire estate goes to the son's daughter by farḍ and radd. She receives her farḍ share (1/2) and the remainder by radd, since there is no ʿaṣaba and no bayt al-māl. The daughters' daughters are dhawū al-arḥām and do not inherit while the son's daughter — a closer relative — is present.</p>
+<h3>Problem 4: Mother, Grandfather, and Full Sister (Muqāsama Method)</h3>
+<p><strong>Background.</strong> A person dies leaving: a mother, a paternal grandfather (jadd), and a full sister.</p>
+<p><strong>Ruling.</strong> This falls among the masāʾil al-jadd waʾl-ikhwa (grandfather-and-siblings cases). The most advantageous calculation for the grandfather is al-muqāsama (division as if he were a full brother). Base = 9 (derived from aṣl = 3, then corrected to 9): mother receives 1/3 = 3 shares; grandfather and full sister divide the remaining 6 by muqāsama — grandfather takes 4, sister takes 2.</p>
+<h3>Problem 5: Wife, Two Daughters, Two Full Sisters, and Distant ʿAṣaba (24-Qirāṭ Division)</h3>
+<p><strong>Background.</strong> A man dies leaving: a wife, two daughters, two full sisters, and male ʿaṣaba who are only distant relatives (not direct descendant, ascendant, or sibling ʿaṣaba).</p>
+<p><strong>Ruling.</strong> Base = 24 qirāṭs (the Ḥaḍramī tradition uses qirāṭ as the unit of division in such cases): wife receives 1/8 = 3 qirāṭs; two daughters receive 2/3 = 16 qirāṭs (8 each); two full sisters receive the remaining 5 qirāṭs as ʿaṣaba maʿa al-ghayr (residuaries alongside the daughters) — 2.5 each. The distant ʿaṣaba receive nothing, having been excluded by the full sisters acting as residuaries.</p>
+<h3>Problem 6: Two Daughters and a Full Sister</h3>
+<p><strong>Background.</strong> A woman dies leaving: two daughters and a full sister.</p>
+<p><strong>Ruling.</strong> Base = 3: two daughters receive 2/3 = 2 shares (1 each); the full sister receives 1/3 = 1 share as ʿaṣaba maʿa al-ghayr (she becomes a residuary alongside the daughters in the absence of male ʿaṣaba).</p>
+<hr>
+<h2>Part II — Resolution 87 (3/20): Employment in Various Sectors</h2>
+<p>Resolution 87 of the Majmaʿ al-Fiqhī al-Islāmī bi-l-Hind addresses the permissibility of Muslims working in different types of employment in non-Muslim-majority contexts. The group read through each clause and the Shaykh provided commentary and responses to questions about the American context.</p>
+<h3>A. Military Service</h3>
+<p><strong>Background.</strong> The resolution states that the primary purpose of the military is to defend national borders and maintain security — objectives recognized by Islamic maqāṣid al-sharīʿa — and therefore Muslims may serve.</p>
+<p><strong>Ruling.</strong> Permissible with the condition of avoiding ḥarām acts to the extent possible. Extended discussion followed about the US military. The Shaykh distinguished: if a soldier can genuinely refuse unlawful orders and has the willpower to do so, service may be permissible. He cited Muhammad Ali Clay's conscientious objection case as precedent that refusal is legally available. If, however, a person lacks the resolve to resist unlawful orders when given, then entry into that military is not permissible for him.</p>
+<p>On alliance treaties between Muslim and non-Muslim states: this is established in the Sunna — the Prophet ﷺ formed a treaty with the tribe of Khuzāʿa. Muslim soldiers fighting alongside non-Muslim allies against non-Muslim enemies (who are not under protection — not mustaʾminīn or muʿāhadīn) is permissible, provided no Muslims are among those being fought.</p>
+<h3>B. Government Salaries Funded by Taxes</h3>
+<p><strong>Background.</strong> Tashfeen raised the question: since US government income (including military salaries) comes from taxes, and taxes are collected in ways that may be impermissible by Islamic standards, does working for the government mean accepting money obtained through ḥarām?</p>
+<p><strong>Ruling.</strong> Three tiers: (1) If the exact, identifiable sum given to an employee is known to come directly from impermissible taxes without mixing, it is ḥarām. (2) If funds are mixed with permissible sources and ḥarām is the majority, it is makrūh. (3) If permissible sources predominate, it is permissible. In the US specifically, since government revenue derives from multiple sources (defense exports, bonds, manufacturing) and taxes constitute less than a majority of certain budgets, the problem largely dissolves. Moreover, wealth collected by non-Muslims from other non-Muslims not under Islamic protection does not carry the same impermissibility as wealth seized from protected individuals.</p>
+<h3>C. Intelligence Work (al-Mukhābarāt)</h3>
+<p><strong>Ruling.</strong> The Shaykh strongly objected to the resolution's permissibility ruling. Intelligence agencies are fundamentally built on tajassus (spying on citizens), which is ḥarām. He cited a report in Kitāb ʿAjalat al-Sibāq ilā Makārim al-Akhlāq by Muḥammad ibn ʿAbdullāh al-Haddār, quoting a ḥadīth that the one engaged in tajassus is ibn zinā. He also observed that intelligence agencies in Muslim-majority countries primarily serve to suppress their own populations on behalf of foreign powers. Permissibility would require a genuinely impartial security service protecting citizens from crime — a condition rarely met.</p>
+<h3>D. Courts</h3>
+<p><strong>Ruling.</strong> Permissible, since their purpose is establishing justice and curtailing oppression.</p>
+<h3>E. Tax Collection Departments</h3>
+<p><strong>Ruling.</strong> Permissible in compliance with Shariʿa, subject to three conditions: genuine public need, insufficiency of zakāt revenue, and burden placed on the wealthy. These conditions are generally not met in Muslim-majority countries, but in non-Muslim contexts with non-Muslim majorities the earlier analysis applies.</p>
+<h3>F. Banks and Financial Institutions</h3>
+<p><strong>Ruling.</strong> The resolution distinguishes: (1) ribā-related departments (writing contracts, disbursing loans, receiving payments) = impermissible; (2) unconnected departments (security guard, general admin) = permissible; (3) IT/technical support maintaining systems used for ribā transactions = ḥarām, because the infrastructure is essential to the ribā operation. The Shaykh used the analogy of maintaining a liquor store's infrastructure: if framed as alcohol rather than ribā, the moral seriousness becomes immediately apparent.</p>
+<h3>G. Renting Premises to Ribā Banks</h3>
+<p><strong>Ruling.</strong> Makrūh. This parallels the Ḥanafī ruling on selling grapes to someone known to make wine — indirect rather than direct assistance to the sin. The ruling remains makrūh rather than ḥarām because the lessor's contribution is probabilistic, not certain.</p>
+<h3>H. Insurance Companies</h3>
+<p><strong>Ruling.</strong> Impermissible in conventional companies (ribā + gambling). Permissible in Islamic takāful companies whose systems are clean. Insurance is morally "lighter" than pure ribā since participants focus on protection, not speculation.</p>
+<h3>I. Liquor Industry</h3>
+<p><strong>Ruling.</strong> No form of work is permissible — including making bottles for liquor companies. Selling items that might be used in liquor production: makrūh if use is merely possible; ḥarām if known or strongly suspected.</p>
+<h3>J. Supermarkets Selling Mixed Ḥalāl and Ḥarām Products</h3>
+<p><strong>Ruling.</strong> Permissible to work in a supermarket where most products are ḥalāl, provided the employee does not directly handle ḥarām items. A Shāfiʿī Muslim may follow a Ḥanafī permissibility ruling for items only forbidden under the Shāfiʿī madhhab if he faces genuine hardship and does not categorically reject the Ḥanafī opinion.</p>
+<h3>K. Mixed-Gender Education (al-Taʿlīm al-Mukhtalaṭ)</h3>
+<p><strong>Ruling.</strong> Impermissible in principle; permissible to benefit by necessity. For teachers: establishing a mixed school = iʿāna ʿalā al-maʿṣiya (ḥarām); teaching at an existing mixed school = iqrār ʿalā al-maʿṣiya — excused if leaving causes significant financial hardship. The Shaykh cited Ibn Qāsim's ruling permitting contracting for work even after Friday prayer time begins when one has even a minimal income need, as a parallel principle.</p>
+<h3>L. Vending Machine Transactions (Baiʿ al-Muʿāṭāt)</h3>
+<p>Discussion of a Jordanian Dār al-Iftāʾ fatwa permitting vending machine purchases as baiʿ al-muʿāṭāt (sale by exchange without verbal contract). The Shaykh raised three concerns: (1) If the sole criterion is rida (mutual consent), what prevents a mentally incapacitated person's exchange from being valid? The Ḥanafī madhhab has not truly abolished all contractual conditions. (2) Vending machines involve potential jahl al-mabīʿ (ignorance of the item), analogous to baiʿ al-ḥaṣāt. (3) The fatwa may reflect pressure to validate universally-practiced behavior rather than principled legal analysis. His conclusion: the issue requires careful examination beyond simply invoking muʿāṭāt.</p>
+<h3>M. Ancillary: Inviting Unveiled Female Relatives</h3>
+<p><strong>Ruling.</strong> A woman may invite her female cousins who do not wear ḥijāb to her home without this constituting iqrār of sin. The sin (showing hair in public) ended when they entered the house. Her role is naṣīḥa (counsel), not active prohibiting. This analysis changes if unrelated men are present.</p>
+<hr>
+<h2>Referenced Scholars &amp; Texts</h2>
+<ul>
+<li><strong>Ibn Qāsim (ʿAbd al-Ḥamīd ibn Qāsim)</strong>: Ḥāshiyat ʿAbd al-Ḥamīd ibn Qāsim — on the Friday prayer/employment contract question and validity of contracting with minimal income need</li>
+<li><strong>Muḥammad ibn ʿAbdullāh al-Haddār</strong>: <em>ʿAjalat al-Sibāq ilā Makārim al-Akhlāq</em> — cited for the narration on intelligence operatives</li>
+<li><strong>Imam al-Ḥaddād</strong>: cited on the danger of disparaging the Companions</li>
+<li><strong>Muftī Taqi Usmani and Pakistani Ḥanafī scholars</strong>: cited for fatwas on baiʿ al-muʿāṭāt</li>
+<li><strong>Jordanian Dār al-Iftāʾ</strong>: fatwa on vending machine transactions — discussed and critiqued</li>
+<li><strong>Ibn Ḥajar al-Haytamī</strong>: referenced as foundational Shāfiʿī authority throughout</li>
+</ul>
+</div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>

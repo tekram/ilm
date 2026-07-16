@@ -11,58 +11,294 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html { background: #fafaf9; color: #37352f; color-scheme: light; }
-      body { font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif; font-size: 16px; line-height: 1.55; color: #37352f; background: #fafaf9; }
-      .site-header { background: #0a1530; padding: 0 32px; height: 56px; display: flex; align-items: center; gap: 8px; }
-      .site-header a { color: #a4a0c8; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.12s; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
       .site-header a:hover { color: #ffffff; }
       .site-header .sep { color: #3a4a72; font-size: 14px; }
       .site-header .current { color: #d0ccf0; font-size: 14px; font-weight: 500; }
-      .hero { background: #0a1530; color: #ffffff; padding: 36px 32px 48px; }
-      .hero-inner { max-width: 860px; margin: 0 auto; }
-      .hero h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 600; line-height: 1.15; letter-spacing: -0.5px; color: #ffffff; margin-bottom: 10px; }
-      .hero p { font-size: 15px; color: #a4a0c8; line-height: 1.5; }
-      .container { max-width: 860px; margin: 0 auto; padding: 40px 32px 72px; }
-      .sessions-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #787671; margin-bottom: 20px; }
-      .session-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-      .session-item { background: #ffffff; border: 1px solid #e5e3df; border-radius: 10px; transition: box-shadow 0.12s ease, border-color 0.12s ease; }
-      .session-item:hover { box-shadow: rgba(15, 15, 15, 0.06) 0px 3px 10px; border-color: #c8c4be; }
-      .session-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; text-decoration: none; color: inherit; }
-      .session-title { font-size: 15px; font-weight: 500; color: #1a1a1a; flex: 1; min-width: 0; }
-      .session-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-      .session-date { font-size: 13px; color: #787671; white-space: nowrap; font-variant-numeric: tabular-nums; }
-      .session-arrow { font-size: 14px; color: #c8c4be; transition: transform 0.12s ease, color 0.12s ease; }
-      .session-item:hover .session-arrow { transform: translateX(3px); color: #5645d4; }
-      footer { border-top: 1px solid #e5e3df; padding: 28px 32px; text-align: center; font-size: 13px; color: #a4a097; }
-      @media (max-width: 560px) { .hero, .site-header { padding-left: 20px; padding-right: 20px; } .container { padding-left: 20px; padding-right: 20px; } .session-link { padding: 14px 16px; } }
+
+      /* ── Hero ── */
+      .hero {
+        background: #0a1530;
+        color: #ffffff;
+        padding: 36px 32px 48px;
+      }
+      .hero-inner {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .hero h1 {
+        font-size: clamp(24px, 4vw, 36px);
+        font-weight: 600;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 15px;
+        color: #a4a0c8;
+        line-height: 1.5;
+      }
+
+      /* ── Container ── */
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 32px 72px;
+      }
+
+      /* ── Sessions ── */
+      .sessions-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #787671;
+        margin-bottom: 20px;
+      }
+
+      .session-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .session-item {
+        background: #ffffff;
+        border: 1px solid #e5e3df;
+        border-radius: 10px;
+        transition: box-shadow 0.12s ease, border-color 0.12s ease;
+      }
+      .session-item:hover {
+        box-shadow: rgba(15, 15, 15, 0.06) 0px 3px 10px;
+        border-color: #c8c4be;
+      }
+
+      .session-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 20px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .session-title {
+        font-size: 15px;
+        font-weight: 500;
+        color: #1a1a1a;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+      .session-date {
+        font-size: 13px;
+        color: #787671;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      .session-arrow {
+        font-size: 14px;
+        color: #c8c4be;
+        transition: transform 0.12s ease, color 0.12s ease;
+      }
+      .session-item:hover .session-arrow {
+        transform: translateX(3px);
+        color: #5645d4;
+      }
+
+      .empty-state {
+        padding: 48px 0;
+        text-align: center;
+        color: #a4a097;
+        font-size: 15px;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .hero, .site-header { padding-left: 20px; padding-right: 20px; }
+        .container { padding-left: 20px; padding-right: 20px; }
+        .session-link { padding: 14px 16px; }
+      }
     </style>
   </head>
   <body>
+
     <header class="site-header">
       <a href="../index.html">Islamic Learning Materials</a>
       <span class="sep">/</span>
       <span class="current">Majma Al-Fatawa Bilhind</span>
     </header>
+
     <div class="hero">
       <div class="hero-inner">
         <h1>Majma Al-Fatawa Bilhind</h1>
         <p>Majma Al-Fatawa Bilhind sessions</p>
       </div>
     </div>
+
     <div class="container">
-      <p class="sessions-label">10 sessions</p>
+      <p class="sessions-label">
+        11 sessions
+      </p>
+
       <ul class="session-list">
-        <li class="session-item"><a href="meetings/local-GMT20260707-160035_Recording.transcript-20260707192433.html" class="session-link"><span class="session-title">Kitāb al-Hibā: Shared Passageway Waqf; Family Trade Partnerships & Water Rights - July 7, 2026</span><span class="session-meta"><span class="session-date">2026-07-07</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260623-160055_Recording.transcript-20260625170224.html" class="session-link"><span class="session-title">Waqf on Owned Canal: Two Grounds of Invalidity; Cosmetic Surgery; Women's Work; Polar Prayer Times — June 23, 2026</span><span class="session-meta"><span class="session-date">2026-06-23</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260616-160032_Recording.transcript-20260625170224.html" class="session-link"><span class="session-title">Waqf for Women's Mosques, Work-Site Domicile & Prisoner Rights - June 16, 2026</span><span class="session-meta"><span class="session-date">2026-06-16</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260602-160043_Recording.transcript-20260625170224.html" class="session-link"><span class="session-title">Waqf Nazarship Conditions & Sale of Seized Waqf Properties - June 02, 2026</span><span class="session-meta"><span class="session-date">2026-06-02</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260526-160027_Recording.transcript-20260526185553.html" class="session-link"><span class="session-title">Combined Fast Intentions, Mosque Renovation & Fiqh Symposium Rulings - May 26, 2026</span><span class="session-meta"><span class="session-date">2026-05-26</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260519-155835_Recording.transcript-20260521165222.html" class="session-link"><span class="session-title">Waqf Interpretation, Nadhr, Hajj Symposium Rulings & Brain Death - May 19, 2026</span><span class="session-meta"><span class="session-date">2026-05-19</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260512-160053_Recording.transcript-20260514161844.html" class="session-link"><span class="session-title">Mosque Expansion, Waqf Materials, Health Insurance & Genetic Testing - May 12, 2026</span><span class="session-meta"><span class="session-date">2026-05-12</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20260505-160026_Recording.transcript-20260505160026.html" class="session-link"><span class="session-title">Waqf Scope and Bank Card Rulings - May 05, 2026</span><span class="session-meta"><span class="session-date">2026-05-05</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20251007-170008_Recording.transcript-20251014112044.html" class="session-link"><span class="session-title">Sale of Inherited Property - October 07, 2025</span><span class="session-meta"><span class="session-date">2025-10-07</span><span class="session-arrow">›</span></span></a></li>
-        <li class="session-item"><a href="meetings/local-GMT20250930-170031_Recording.transcript-20251014112040.html" class="session-link"><span class="session-title">Usufruct Bequest Rules - September 30, 2025</span><span class="session-meta"><span class="session-date">2025-09-30</span><span class="session-arrow">›</span></span></a></li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260714-155805_Recording.transcript-20260716140759.html" class="session-link">
+            <span class="session-title">Kitāb al-Farāʾiḍ: Six Inheritance Problems; Resolution 87 on Work & Employment — July 14, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-07-14</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260707-160035_Recording.transcript-20260707192433.html" class="session-link">
+            <span class="session-title">Kitāb al-Hibā: Shared Passageway Waqf; Family Trade Partnerships & Water Rights - July 7, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-07-07</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260623-160055_Recording.transcript-20260625170224.html" class="session-link">
+            <span class="session-title">Waqf on Owned Canal: Two Grounds of Invalidity; Cosmetic Surgery; Women's Work; Polar Prayer Times — June 23, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-06-23</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260616-160032_Recording.transcript-20260625170224.html" class="session-link">
+            <span class="session-title">Waqf for Women's Mosques, Siqaya Redirection, Mother's Oath & Prisoner Rights - June 16, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-06-16</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260602-160043_Recording.transcript-20260625170224.html" class="session-link">
+            <span class="session-title">Waqf Nazarship Conditions & Sale of Seized Waqf Properties - June 02, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-06-02</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260526-160027_Recording.transcript-20260526185553.html" class="session-link">
+            <span class="session-title">Combined Fast Intentions, Mosque Renovation & Fiqh Symposium Rulings - May 26, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-05-26</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260519-155835_Recording.transcript-20260521165222.html" class="session-link">
+            <span class="session-title">Waqf Interpretation, Nadhr, Hajj Symposium Rulings & Brain Death - May 19, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-05-19</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260512-160053_Recording.transcript-20260514161844.html" class="session-link">
+            <span class="session-title">Mosque Expansion, Waqf Materials, Health Insurance & Genetic Testing - May 12, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-05-12</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20260505-160026_Recording.transcript-20260505160026.html" class="session-link">
+            <span class="session-title">Waqf Scope and Bank Card Rulings - May 05, 2026</span>
+            <span class="session-meta">
+              <span class="session-date">2026-05-05</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20251007-170008_Recording.transcript-20251014112044.html" class="session-link">
+            <span class="session-title">Sale of Inherited Property - October 07, 2025</span>
+            <span class="session-meta">
+              <span class="session-date">2025-10-07</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
+        <li class="session-item">
+          <a href="meetings/local-GMT20250930-170031_Recording.transcript-20251014112040.html" class="session-link">
+            <span class="session-title">Usufruct Bequest Rules - September 30, 2025</span>
+            <span class="session-meta">
+              <span class="session-date">2025-09-30</span>
+              <span class="session-arrow">›</span>
+            </span>
+          </a>
+        </li>
+        
       </ul>
     </div>
-    <footer><a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← All Study Circles</a></footer>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← All Study Circles</a>
+    </footer>
+
   </body>
 </html>
