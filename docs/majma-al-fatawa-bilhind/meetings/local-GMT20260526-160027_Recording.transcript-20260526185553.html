@@ -4,350 +4,60 @@
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Combined Fast Intentions, Mosque Renovation & Fiqh Symposium Rulings - May 26, 2026</title>
+    <title>Combined Fast Intentions, Mosque Renovation &amp; Fiqh Symposium Rulings - May 26, 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html { background: #fafaf9; color: #37352f; color-scheme: light; }
-      body {
-        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: 1.55;
-        color: #37352f;
-        background: #fafaf9;
-      }
-
-      /* ── Site Header ── */
-      .site-header {
-        background: #0a1530;
-        padding: 0 32px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .site-header a {
-        color: #a4a0c8;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 0.12s;
-      }
+      body { font-family: Inter, -apple-system, system-ui, sans-serif; font-size: 16px; line-height: 1.55; color: #37352f; background: #fafaf9; }
+      .site-header { background: #0a1530; padding: 0 32px; height: 56px; display: flex; align-items: center; gap: 8px; }
+      .site-header a { color: #a4a0c8; text-decoration: none; font-size: 14px; font-weight: 500; }
       .site-header a:hover { color: #ffffff; }
       .site-header .sep { color: #3a4a72; font-size: 14px; }
-      .site-header .current {
-        color: #d0ccf0;
-        font-size: 14px;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 320px;
-      }
-
-      /* ── Page Header ── */
-      .page-header {
-        background: #0a1530;
-        padding: 36px 32px 48px;
-        border-bottom: 1px solid #1a2a52;
-      }
-      .page-header-inner {
-        max-width: 760px;
-        margin: 0 auto;
-      }
-      .page-header h1 {
-        font-size: clamp(22px, 3.5vw, 32px);
-        font-weight: 600;
-        line-height: 1.2;
-        letter-spacing: -0.5px;
-        color: #ffffff;
-        margin-bottom: 12px;
-      }
-      .session-meta {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-      .meta-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 12px;
-        font-weight: 500;
-        color: #a4a0c8;
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.10);
-        border-radius: 9999px;
-        padding: 3px 10px;
-      }
-
-      /* ── Content ── */
-      .content-wrapper {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 48px 32px 80px;
-      }
-
-      /* Markdown content typography */
-      .summary-content {
-        font-size: 16px;
-        line-height: 1.7;
-        color: #37352f;
-      }
-      .summary-content h1 {
-        font-size: 26px;
-        font-weight: 600;
-        letter-spacing: -0.3px;
-        color: #1a1a1a;
-        margin-top: 2.2em;
-        margin-bottom: 0.7em;
-        padding-bottom: 0.3em;
-        border-bottom: 2px solid #e5e3df;
-      }
-      .summary-content h2 {
-        font-size: 21px;
-        font-weight: 600;
-        letter-spacing: -0.2px;
-        color: #1a1a1a;
-        margin-top: 2em;
-        margin-bottom: 0.6em;
-        padding-bottom: 0.25em;
-        border-bottom: 1px solid #e5e3df;
-      }
-      .summary-content h3 {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-top: 1.6em;
-        margin-bottom: 0.5em;
-      }
-      .summary-content h4 {
-        font-size: 15px;
-        font-weight: 600;
-        color: #5d5b54;
-        margin-top: 1.4em;
-        margin-bottom: 0.4em;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .summary-content p {
-        margin: 1em 0;
-      }
-      .summary-content ul,
-      .summary-content ol {
-        margin: 1em 0;
-        padding-left: 1.8em;
-      }
-      .summary-content li {
-        margin: 0.45em 0;
-      }
-      .summary-content strong {
-        font-weight: 600;
-        color: #1a1a1a;
-      }
-      .summary-content em {
-        color: #5d5b54;
-      }
-      .summary-content blockquote {
-        border-left: 3px solid #5645d4;
-        padding: 0.6em 0 0.6em 1.2em;
-        margin: 1.2em 0;
-        color: #5d5b54;
-        background: #f4f0fc;
-        border-radius: 0 8px 8px 0;
-      }
-      .summary-content hr {
-        border: none;
-        border-top: 2px solid #e5e3df;
-        margin: 2.5em 0;
-      }
-      .summary-content code {
-        background: #f0eeec;
-        padding: 0.1em 0.35em;
-        border-radius: 4px;
-        font-size: 0.9em;
-        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-      }
-      .summary-content pre {
-        background: #f0eeec;
-        padding: 1.2em;
-        border-radius: 8px;
-        overflow-x: auto;
-        margin: 1.2em 0;
-      }
-      .summary-content pre code {
-        background: none;
-        padding: 0;
-      }
-      /* first h1/h2 shouldn't have a huge top margin */
-      .summary-content > h1:first-child,
-      .summary-content > h2:first-child,
-      .summary-content > h3:first-child {
-        margin-top: 0;
-      }
-
-      /* ── Footer ── */
-      footer {
-        border-top: 1px solid #e5e3df;
-        padding: 28px 32px;
-        text-align: center;
-        font-size: 13px;
-        color: #a4a097;
-      }
-
-      @media (max-width: 560px) {
-        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
-        .content-wrapper { padding-left: 20px; padding-right: 20px; }
-        .site-header .current { max-width: 160px; }
-      }
+      .site-header .current { color: #d0ccf0; font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 320px; }
+      .page-header { background: #0a1530; padding: 36px 32px 48px; border-bottom: 1px solid #1a2a52; }
+      .page-header-inner { max-width: 760px; margin: 0 auto; }
+      .page-header h1 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -0.5px; color: #ffffff; margin-bottom: 12px; }
+      .session-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+      .meta-chip { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; color: #a4a0c8; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); border-radius: 9999px; padding: 3px 10px; }
+      .content-wrapper { max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; }
+      .summary-content { font-size: 16px; line-height: 1.7; color: #37352f; }
+      .summary-content h2 { font-size: 21px; font-weight: 600; color: #1a1a1a; margin-top: 2em; margin-bottom: 0.6em; padding-bottom: 0.25em; border-bottom: 1px solid #e5e3df; }
+      .summary-content h3 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-top: 1.6em; margin-bottom: 0.5em; }
+      .summary-content p { margin: 1em 0; }
+      .summary-content ul, .summary-content ol { margin: 1em 0; padding-left: 1.8em; }
+      .summary-content li { margin: 0.45em 0; }
+      .summary-content strong { font-weight: 600; color: #1a1a1a; }
+      .summary-content em { color: #5d5b54; }
+      .summary-content hr { border: none; border-top: 2px solid #e5e3df; margin: 2.5em 0; }
+      .summary-content > h2:first-child { margin-top: 0; }
+      footer { border-top: 1px solid #e5e3df; padding: 28px 32px; text-align: center; font-size: 13px; color: #a4a097; }
     </style>
   </head>
   <body>
-
     <header class="site-header">
       <a href="../../index.html">Islamic Learning Materials</a>
       <span class="sep">/</span>
       <a href="../index.html">Sessions</a>
       <span class="sep">/</span>
-      <span class="current">Combined Fast Intentions, Mosque Renovation & Fiqh Symposium Rulings - May 26, 2026</span>
+      <span class="current">Combined Fast Intentions, Mosque Renovation &amp; Fiqh Symposium Rulings - May 26, 2026</span>
     </header>
-
     <div class="page-header">
       <div class="page-header-inner">
-        <h1>Combined Fast Intentions, Mosque Renovation & Fiqh Symposium Rulings - May 26, 2026</h1>
+        <h1>Combined Fast Intentions, Mosque Renovation &amp; Fiqh Symposium Rulings - May 26, 2026</h1>
         <div class="session-meta">
           <span class="meta-chip">📅 2026-05-26</span>
-          
           <span class="meta-chip">🕐 16:00</span>
-          
         </div>
       </div>
     </div>
-
     <div class="content-wrapper">
-      <div class="summary-content"><h2>Overview</h2>
-<p>This session of the Majma' al-Fatawa bi'l-Hind weaves together classical and contemporary Shafi'i fiqh. It opens with a question on combining the fast of the Day of Arafah with a make-up (qada') of Ramadan, moves into a detailed fatwa by 'Abd al-Rahman al-Mashhur on the renovation of an ancient mosque in Shibam (Hadramawt) including the rules of selling worn-out mats and woodwork, and then works systematically through Resolutions 71–75 of the 7th–17th Symposium of the Islamic Fiqh Academy held at Madrasa Sheikh 'Ali al-Muttaqi (Burhanpur, India): environmental pollution, sex education in schools, modern medical treatments for the fasting person, the starting point of travel distance, and dual-residence rulings for those working away from home. The session closes with brief notes on protection from the evil eye through adhkar and a clarification on the three-day rule for grazing animals in zakat.</p>
-<hr>
-<h2>1. Combining the Fast of Arafah with a Qada' of Ramadan</h2>
-<h3>Background / Question</h3>
-<p>A questioner asks: if one intends both the fast of 'Arafah and a make-up day of Ramadan, does the full reward (thawab kamil) of 'Arafah accrue? Ibn Hajar al-Haytami in his Fatawa says "if he intends it, both are obtained" — but is this the full reward, or merely the requested act?</p>
-<h3>Ruling</h3>
-<ul>
-<li>Ibn Hajar and al-Ramli agree: if one explicitly intends both the obligatory (qada') and the supererogatory (Arafah), both are validly performed and rewarded together.</li>
-<li>They differ when only the fard is intended without intending Arafah:</li>
-<li><strong>Ibn Hajar</strong>: the basic merit (asl al-sunna) is obtained — i.e. one is not blamed for omitting the encouraged fast — but the full reward of Arafah is not realized.</li>
-<li><strong>Al-Ramli</strong>: the full reward of Arafah is obtained even without explicit intention, just as he holds in the parallel case of tahiyyat al-masjid (the masjid-greeting prayer being absorbed into any prayer one offers on entering).</li>
-<li>The relied-upon (mu'tamad) position of the madhhab: combining the niyya of fard and nafl on a single day is valid.</li>
-<li>Opposing minority views: al-Sayyid al-Samhudi held that combining fard with nafl is invalid (neither is realized); Makhrama similarly held that no supererogatory fast is valid before the qada' of Ramadan is completed.</li>
-</ul>
-<h3>Referenced scholars / texts</h3>
-<p>Ibn Hajar al-Haytami (Fatawa), Shams al-Din al-Ramli, al-Sayyid al-Samhudi, Makhrama.</p>
-<hr>
-<h2>2. Renovating the Khawkha Mosque in Shibam — a Fatwa of 'Abd al-Rahman al-Mashhur</h2>
-<h3>Background / Question</h3>
-<p>A group of pious people in Shibam (the ancient "high city" of mudbrick towers in Hadramawt, dated by the fatwa to 1319 AH) sought to demolish and rebuild the old Khawkha mosque. The structure was decaying, leaked when it rained, and stood lower than the surrounding ground so water pooled around it. They proposed to raise its floor by about three cubits, build it higher, sell its old mats, doors and timbers, and replace them. May they proceed, and is anyone entitled to object?</p>
-<h3>Ruling</h3>
-<ul>
-<li>When <strong>necessity (darura), need (haja), or general benefit (maslaha)</strong> require it — e.g. risk of a wall collapsing, protecting worshippers from heat, cold, or overcrowding — the mosque may be demolished, raised, or expanded.</li>
-<li>Hierarchy of who may act:</li>
-</ul>
-<p>1. The <strong>specific qualified nazir</strong> (trustee) named by the founder.</p>
-<p>2. The <strong>ruler (hakim)</strong> if no qualified nazir exists.</p>
-<p>3. <strong>Others</strong> only with the permission of the nazir or, failing that, the hakim.</p>
-<ul>
-<li>A third party acting without either permission is sinful and liable to ta'zir from a qualified judge. If a third party acts with the hakim's permission but bypasses an available nazir, he sins but is not punished (because of the hakim's involvement). If no hakim exists and a person of integrity sees a clear benefit such that "if the founder were alive he would consent," it is permitted.</li>
-<li><strong>Required conditions</strong> for the rebuilt structure:</li>
-<li>It must retain the form (sura) of a mosque — it may not be converted into a ribat, school, or hospital.</li>
-<li>Minor rearrangements within the mosque form (moving a mihrab, making a courtyard, making the central area a place for shoes) are permitted.</li>
-<li>Any expansion involving opening a new door or breaching a wall requires the imam's or his deputy's permission.</li>
-<li><strong>Selling old mats and woodwork</strong>: not permitted unless they are truly worn out — i.e. their beauty <em>and</em> benefit are gone, or the wood is broken or rotted such that it is fit only for burning. In that case the proceeds are spent on the mosque's interests; if a replacement mat or beam can be bought, it must be bought before any other use of the funds.</li>
-<li>If old timber still has any usable purpose — even mixed into the building's mortar — selling it remains impermissible; a wooden offcut can stand in place of a brick, and shavings (nuhata) can stand in place of straw mixed into the mud.</li>
-<li>Privately-owned (not waqf) furnishings of a mosque may be sold freely when there is benefit.</li>
-<li>Anyone obstructing the qualified nazirs in such a permitted renovation has no right to do so; the builders and supporters earn great reward, per the hadith "Whoever builds a mosque for the sake of Allah, Allah builds for him the like of it in Paradise" and "...even (as small) as a sandgrouse's nesting hollow."</li>
-</ul>
-<h3>Practical case raised in the session</h3>
-<p>When mosque carpets become foul-smelling, stain worshippers' clothes, or cause allergies through long use, they are treated as "ruined" (talif) — in fact worse, since they actively harm worshippers. They must be removed and, if not saleable, discarded outside the mosque. Foul odors must be removed from the mosque because "the angels are harmed by what harms the children of Adam."</p>
-<h3>Referenced scholars / texts</h3>
-<p>'Abd al-Rahman b. Muhammad al-Mashhur (Fatawa — sahib al-Bughya), Ibn Hajar al-Haytami (Tuhfa, Fath al-Jawad), Imam al-Nawawi.</p>
-<hr>
-<h2>3. Endowments for the Mosque vs. for Its Interests (Masalih)</h2>
-<h3>Question</h3>
-<p>If someone endows the income of a shop or property "for the mosque" without qualifying it, what may that income be spent on?</p>
-<h3>Ruling</h3>
-<ul>
-<li>A dispute between al-Khatib al-Shirbini and al-Ramli:</li>
-<li><strong>Al-Khatib</strong>: an unqualified waqf "on the mosque" funds only the physical building — construction, plastering, the floor, brooms, lamps. It does <strong>not</strong> fund the imam, mu'adhdhin, or mats; nor decoration.</li>
-<li><strong>Al-Ramli</strong>: it covers everything, including the imam and mu'adhdhin's stipends.</li>
-<li>Both agree that a waqf explicitly "on the <em>masalih</em> (interests) of the mosque" covers all of these — but never decoration or gilding, which are considered blameworthy because they distract worshippers (and a waqf restricted purely to decoration is invalid).</li>
-<li>Practical advice: when endowing, write "for the masalih of the mosque" rather than simply "for the mosque" to capture the broader scope.</li>
-</ul>
-<hr>
-<h2>4. Symposium Resolution #71 — Protecting the Environment</h2>
-<h3>Ruling</h3>
-<ul>
-<li>Industries that generate pollution <strong>must</strong> use pollution-control measures so the environment and human health are not harmed; the shaykhs framed this as a sharʿi obligation under the maxim "no harm and no causing harm" (la darar wa la dirar).</li>
-<li>The symposium called on the Indian government to legislate environmental protections binding on both domestic and multinational firms and pressed that wealthy nations bear historical responsibility for global pollution.</li>
-<li>Citizens were urged to avoid open drains, dumping in streets and public places, and water pollution.</li>
-<li>The session noted a distinction the shaykhs drew between direct chemical pollution (a present obligation to prevent) and indirect long-term harms such as deforestation — the latter is not by itself religiously obligatory to prevent absent state regulation.</li>
-</ul>
-<hr>
-<h2>5. Symposium Resolution #72 — Sex Education in Schools</h2>
-<h3>Ruling</h3>
-<ul>
-<li>The symposium strongly opposed the Indian government's proposal to introduce sex education in primary and secondary curricula, calling it a Western import alien to both Islamic teaching and Hindu/Eastern values.</li>
-<li>It urged that the curriculum instead emphasize moral and chastity-based education drawn from values shared across religions, without favoring any specific creed.</li>
-<li>Session commentary: mere instruction about reproductive anatomy and function is not in itself forbidden; what the resolution objects to is teaching that may inflame the desires of minors, normalizing illicit acts, or introducing materials such as contraceptive instruction at an age when the harm outweighs the benefit. The shaykhs noted that in Tarim such matters are traditionally taught privately, often close to marriage.</li>
-<li>On contemporary questions about same-sex attraction discussed in schools, the shaykhs emphasized teaching the legal ruling of Islam directly — what is halal and haram — rather than arguing about what is "natural"; the answer is what Allah has legislated, which produces offspring, mawadda and rahma in the conjugal bond.</li>
-</ul>
-<hr>
-<h2>6. Symposium Resolution #73 — Medical Treatments and Fasting</h2>
-<h3>Rulings (one by one)</h3>
-<p>1. Medicine placed under the tongue for a heart condition does <strong>not</strong> break the fast, provided no part of it or saliva mixed with it is swallowed.</p>
-<p>2. An <strong>inhaler</strong> used by a fasting asthmatic does break the fast (al-Sayyid 'Abdullah Mahfuz al-Haddad differed, holding it does not, because no physical substance enters). The shaykhs note Shaykh Fadl also broke the fast for it.</p>
-<p>3. Inhaling vaporized medicine through nose or mouth via a nebulizer or similar device breaks the fast.</p>
-<p>4. <strong>Intravenous or intramuscular injections</strong> — whether medicinal or nutritional — do <strong>not</strong> break the fast, but nutritional/strength injections without a sharʿi need are disliked (makruh). Shaykh Salim al-'Alawi (in <em>Wuduh al-Butlan</em>) dissented and considered all injections to break the fast; Shaykh Fadl leaned toward the symposium's view; the speaker's grandfather counselled fasting in any case, then making up the day out of caution.</p>
-<p>5. Use of the injection apparatus itself does not break the fast, though it carries some makruh given the nutritive component.</p>
-<p>6. Medicine introduced into the rectum, reaching the upper boundary of the colon, breaks the fast (whether liquid or not). Topical application to the site of haemorrhoids does not, though it should be avoided while fasting except in serious need.</p>
-<p>7. Insertion of medical instruments into the rectum for examination does not break the fast — unless the instrument carries medicine or liquid, in which case it does. The Hanafis hold non-detached instruments do not break unless they carry moisture.</p>
-<p>8. Vaginal medication: applied to the outer part of the vulva does not break the fast; placed internally does.</p>
-<p>9. Drops into the urethra (ihlil) of a male: do not break the fast in the relied-upon Shafi'i view (since it does not normally constitute an opening), though there is genuine ikhtilaf, with the woman's nipple in a parallel position.</p>
-<p>10. Insertion of examination tools into the womb breaks the fast if they carry medication or other substances.</p>
-<hr>
-<h2>7. Symposium Resolution #74 — Beginning of Travel Distance</h2>
-<h3>Ruling</h3>
-<ul>
-<li>One who leaves the house intending only destinations within his own city is not a traveler in the shar'i sense regardless of distance, and the concessions of travel do not apply.</li>
-<li>Travel concessions (qasr, iftar) begin only when one actually departs the city's boundary intending external travel.</li>
-<li>In small towns, the travel-distance count starts at the town's edge; one becomes a traveler at 48 <em>miles</em>.</li>
-<li>Discussion of the mile: the symposium speaks loosely; the Hashimi (sharʿi) mile differs from the contemporary mile. Converting 48 modern miles at 1.6 km gives ~77 km. Bajuri's <em>Sharh al-Yaqut al-Nafis</em> mentions ~75.6 km (Hashimi reckoning, on Ibn 'Abd al-Barr's method). Speakers cited values around 82 km (some attributing similar figures to Shaykh 'Ali Jum'a, who in turn followed al-Sayyid Ahmad bak al-Husayni at ~84 km). The case of Tarim to Sha'b al-Nabi Hud (~75–76 km) was given as illustrative, with the Habib Mashhur not shortening while Shaykh Muhammad al-Khatib combines without shortening.</li>
-<li>For large cities, the symposium split: the majority count from the city's outer boundary; a minority count from the quarter (hayy) one departs from. All agreed that the traveler does not begin qasr until leaving the city, and that the qasr ruling ends upon returning to its limits.</li>
-<li>The criterion for "one city" is custom (urf), not administrative subdivision; intermediate empty land, farms, or government compounds do not split one urban fabric into two. If usage establishes that two adjacent areas have become separate cities, distance is reckoned between them; in case of doubt, the ruling of a single city stands.</li>
-</ul>
-<hr>
-<h2>8. Symposium Resolution #75 — Workplace as a Residence (Mawtan)</h2>
-<h3>Ruling</h3>
-<ul>
-<li>Building one's own home in the city of work and residing there long-term is treated as the intention of permanent residence. That city becomes a real homeland (mawtan haqiqi) alongside the original homeland — a person may have more than one. He may not shorten his prayers in either.</li>
-<li>If he does not own a home there but lives with his family in rented or company housing with the intention of permanent residence, the same ruling applies.</li>
-<li>The Shafi'i criterion clarified: the test is <strong>not</strong> primarily employment but <strong>family</strong>. Where the family lives is the primary mawtan. If a person has family in two cities, one then looks at wealth/property; if equal, the longer-staying location; if still equal, both are treated as homelands. As soon as he enters either, his travel ends.</li>
-<li>A worker who lives most of the year in a city without his family is not counted toward the Friday congregation as a resident; the Friday prayer is still binding on him by reason of his de facto presence.</li>
-</ul>
-<hr>
-<h2>9. Closing Notes</h2>
-<ul>
-<li><strong>The evil eye (al-'ayn)</strong>: it is real ("it puts a man in the grave and a camel in the cooking pot"); daily morning and evening adhkar protect against it, as Imam al-Haddad reportedly did not fear it for himself or his children. Exceptions exist by Allah's decree. Adhkar are also broadly effective against the entry of jinn into homes — even more so than against the evil eye, since the evil eye is an act of human injury (jinaya) that Allah may permit despite the recitation.</li>
-<li><strong>Zakat and grazing animals</strong>: the three-day rule for animals being fed by their owner (which would disqualify them as saʿima) is not an absolute fixed period; the criterion is the time beyond which the animal suffers clear harm. With improved feed, the period may extend (e.g. to a week), and the ruling adjusts to actual modern conditions.</li>
-</ul>
-<hr>
-<p>The next session will, in sha'a Allah, be Thursday's lesson in <em>Tuhfat al-Muhtaj</em>, with the present series continuing the following week.</p></div>
+      <div class="summary-content"><h2>Overview</h2><p>This session of the Majma' al-Fatawa bi'l-Hind weaves together classical and contemporary Shafi'i fiqh. It opens with a question on combining the fast of the Day of Arafah with a make-up (qada') of Ramadan, moves into a detailed fatwa by 'Abd al-Rahman al-Mashhur on the renovation of an ancient mosque in Shibam (Hadramawt) including the rules of selling worn-out mats and woodwork, and then works systematically through Resolutions 71–75 of the 7th–17th Symposium of the Islamic Fiqh Academy held at Madrasa Sheikh 'Ali al-Muttaqi (Burhanpur, India): environmental pollution, sex education in schools, modern medical treatments for the fasting person, the starting point of travel distance, and dual-residence rulings for those working away from home. The session closes with brief notes on protection from the evil eye through adhkar and a clarification on the three-day rule for grazing animals in zakat.</p></div>
     </div>
-
     <footer>
       <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
     </footer>
-
   </body>
 </html>
