@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitāb al-Farāʾiḍ: Estate Calculations, Grandfather-vs-Brothers Bequest & Symposium Rulings on Professions - July 21, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Kitāb al-Farāʾiḍ: Estate Calculations, Grandfather-vs-Brothers Bequest & Symposium Rulings on Professions - July 21, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Kitāb al-Farāʾiḍ: Estate Calculations, Grandfather-vs-Brothers Bequest & Symposium Rulings on Professions - July 21, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-07-21</span>
+          
+          <span class="meta-chip">🕐 15:55</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>The session covers three inheritance (farāʾiḍ) fatwas from the classical collection, then returns to the Sixth Indian Fiqh Symposium's resolutions on professions (continued from prior weeks). The farāʾiḍ portion tackles: (1) a detailed estate calculation from Ḥabīb Aḥmad b. Ḥasan al-ʿAṭṭās's family, involving two wives, a son, three daughters, and bequests equal to a son's or daughter's share for named beneficiaries; (2) a grandfather with two brothers plus a bequest of one-third of what remains after the <em>farḍ</em> — with the <em>farḍ</em> vs. <em>taʿṣīb</em> debate for the grandfather's share; (3) a father and daughter dying together with unknown order. The session then covers the Symposium's resolutions on lawyering, medicine, cross-gender medical treatment, and working in hotels. A closing question on the mechanics of zakat when a partial <em>niṣāb</em> is acquired mid-year is resolved with the <em>Sharḥ al-Manhaj</em> / <em>Nihāya</em> / <em>Ibn Ḥajar</em> discussion of <em>inqiṭāʿ</em> of the <em>ḥawl</em>.</p>
+<hr>
+<h2>1. Estate Calculation for the Ḥabīb Aḥmad b. Ḥasan al-ʿAṭṭās Case</h2>
+<h3>Background / Question</h3>
+<p>Shaykh Muḥammad b. ʿAwaḍ b. Faḍl — a scholar, poet, and close associate of the late Ḥabīb Aḥmad b. Ḥasan al-ʿAṭṭās — writes to the Shaykh asking him to work out in detail the distribution of a 200-riyāl estate. Heirs: <strong>two wives, one son, three daughters</strong>. Bequests (<em>waṣāya</em>): each of <strong>four named male beneficiaries</strong> is to receive a share equal to the son's; each of <strong>three named female beneficiaries</strong> is to receive a share equal to one of the daughters. The question is entirely one of <em>farāʾiḍ</em> arithmetic.</p>
+<h3>Ruling — the calculation</h3>
+<ul>
+<li>The pure inheritance problem alone (without the bequests) is issued <strong>from 40 shares</strong>.</li>
+<li>The combined problem — inheritance plus bequests — is issued <strong>from 732 shares</strong>, which by reduction (<em>ikhtiṣār</em>) becomes <strong>336 shares</strong>.</li>
+<li>Distribution (of the 336 shares):</li>
+<li>The <strong>son</strong> (of the <em>ṣulb</em>) — 84 shares.</li>
+<li>The <strong>three daughters</strong> of the <em>ṣulb</em> — 42 shares each (126 total).</li>
+<li>The <strong>wife</strong> (in the aggregate; per the Shaykh's transcription, the widow's share) — 30 shares.</li>
+<li>The <strong>four male bequest-beneficiaries</strong> — 84 shares combined, 21 shares each.</li>
+<li>The <strong>three female bequest-beneficiaries</strong> — 42 shares combined, 14 shares each.</li>
+<li>The total of these is 366 shares.</li>
+<li>For dividing the actual <strong>200 riyāl</strong> among heirs and legatees, the shares of the <em>waratha</em> + the <em>muwaṣṣā lahum</em> from the base of the problem come to <strong>61 shares</strong>; the 200 riyāl is therefore divided by 61.</li>
+<li>The detailed breakdown is included on the right-hand page of the fatwa (the questioner is instructed to look there).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ḥabīb Aḥmad b. Ḥasan al-ʿAṭṭās (the deceased); Shaykh Muḥammad b. ʿAwaḍ b. Faḍl (questioner, and author of historical works and poetry); Shaykh Faḍl b. Muḥammad, author of <em>Khulāṣat al-Kalām fī ʿIlm al-Farāʾiḍ li-l-Anām</em>.</p>
+<h3>Cultural aside</h3>
+<p>The Shaykh reflects at length on the paucity of authored books among Yemeni scholars ("<em>innamā nuʾallif rijālan wa-lasnā nuʾallif kutuban</em>" — "we author men, not books"), the destruction of family libraries during the communist period, and the argument that if the great scholars of Ḥaḍramawt had written more, the community would not have to depend on unfamiliar sources. He also discusses regional variations in kinship terms (<em>yā walad Muḥammad</em>, <em>yā ʿammī</em>, <em>yā khālī</em>), and the interconnected Faḍl-Khaṭīb family relationships.</p>
+<hr>
+<h2>2. Grandfather with Two Brothers Plus a Bequest of "One-Third of What Remains After the Farḍ"</h2>
+<h3>Background / Question</h3>
+<p>A man dies leaving a grandfather (<em>jadd</em>) and two brothers, and has left a bequest of "one-third of what remains after the <em>farḍ</em>." The question asks:</p>
+<p>1. Is the grandfather's share taken by way of <em>farḍ</em> (fixed share) or <em>taʿṣīb</em> (as a residuary)?</p>
+<p>2. On which basis is the bequest valid? Per al-Shabrāmulisī's <em>ḥāshiya</em> on the <em>Nihāya</em>, the bequest is valid whether by <em>farḍ</em> or by <em>taʿṣīb</em>. Per al-Bājūrī, the bequest is valid only on the <em>farḍ</em> view.</p>
+<p>3. On the <em>farḍ</em> view, does the bequest require authorization (<em>ijāza</em>) from the two brothers, since the loss (<em>ḍaym</em>) falls solely on them?</p>
+<p>4. Does the same apply to (a) father + grandfather, and (b) father or grandfather + daughter — where the loss again falls on some heirs and not the daughter?</p>
+<p>5. From how many shares is the <em>ijāza</em> case computed vs. the <em>radd</em> case, and what is the joint (<em>jāmiʿa</em>) case?</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>Ibn Ḥajar's <em>Tuḥfa</em> leans toward the <em>farḍ</em> view</strong>, and most <em>farāʾiḍiyyīn</em> follow him. The <em>Nihāya</em> and <em>Mughnī</em> lean toward the <em>taʿṣīb</em> view.</li>
+<li>On the <em>farḍ</em> view: authorization from the two brothers <strong>is</strong> required, because the <em>ḍaym</em> is on them alone.</li>
+<li><strong>Case-by-case shares:</strong></li>
+<li><strong>Case of <em>ijāza</strong></em> (brothers authorize the bequest): issued from <strong>9</strong> shares — the grandfather gets 3; the <em>muwaṣṣā lahu</em> gets 3; <strong>the two brothers get 4 combined, i.e., 2 each</strong>.</li>
+<li><strong>Case of <em>radd</strong></em> (brothers refuse authorization): issued from <strong>63</strong> shares — the <em>muwaṣṣā lahu</em> gets 18; the grandfather gets 15; the two brothers get the remaining <strong>30 combined, i.e., 15 each</strong>.</li>
+<li><strong>Case of the <em>jāmiʿa</strong></em> (the joint case combining <em>ijāza</em> and <em>radd</em>): <strong>63</strong> (which absorbs the 9 by <em>tadākhul</em>, so the greater number 63 suffices).</li>
+<li>The same holds for the parallel cases: <strong>grandfather-or-father with a daughter</strong> — the <em>ḍaym</em> falls on the grandfather/father, not on the daughter. No difference in the <em>tafṣīl</em>.</li>
+<li><strong>On the <em>taʿṣīb</em> view</strong> (as reported by the questioner from al-Bājūrī): the bequest is <strong>invalid</strong> (<em>bāṭila</em>). This is likewise the position of ʿallāma al-Shawbarī citing Shaykh Aḥmad al-Ramlī in the <em>ḥāshiya</em> on <em>Sharḥ al-Rawḍ</em>, and it is the apparent view. Why? Because on this view there is no <em>farḍ</em> to which the phrase "after the <em>farḍ</em>" can attach.</li>
+<li>Al-Shabrāmulisī's holding that the bequest is valid on the <em>taʿṣīb</em> view, taking the amount from the <em>raʾs al-māl</em> itself, is answered on two grounds:</li>
+</ul>
+<p>1. What the bequest is contingent upon (namely, the <em>baʿdiyya</em> — the "after-ness" — of the <em>farḍ</em>) does not exist here.</p>
+<p>2. Even conceding validity, what amount would be extracted? If one-third of the total estate, this prejudices the heirs and departs from the <em>muwaṣṣī</em>'s wording; if less, what precise portion? There is no principled measure.</p>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Ḥajar al-Haytamī (<em>Tuḥfa</em>); <em>Nihāya</em>; <em>Mughnī</em>; al-Bājūrī; al-Shabrāmulisī (<em>ḥāshiya</em> on <em>Nihāya</em>); al-Shawbarī citing Shaykh Aḥmad al-Ramlī on <em>Sharḥ al-Rawḍ</em>.</p>
+<hr>
+<h2>3. Father and Daughter Dying Together, Order Unknown</h2>
+<h3>Background / Question</h3>
+<p>A man and his daughter both die, and it is not known which preceded the other, nor whether they died together. The heirs have not reached a settlement, and each side claims that the other died later (each hoping to gain by the daughter's survival for one side, and the father's survival for the other). The deceased man is survived by a maternal-side sister (<em>ukht min al-umm</em>), and he mentioned in his lifetime that he had <em>ʿaṣaba</em> (i.e., paternal-side kinsmen) without naming a full or paternal-side brother. What is the ruling?</p>
+<h3>Ruling — the general principle</h3>
+<ul>
+<li>Whether they died simultaneously, or whether the order is unknown, or whether the order is known but has since been forgotten, or the specific one who preceded is unclear: <strong>neither inherits from the other</strong>. Because:</li>
+<li>If simultaneous, inheritance requires living heirs at death;</li>
+<li>If in sequence, the specific one who died first would inherit-back from a dead person.</li>
+<li>The estate of each is distributed among <strong>his/her own</strong> heirs, treating the other as not surviving.</li>
+</ul>
+<h3>Ruling — disputed claims</h3>
+<ul>
+<li>If the daughter's heirs claim she died after her father, and the father's heirs deny it, the denier's word prevails with an oath (<em>yamīn</em>) — the burden of establishing the daughter's survival is on the claimant, because the rule is <em>aṣl ʿadam</em> (the default is that she did not outlive him).</li>
+<li>If either side produces evidence (a single witness with an oath, or two women) attesting to the daughter's survival past the father's death, it is accepted.</li>
+<li>If both sides produce evidence that their party outlived the other, the two testimonies <strong>cancel</strong> each other, and the estates revert to the previous rule — each estate to its own heirs.</li>
+</ul>
+<h3>Ruling — the uterine sister and the <em>ʿaṣaba</em> clause</h3>
+<ul>
+<li>Once the daughter is held not to inherit from her father: the <strong>maternal-side sister</strong> takes <strong>one-sixth</strong>.</li>
+<li>For the remainder:</li>
+<li>If the specific <em>ʿaṣaba</em> is established — whether the individual the deceased called his <em>ʿaṣaba</em> or someone else — and it is proved by evidence tracing the lineage back to a known common ancestor, that person takes the residue.</li>
+<li>Mere claim of being "of the tribe of so-and-so" is not enough.</li>
+<li>If no evidence, and it is publicly known (<em>istifāḍa</em>) that the deceased and the claimant belong to the same named tribe or clan (<em>fakhdh</em>), and the deceased-named claimant is closer in kinship than any other of that group, the residue goes to him.</li>
+<li>If not the closer, the inheritance is <strong>suspended</strong> (<em>wuqifa</em>) until either a closer relative is established or a settlement is reached.</li>
+<li><strong>But</strong> if the <em>fakhdh</em> or tribe is so widely dispersed (<em>intashara intishāran lā yanḍabiṭ</em>) that no specific residuary can be identified: the entire remainder goes to the <strong>maternal-side sister</strong> by <em>farḍ</em> + <em>radd</em>. This follows Abū Makhrama, and is the position adopted by the later scholars, who hold that in these late times inheritance does <strong>not</strong> revert to the <em>bayt al-māl</em> for lack of its organized administration.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Abū Makhrama; the position of the later scholars (<em>mutaʾakhkhirūn</em>) on the <em>bayt al-māl</em>'s current disorder.</p>
+<hr>
+<h2>4. Sixth Indian Fiqh Symposium (continued): Rulings on Professions</h2>
+<h3>Background / Question</h3>
+<p>The session picks up the Symposium's resolutions where they were suspended the prior week — cover the profession of law (<em>muḥāmāh</em>), medicine (<em>ṭibb</em>), cross-gender medical treatment, touching of the covered body, and working in hotels.</p>
+<h3>Ruling — Lawyering (<em>Muḥāmāh</em>)</h3>
+<ul>
+<li>The pronunciation <em>mihna</em> (with kasra) is confirmed as <em>mihna al-muḥāmāh</em> per <em>al-Qāmūs</em> (both <em>mahna</em> and <em>mihna</em> are attested).</li>
+<li>Lawyering is <strong>permissible in itself</strong>.</li>
+<li>It is <strong>not permissible</strong> to practice it:</li>
+<li>in falsified, forged, or unlawful disputes;</li>
+<li>to deprive a rightful holder of his right;</li>
+<li>by resort to lying or deception.</li>
+<li>The context is Islamic courts, and by extension anywhere a lawyer represents parties before adjudicators (<em>muḥakkimūn</em>). Outside such contexts, lawyering serves little purpose.</li>
+<li><strong>Modern question</strong>: what if the lawyer says he will not verify whether his client is truthful and simply defends the case as presented? The Shaykh: probably allowed, because forbidding it requires certainty of the underlying deception; the presumption is <em>aṣl al-barāʾa</em>.</li>
+<li><strong>Muslim lawyer in a non-Muslim country</strong>: not simply forbidden, but bound by two constraints:</li>
+</ul>
+<p>1. He cannot argue with <em>bāṭil</em> — cannot make the guilty innocent or the innocent guilty.</p>
+<p>2. He cannot argue on the basis of law contradicting <em>sharīʿa</em> to give a party what he would not have under <em>sharīʿa</em> — e.g., using a "half the estate on divorce" statute against a husband whose money is protected by <em>sharīʿa</em> — because this would be arguing <em>for</em> an outcome forbidden by <em>sharīʿa</em>.</p>
+<ul>
+<li><strong>Belief in secular law being superior to sharīʿa</strong>: not a condition of the profession's permissibility (that is a matter of the person's actual faith); but if he does believe the secular law is superior to what God has revealed, this is <em>kufr</em>.</li>
+<li><strong>Defending Muslims against an unjust statute</strong> (as opposed to enforcing it): if the lawyer works to reduce the harm of an unjust law being imposed on Muslims, this is meritorious and reward is earned — analogous to a customs officer, though the customs case has its own complications (illegal work is illegal even at a reduced rate).</li>
+</ul>
+<h3>Ruling — Medicine (<em>Ṭibb</em>)</h3>
+<ul>
+<li>Medicine is among the best professions — humanitarian service and lawful earning.</li>
+<li>The doctor may work in hospitals and clinics for a fee and treat patients.</li>
+<li><strong>Prohibited</strong>:</li>
+<li>Proposing an unnecessary examination or surgery for profit;</li>
+<li>Prescribing needless medicine for extra income.</li>
+<li>Doing so is <em>khiyāna</em> (breach of trust), and money earned from such practices is not permissible to use.</li>
+<li><strong>Modern application: kickbacks</strong>:</li>
+<li>A doctor who arranges with a pharmacy or hospital to receive a cut for referrals may or may not be permitted, depending on whether:</li>
+<li>It is a proper <em>jaʿāla</em> (award for a service, e.g., referral of specific numbers of patients);</li>
+<li>He is honest and always refers to the <em>best</em> option, not merely the one that pays him (the <em>mustashār</em> is <em>muʾtaman</em>);</li>
+<li>The patient's interest is genuinely served.</li>
+<li>If the arrangement is not disclosed and the doctor is effectively serving as an agent (<em>wakīl</em>) of the patient and earning a hidden payment from the third party, it is prohibited (falls under <em>hadāyā al-ʿummāl</em> — gifts of officials).</li>
+<li>Difficult case: fees collected from the patient (examination + consultation) commingle with a hidden referral commission — this needs further scrutiny.</li>
+</ul>
+<h3>Ruling — Cross-gender medical treatment</h3>
+<ul>
+<li>Ideally a man treats a man, a woman treats a woman.</li>
+<li>Cross-gender treatment is permitted <strong>when there is a genuine need (ḥāja) or a necessity (ḍarūra)</strong> — not restricted to <em>ḍarūra</em> alone.</li>
+<li>This applies to Muslims and non-Muslims (both are addressed by the branches of sharīʿa).</li>
+<li>A Muslim doctor <strong>may not refuse</strong> to treat a female patient who comes to him. If he refuses out of piety, he may lose his job or be reported.</li>
+<li>Legitimate reasons a male Muslim doctor may treat a female patient:</li>
+<li>Fear of losing his employment or being subjected to investigation;</li>
+<li>Fear that the female alternative is unreliable, would deceive or overcharge the patient;</li>
+<li>He is trustworthy and the alternative female doctor is not.</li>
+</ul>
+<h3>Ruling — Touching parts covered by the sitr</h3>
+<ul>
+<li>Touching or looking at parts falling under the <em>sitr</em> (covering rules) is not permitted <strong>except by necessity for treatment</strong>.</li>
+<li>The doctor may look at and touch the covered area <em>only</em> to the extent necessary for treatment.</li>
+<li>Example: a pharmacist locating a vein in a woman's arm for injection — permitted by <em>ḍarūra</em>.</li>
+</ul>
+<h3>Ruling — Working in hotels</h3>
+<ul>
+<li>Employment in a hotel and the operation of one are both permissible.</li>
+<li>The hotel owner may collect rent from guests.</li>
+<li>The guest's private use of <em>ḥarām</em> in his room (e.g., alcohol) <strong>does not</strong> invalidate the owner's right to the rent — the contract is for lodging.</li>
+<li><strong>However</strong>, if the hotel owner or an employee directly provides <em>ḥarām</em> items (alcohol, etc.) to guests, this is <em>taʿāwun ʿalā l-ithm</em> and no fee may be taken for the <em>ḥarām</em> provision itself.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>The Sixth Indian Fiqh Symposium (Aʿẓam Garh, 2007) — resolutions on lawyering, medicine, and hotels.</p>
+<hr>
+<h2>5. Zakat: Trade Goods Below Niṣāb + Later Acquisition of Currency (from <em>Sharḥ al-Manhaj</em>)</h2>
+<h3>Background / Question</h3>
+<p>A student asks about a case in <em>Sharḥ al-Manhaj</em>: a man begins the year with trade goods below the <em>niṣāb</em> and with no cash to complete it. <strong>Six months</strong> into that year he acquires <strong>50 dirhams</strong> (currency), which alongside the trade goods completes the <em>niṣāb</em>. At the end of the trade-goods' <em>ḥawl</em>, the trade goods' value has grown to 150. The text says: "he pays zakat on all when the 50's <em>ḥawl</em> completes." How does this affect the second year, when the trade goods' <em>ḥawl</em> comes 6 months <strong>before</strong> the currency's <em>ḥawl</em>?</p>
+<h3>Ruling</h3>
+<ul>
+<li>The <em>matn</em> of the <em>Sharḥ al-Manhaj</em> distinguishes two cases:</li>
+<li><strong>Currency owned from the beginning of the trade goods' ḥawl</strong> (e.g., he had 100 dirhams, bought 50 worth of trade goods, kept 50 as cash — at year-end the trade goods are worth 150) — zakat is due on the entire 200 at the trade goods' year-end.</li>
+<li><strong>Currency acquired mid-year</strong> (he bought with 100 → became trade goods; then 50 arrived mid-year) — he pays zakat on all when <strong>the 50's ḥawl</strong> completes, not the trade goods' ḥawl. The 50 combines toward <em>niṣāb</em> but its own <em>ḥawl</em> is a fresh one.</li>
+<li>The Shaykh's initial intuition, and what many students think, is that zakat should be paid at the trade goods' <em>ḥawl</em> regardless. But the corrective view — supported by al-Shabrāmulisī, Ibn Ḥajar, and <em>al-Rawḍ wa-Sharḥuh</em> — is that <strong>when the trade goods do not reach the <em>niṣāb</em> at year-end and are supplemented by property received mid-year of the same genus, the <em>ḥawl</em> of the trade goods is interrupted (<em>inqiṭāʿ</em>)</strong>; the effective <em>ḥawl</em> becomes the one of the newly-received property.</li>
+<li>Consequence for <strong>year one</strong>: no zakat is due at the trade goods' year-end (below <em>niṣāb</em>); zakat is due 6 months later when the 50's <em>ḥawl</em> completes — on the entire 200 combined.</li>
+<li>Consequence for <strong>year two</strong>: the trade goods' <em>ḥawl</em> returns to its original schedule — 6 months earlier than the 50's — and zakat is paid at that time on the entire combined amount (assuming the <em>niṣāb</em> remains reached from the start of that year). Effectively, year one's payment is delayed 6 months, year two's is on time.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p><em>Sharḥ al-Manhaj</em> (matn and <em>ḥāshiyat</em> al-Shabrāmulisī); Muḥammad al-Ramlī's <em>Sharḥ</em>; Ibn Ḥajar's <em>Tuḥfa</em> on the interruption of the <em>ḥawl</em>; <em>al-Rawḍ wa-Sharḥuh</em>; <em>al-Mughnī</em>.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
