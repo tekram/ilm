@@ -1,9 +1,331 @@
-&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-    &lt;meta name=&quot;color-scheme&quot; content=&quot;light&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
-    &lt;title&gt;Iḥyā' al-Mawāt (Land Reclamation), Ḥimā &amp; Zakat on Debts and Rented Property - August 20, 2026&lt;/title&gt;
-  &lt;/head&gt;
-&lt;/html&gt;
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iḥyā' al-Mawāt (Land Reclamation), Ḥimā & Zakat on Debts and Rented Property - August 20, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Iḥyā' al-Mawāt (Land Reclamation), Ḥimā & Zakat on Debts and Rented Property - August 20, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Iḥyā' al-Mawāt (Land Reclamation), Ḥimā & Zakat on Debts and Rented Property - August 20, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-08-20</span>
+          
+          <span class="meta-chip">🕐 15:59</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>This session continues the <em>Tuhfat al-Muhtaj</em> commentary in the chapter on <em>Iḥyā' al-Mawāt</em> (reclamation of dead/unowned land), covering how reclamation requirements vary by intended use (dwelling, mosque, livestock pen, farm, orchard), the status of one who begins but does not finish reclaiming (<em>tahajjur</em>), the ruler's authority to grant land (<em>iqtā'</em>) or designate protected grazing reserves (<em>ḥimā</em>), and the rule against monopolizing a perpetual water source. The second half of the lesson turns to two resolutions of the International Islamic Fiqh Academy (Majma' al-Fiqh al-Islami, 2nd session, Jeddah, 1406H/1985) on <em>zakat</em> on debts and on rented real estate, followed by a closing methodological discussion comparing <em>Tuhfat al-Muhtaj</em>, <em>al-Nihāya</em>, and <em>al-Mughnī</em>.</p>
+<hr>
+<h2>1. Conditions for Reclaiming Land by Intended Use</h2>
+<h3>Background / Question</h3>
+<p><em>Iḥyā'</em> (reclamation) has no fixed definition in the Sharīʿa or the Arabic language, so — like <em>ḥirz</em> (safekeeping, for theft rulings) or <em>qabḍ</em> (taking possession, for sales) — its requirements are referred back to custom (<em>'urf</em>), with the underlying rule being that everything needed for the land's intended use must be prepared.</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>Dwelling or mosque</strong>: requires enclosing (<em>tahwīṭ</em>) the plot, whether by walls, reeds, or palm fronds, according to local custom (al-Māwardī and al-Rūyānī: this varies by country; view adopted by al-Adhra'ī); stones require an enclosing wall only if custom requires it.</li>
+<li>Also requires roofing part of the plot and fitting a door — though one view holds the door is not a strict condition, since its absence doesn't prevent habitation; the relied-upon view requires it.</li>
+<li><strong>Livestock pen (<em>zarība</em>)</strong>: enclosure sufficient to keep out intruders is required; no roof is required even though animals need shade. A door is required per the same dispute as above (the stronger view requires it).</li>
+<li><strong>Farm (<em>mazra'a</em>)</strong>: gathering earth/thorns around the plot (like a house wall), leveling the ground (filling low spots, cutting down high ones), plowing if needed for planting, and arranging water if ordinary rainfall is insufficient — except the marshlands (<em>baṭā'iḥ</em>) of Iraq, where excess water must instead be kept out. Mountain land that cannot be irrigated and lacks sufficient rain only needs plowing and soil-gathering; actual cultivation or habitation is not required to complete reclamation.</li>
+<li><strong>Orchard/garden (<em>bustān</em>)</strong>: same as a farm, plus planting (at least partially) is required — a garden isn't called a garden without trees — whereas a farm does not require actual planting.</li>
+<li><strong>General principle</strong>: acts done only with intent to own (e.g., building a house) don't require an explicit intention; acts that may be done for others too (e.g., digging a well) require the intent to own for ownership to result.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Ḥajar al-Haytamī (<em>Tuhfat al-Muhtaj</em>), al-Māwardī, al-Rūyānī, al-Adhra'ī, al-Rawḍa and its source (<em>Sharḥ al-Muhadhdhab</em>).</p>
+<hr>
+<h2>2. Tahajjur — Staking an Unfinished Claim</h2>
+<h3>Background / Question</h3>
+<p>Someone who begins reclamation (digging foundations, marking a plot with stones or stakes, gathering earth, or drawing boundary lines) without completing it is called <em>mutahajjir</em> (one who has staked a claim).</p>
+<h3>Ruling</h3>
+<ul>
+<li>He becomes entitled to bar others from the plot — an entitlement (<em>ikhtiṣāṣ</em>), not ownership — limited to what he can actually cultivate/build on and is capable of developing immediately.</li>
+<li>His right is not voided merely because the land floods and becomes temporarily unusable; the right returns when use becomes possible again.</li>
+<li>He has no right to any excess beyond what he can presently develop.</li>
+<li>The correct view: this right cannot be sold, and — by extension — cannot be gifted or subjected to pre-emption (<em>shuf'a</em>), since what cannot be sold cannot be gifted either; however, he may relinquish it for a payment (a transfer of right, not a sale).</li>
+<li>If someone else reclaims it, that person takes ownership (even though sinful in doing so) — reclamation itself establishes ownership, similar to validly buying something someone else had merely bid on.</li>
+<li>Relocating another's staking materials (tools, stones, stakes) without permission is forbidden, since it is unauthorized interference with another's property (even if only a right of priority).</li>
+<li>If the claim drags on with no excuse and no reclamation, the ruler (or his deputy) — or, since this is enjoining good, even ordinary Muslims — may order him to "reclaim it or release it," giving a short grace period at the ruler's discretion; if that period passes with nothing done, his right lapses (and no further recourse to the ruler is needed before someone else may take it).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ḥadīth of Abū Dāwūd/Muslim: <em>"man sabaqa ilā mā lam yasbiq ilayhi muslim..."</em> ("whoever gets to what no one has gotten to before is more entitled to it"); al-Māwardī; al-Mutawallī, Ibn al-Rif'a, and al-Adhra'ī.</p>
+<hr>
+<h2>3. Iqtā' — The Ruler's Land Grants</h2>
+<h3>Background / Question</h3>
+<p>Distinguished from a plain reclamation claim: what happens when the Imam/ruler formally grants (<em>iqṭā'</em>) dead land to someone?</p>
+<h3>Ruling</h3>
+<ul>
+<li>If granted as outright ownership of the land itself, ownership occurs immediately upon the grant (cited precedent: the Prophet ﷺ granting land from Banū al-Naḍīr's estates to al-Zubayr, narrated by al-Shaykhān/Bukhārī-Muslim; al-Zarkashī discussed whether others could later claim it by reclamation).</li>
+<li>If granted merely as priority to reclaim, the grantee becomes like a <em>mutahajjir</em> (subject to the same rules above) once he takes up reclamation.</li>
+<li>The Imam (distinguished from a mere <em>sulṭān</em>, since an Imam has authority over multiple rulers) alone has the authority to make such grants; a grant is not valid over land whose owner is merely presumed to have abandoned it (unless true despair of an owner's return is reached, at which point it reverts to the state treasury).</li>
+<li>The Imam may not grant to someone incapable of reclaiming (whether for legal or practical reasons), and may only grant what the grantee is actually capable of developing — mirroring the limits on ordinary <em>tahajjur</em>. Claiming more than one can develop is impermissible, since it obstructs others without benefit.</li>
+<li>A <em>mutahajjir</em> who tells another "I have transferred my claim to you" or "I appoint you in my place" — possibly for payment — transfers the right of priority to that person; once done, he cannot revoke it, having relinquished his right (analogous to resigning a post for compensation).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Al-Zarkashī; al-Māwardī; the <em>Majmūʿ</em> and others (on the scope of <em>iqṭā'</em> as ownership of the land itself versus its usufruct only).</p>
+<hr>
+<h2>4. Ḥimā — Protected Grazing Reserves and Water Sources</h2>
+<h3>Background / Question</h3>
+<p>May the Imam designate a reserved tract of unowned land (<em>ḥimā</em>) that others may not use, and are there limits on this?</p>
+<h3>Ruling</h3>
+<ul>
+<li>The stronger view: the Imam, his deputy, or even a provincial governor may designate a <em>ḥimā</em> to bar others from a tract, reserving it for the mounts of those engaged in jihad, for animals due as <em>zakāt</em>, <em>jizya</em>, or charity, for lost livestock, and for those too weak to travel far in search of grazing (<em>najʿa</em>) — modeled on the Prophet's ﷺ reservation of al-Naqīʿ, cited in reconciling it with the Bukhārī ḥadīth "<em>lā ḥimā illā li-llāhi wa-rasūlihi</em>" ("no protected reserve except for God and His Messenger" — meaning none but on the same footing as the Prophet's ﷺ reserve).</li>
+<li>Condition: there must remain enough open pasture for other Muslims even after accounting for those who must go farther afield.</li>
+<li>The Imam may rescind his own <em>ḥimā</em> when a need or benefit calls for it (unlike the Prophet's ﷺ reservation, which is permanently fixed and not to be altered — including by any of the rightly-guided caliphs).</li>
+<li>The Imam may never reserve land for his own private benefit — a privilege reserved for the Prophet ﷺ alone in a different narrow sense (and one the Prophet ﷺ himself did not exercise, aside from the exception cited in the discussion of Zaynab bint Jaḥsh's marriage verses).</li>
+<li>The ruler may not admit his own livestock into a reserve designated for the Muslims generally, since he is not among the "weak" the reserve is meant to protect; if others' livestock intrude there, no liability or discretionary punishment (<em>ta'zīr</em>) attaches (per Abū Ḥāmid).</li>
+<li>The Imam may not monopolize a source of perpetual water (a spring or well whose water never runs out) for the state or for animals alone — it belongs to the Muslims generally — except for something like the needs of <em>jizya</em>-payers.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ḥadīth of al-Naqīʿ (near Wādī al-'Aqīq, ~20 miles from Madīna); Bukhārī's ḥadīth "<em>lā ḥimā illā li-llāhi wa-rasūlihi</em>"; Abū Ḥāmid (al-Ghazālī).</p>
+<h3>Discussion note</h3>
+<p>A participant raised that the criterion throughout this chapter is <em>capability</em> (<em>qudra</em>), not <em>need</em> (<em>ḥāja</em>) — e.g., someone needing a large plot for a factory but lacking the means to build cannot claim more than he can presently develop.</p>
+<hr>
+<h2>5. Fiqh Academy Resolution 1/2 — Zakāt on Debts</h2>
+<h3>Background / Question</h3>
+<p>The International Islamic Fiqh Academy (2nd session, Jeddah, 10–16 Rabī' al-Ākhir 1406H / 22–28 December 1985) studied <em>zakāt</em> on debts owed to a person, noting that no explicit text from the Qur'an or Sunna settles the matter, that the Companions and their successors held varying views on how to pay it, and that the schools differ accordingly — the root disagreement being whether money one is owed but has not yet collected counts as "in hand" (present) or not.</p>
+<h3>Ruling</h3>
+<ul>
+<li><em>Zakāt</em> on a debt is due annually from the creditor if the debtor is solvent and willing to pay.</li>
+<li>If the debtor is insolvent or evasive, <em>zakāt</em> becomes due (i.e., must be paid out) after a full year has elapsed <strong>from the date the money is actually collected</strong> — discussion in the lesson centered on whether "from the day of collection" modifies when the <em>ḥawl</em> (zakat year) itself begins, or only when payment of the already-obligated zakat must be made; the shaykh favored the latter reading, consistent with the Shāfi'ī position (zakat is owed throughout, but its payment is deferred until collection, then due after a year from collection).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Majma' al-Fiqh al-Islāmī (International Islamic Fiqh Academy) Resolution 1/2; brief comparison with the apparent Ḥanafī position.</p>
+<hr>
+<h2>6. Fiqh Academy Resolution 2/2 — Zakāt on Rented Real Estate and Non-Agricultural Land</h2>
+<h3>Background / Question</h3>
+<p>The same Academy session studied <em>zakāt</em> on rented real estate and rented non-agricultural land, finding no clear text obligating <em>zakāt</em> on the principal asset, nor on its yield immediately upon receipt.</p>
+<h3>Ruling</h3>
+<ul>
+<li>No <em>zakāt</em> is due on the <strong>principal</strong> of real estate or land held for rental income (i.e., property one owns and rents out) — distinguished from property one rents in order to sublet, which functions like trade goods (<em>'urūḍ al-tijāra</em>) and would carry <em>zakāt</em> obligations as such; a further nuance was raised: property purchased outright with intent to rent out (rather than resell) leans toward being treated as personal holding (no zakat), by analogy to the ruling on owned-and-rented property.</li>
+<li><em>Zakāt</em> <strong>is</strong> due on the rental yield itself — a quarter of a tenth (<em>rub' al-'ushr</em>, i.e. 2.5%) — after a full <em>ḥawl</em>, subject to the normal conditions and absence of impediments for zakat.</li>
+<li>Extended discussion (a live disagreement raised by Shaykh 'Abd al-Ḥamīd al-Sharwānī, author of the <em>Ḥāshiya</em> on <em>Tuhfat al-Muhtaj</em>, against Ibn Ḥajar's position): if a property intended for rent goes unrented for the whole year, Ibn Ḥajar's view still assesses <em>zakāt</em> on its estimated fair rental value; al-Sharwānī objected that an unrealized benefit that "perished" (was never earned) should not be taxed, and the assembled scholars considered his objection understandable in that narrow case but not something to be accepted as a general principle without support from al-Nawawī, Ibn Ḥajar, or an authoritative source, since the two men's positions otherwise agree that once rent has actually been received and retained to the end of the year, <em>zakāt</em> is due — the dispute is narrowly about <em>unrented</em> property.</li>
+<li>Distinguished from goods that are sold and consumed (no zakat, since their existence ceases entirely) — a rental relationship keeps a live "attachment" (the tenancy) that persists to the end of the year even if the rent already collected has been spent, unlike sold merchandise.</li>
+<li>A practical/policy observation was raised (property-hoarding in Syria driving up rents and leaving shops closed) as an illustration of the wisdom behind Ibn Ḥajar's stricter view, though the shaykh noted this is a secondary benefit of the ruling, not its basis — the ruling itself follows the textual evidence regardless of whether it happens to serve or disserve a given policy outcome.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Majma' al-Fiqh al-Islāmī Resolution 2/2; Ibn Ḥajar al-Haytamī (<em>Tuhfat al-Muhtaj</em>); Shaykh 'Abd al-Ḥamīd al-Sharwānī (<em>Ḥāshiyat al-Sharwānī</em>); Shaykh Muḥammad al-Khaṭīb (fatwā council discussion cited by the teacher).</p>
+<hr>
+<h2>7. Methodological Q&A — Comparing Tuhfat al-Muhtaj, al-Nihāya, and al-Mughnī</h2>
+<p>A student asked whether there are chapters where <em>Tuhfat al-Muhtaj</em> is indispensable compared to <em>al-Nihāya</em> or <em>al-Mughnī</em> (i.e., chapters neither of the others can substitute for). The teacher's answer, based on long practice with all three: <em>Tuhfat al-Muhtaj</em> is especially thorough in the chapter on menstruation (<em>ḥayḍ</em>) and in the chapter on commanding good/forbidding evil (including the discussion of <em>tajassus</em>, spying) — material not found as fully in <em>al-Nihāya</em> or <em>al-Mughnī</em>. Generally, where Ibn Ḥajar references one of his own standalone treatises on a sub-topic, that treatise (not the <em>Tuhfa</em> itself) contains the deeper treatment. <em>Al-Nihāya</em> tends to follow <em>Tuhfa</em>'s wording closely even where it differs in conclusions; a student wanting the fullest coverage should pair <em>Tuhfat al-Muhtaj</em> with <em>Ḥāshiyat 'Abd al-Ḥamīd</em> (al-Sharwānī), which the teacher considered together to be a largely complete treatment. On a related question about which text to read alongside a planned move from <em>Sharḥ al-Minhāj</em> to <em>al-Nihāya</em>, the teacher recommended continuing with <em>Tuhfat al-Muhtaj</em> together with al-Sharwānī's <em>Ḥāshiya</em>.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
