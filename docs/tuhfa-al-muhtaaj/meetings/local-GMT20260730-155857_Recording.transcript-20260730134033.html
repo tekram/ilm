@@ -11,198 +11,36 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html { background: #fafaf9; color: #37352f; color-scheme: light; }
-      body {
-        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: 1.55;
-        color: #37352f;
-        background: #fafaf9;
-      }
-
-      /* ── Site Header ── */
-      .site-header {
-        background: #0a1530;
-        padding: 0 32px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .site-header a {
-        color: #a4a0c8;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 0.12s;
-      }
+      body { font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif; font-size: 16px; line-height: 1.55; color: #37352f; background: #fafaf9; }
+      .site-header { background: #0a1530; padding: 0 32px; height: 56px; display: flex; align-items: center; gap: 8px; }
+      .site-header a { color: #a4a0c8; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.12s; }
       .site-header a:hover { color: #ffffff; }
       .site-header .sep { color: #3a4a72; font-size: 14px; }
-      .site-header .current {
-        color: #d0ccf0;
-        font-size: 14px;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 320px;
-      }
-
-      /* ── Page Header ── */
-      .page-header {
-        background: #0a1530;
-        padding: 36px 32px 48px;
-        border-bottom: 1px solid #1a2a52;
-      }
-      .page-header-inner {
-        max-width: 760px;
-        margin: 0 auto;
-      }
-      .page-header h1 {
-        font-size: clamp(22px, 3.5vw, 32px);
-        font-weight: 600;
-        line-height: 1.2;
-        letter-spacing: -0.5px;
-        color: #ffffff;
-        margin-bottom: 12px;
-      }
-      .session-meta {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-      .meta-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 12px;
-        font-weight: 500;
-        color: #a4a0c8;
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.10);
-        border-radius: 9999px;
-        padding: 3px 10px;
-      }
-
-      /* ── Content ── */
-      .content-wrapper {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 48px 32px 80px;
-      }
-
-      /* Markdown content typography */
-      .summary-content {
-        font-size: 16px;
-        line-height: 1.7;
-        color: #37352f;
-      }
-      .summary-content h1 {
-        font-size: 26px;
-        font-weight: 600;
-        letter-spacing: -0.3px;
-        color: #1a1a1a;
-        margin-top: 2.2em;
-        margin-bottom: 0.7em;
-        padding-bottom: 0.3em;
-        border-bottom: 2px solid #e5e3df;
-      }
-      .summary-content h2 {
-        font-size: 21px;
-        font-weight: 600;
-        letter-spacing: -0.2px;
-        color: #1a1a1a;
-        margin-top: 2em;
-        margin-bottom: 0.6em;
-        padding-bottom: 0.25em;
-        border-bottom: 1px solid #e5e3df;
-      }
-      .summary-content h3 {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-top: 1.6em;
-        margin-bottom: 0.5em;
-      }
-      .summary-content h4 {
-        font-size: 15px;
-        font-weight: 600;
-        color: #5d5b54;
-        margin-top: 1.4em;
-        margin-bottom: 0.4em;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .summary-content p {
-        margin: 1em 0;
-      }
-      .summary-content ul,
-      .summary-content ol {
-        margin: 1em 0;
-        padding-left: 1.8em;
-      }
-      .summary-content li {
-        margin: 0.45em 0;
-      }
-      .summary-content strong {
-        font-weight: 600;
-        color: #1a1a1a;
-      }
-      .summary-content em {
-        color: #5d5b54;
-      }
-      .summary-content blockquote {
-        border-left: 3px solid #5645d4;
-        padding: 0.6em 0 0.6em 1.2em;
-        margin: 1.2em 0;
-        color: #5d5b54;
-        background: #f4f0fc;
-        border-radius: 0 8px 8px 0;
-      }
-      .summary-content hr {
-        border: none;
-        border-top: 2px solid #e5e3df;
-        margin: 2.5em 0;
-      }
-      .summary-content code {
-        background: #f0eeec;
-        padding: 0.1em 0.35em;
-        border-radius: 4px;
-        font-size: 0.9em;
-        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-      }
-      .summary-content pre {
-        background: #f0eeec;
-        padding: 1.2em;
-        border-radius: 8px;
-        overflow-x: auto;
-        margin: 1.2em 0;
-      }
-      .summary-content pre code {
-        background: none;
-        padding: 0;
-      }
-      /* first h1/h2 shouldn't have a huge top margin */
-      .summary-content > h1:first-child,
-      .summary-content > h2:first-child,
-      .summary-content > h3:first-child {
-        margin-top: 0;
-      }
-
-      /* ── Footer ── */
-      footer {
-        border-top: 1px solid #e5e3df;
-        padding: 28px 32px;
-        text-align: center;
-        font-size: 13px;
-        color: #a4a097;
-      }
-
-      @media (max-width: 560px) {
-        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
-        .content-wrapper { padding-left: 20px; padding-right: 20px; }
-        .site-header .current { max-width: 160px; }
-      }
+      .site-header .current { color: #d0ccf0; font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 320px; }
+      .page-header { background: #0a1530; padding: 36px 32px 48px; border-bottom: 1px solid #1a2a52; }
+      .page-header-inner { max-width: 760px; margin: 0 auto; }
+      .page-header h1 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -0.5px; color: #ffffff; margin-bottom: 12px; }
+      .session-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+      .meta-chip { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; color: #a4a0c8; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); border-radius: 9999px; padding: 3px 10px; }
+      .content-wrapper { max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; }
+      .summary-content { font-size: 16px; line-height: 1.7; color: #37352f; }
+      .summary-content h1 { font-size: 26px; font-weight: 600; letter-spacing: -0.3px; color: #1a1a1a; margin-top: 2.2em; margin-bottom: 0.7em; padding-bottom: 0.3em; border-bottom: 2px solid #e5e3df; }
+      .summary-content h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.2px; color: #1a1a1a; margin-top: 2em; margin-bottom: 0.6em; padding-bottom: 0.25em; border-bottom: 1px solid #e5e3df; }
+      .summary-content h3 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-top: 1.6em; margin-bottom: 0.5em; }
+      .summary-content h4 { font-size: 15px; font-weight: 600; color: #5d5b54; margin-top: 1.4em; margin-bottom: 0.4em; text-transform: uppercase; letter-spacing: 0.5px; }
+      .summary-content p { margin: 1em 0; }
+      .summary-content ul, .summary-content ol { margin: 1em 0; padding-left: 1.8em; }
+      .summary-content li { margin: 0.45em 0; }
+      .summary-content strong { font-weight: 600; color: #1a1a1a; }
+      .summary-content em { color: #5d5b54; }
+      .summary-content blockquote { border-left: 3px solid #5645d4; padding: 0.6em 0 0.6em 1.2em; margin: 1.2em 0; color: #5d5b54; background: #f4f0fc; border-radius: 0 8px 8px 0; }
+      .summary-content hr { border: none; border-top: 2px solid #e5e3df; margin: 2.5em 0; }
+      .summary-content code { background: #f0eeec; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+      .summary-content pre { background: #f0eeec; padding: 1.2em; border-radius: 8px; overflow-x: auto; margin: 1.2em 0; }
+      .summary-content pre code { background: none; padding: 0; }
+      .summary-content > h1:first-child, .summary-content > h2:first-child, .summary-content > h3:first-child { margin-top: 0; }
+      footer { border-top: 1px solid #e5e3df; padding: 28px 32px; text-align: center; font-size: 13px; color: #a4a097; }
+      @media (max-width: 560px) { .site-header, .page-header { padding-left: 20px; padding-right: 20px; } .content-wrapper { padding-left: 20px; padding-right: 20px; } .site-header .current { max-width: 160px; } }
     </style>
   </head>
   <body>
@@ -220,345 +58,109 @@
         <h1>Hired Animals That Flee, Lease Transfers & Traffic Accident Liability - July 30, 2026</h1>
         <div class="session-meta">
           <span class="meta-chip">📅 2026-07-30</span>
-          
           <span class="meta-chip">🕐 15:58</span>
-          
         </div>
       </div>
     </div>
 
     <div class="content-wrapper">
       <div class="summary-content"><h2>Overview</h2>
-<p>This session continues the reading of <em>Tuhfat al-Muhtaj</em> (commentary on</p>
-<p><em>Minhaj al-Talibin</em>) in the chapter on <em>Ijara</em> (leasing), resuming from the</p>
-<p>discussion of a hired pack animal (camel) that flees or goes missing while in</p>
-<p>the lessee's possession, before moving into related rulings on rent liability,</p>
-<p>transfer of ownership during a lease, and guarantees. The session closes with</p>
-<p>a Q&A covering fiqh methodology, menstruation rulings, traffic-accident</p>
-<p>liability, mosque prayer-line sutrahs, damaan al-darak, and the chemical</p>
-<p>composition of alcohol in fuel. The group also agreed on a revised weekly</p>
-<p>study schedule.</p>
+<p>This session continues the reading of <em>Tuhfat al-Muhtaj</em> (commentary on <em>Minhaj al-Talibin</em>) in the chapter on <em>Ijara</em> (leasing), resuming from the discussion of a hired pack animal (camel) that flees or goes missing while in the lessee's possession, before moving into related rulings on rent liability, transfer of ownership during a lease, and guarantees. The session closes with a Q&A covering fiqh methodology, menstruation rulings, traffic-accident liability, mosque prayer-line sutrahs, damaan al-darak, and the chemical composition of alcohol in fuel. The group also agreed on a revised weekly study schedule.</p>
 <hr>
 <h2>1. A Hired Animal That Flees or Goes Missing</h2>
 <h3>Background / Question</h3>
-<p>If someone hires a camel (or similar animal requiring upkeep) and it flees or</p>
-<p>its whereabouts become unknown, leaving no funds behind, who bears the cost</p>
-<p>of feeding it, and does the lessee have the right to rescind the contract?</p>
+<p>If someone hires a camel (or similar animal requiring upkeep) and it flees or its whereabouts become unknown, leaving no funds behind, who bears the cost of feeding it, and does the lessee have the right to rescind the contract?</p>
 <h3>Ruling</h3>
 <ul>
-<li>The lessee has no right of rescission, since benefit from the animal can</li>
+<li>The lessee has no right of rescission, since benefit from the animal can still theoretically be obtained once it is found.</li>
+<li>If the animal has known funds of its own, the judge (<em>qadi</em>) arranges for its maintenance and the wages of its handler from that wealth.</li>
+<li>If it has no separate funds, the judge may sell the surplus portion of the animals beyond the lessee's actual need (preferred over borrowing), or borrow against it if no surplus exists and a lender is available.</li>
+<li>The judge's authorization is required to protect the lessee's right and out of respect for the animal's welfare (analogous to a lost garment or a missing person's slave, which may likewise be sold to preserve its value if maintenance costs threaten to consume it).</li>
+<li>The judge should ideally set a fixed daily allowance for expenses; the one spending is believed under oath if he claims a customary amount.</li>
+<li>Selling part of the animal for upkeep does not dissolve the lease for that portion (treated as if destroyed out of necessity), and the lessor may later be able to claim a proportional refund from the owner.</li>
+<li>If the judge permits the lessee to advance funds from his own money with a right of reimbursement, this is valid per the <em>azhar</em> (more apparent) view, since it is a case of necessity. Reimbursement without the judge's permission is only recognized if witnessed with intent to be repaid; scholars differ on whether the rare case of missing witnesses defeats the claim — the accepted view is that mere intent to reclaim suffices, since such disappearances are not uncommon during travel.</li>
+<li>Distinguished from a case where the animal is stolen/taken away (as opposed to merely left behind): there, in a lease of a specific object the lessee has an option to rescind (as with a runaway riding beast); in a lease of a described type (<em>dhimma</em>), the judge hires a substitute or borrows funds, and if borrowing is not possible, the lease may be rescinded.</li>
 </ul>
-<p>still theoretically be obtained once it is found.</p>
-<ul>
-<li>If the animal has known funds of its own, the judge (<em>qadi</em>) arranges for</li>
-</ul>
-<p>its maintenance and the wages of its handler from that wealth.</p>
-<ul>
-<li>If it has no separate funds, the judge may sell the surplus portion of the</li>
-</ul>
-<p>animals beyond the lessee's actual need (preferred over borrowing), or</p>
-<p>borrow against it if no surplus exists and a lender is available.</p>
-<ul>
-<li>The judge's authorization is required to protect the lessee's right and out</li>
-</ul>
-<p>of respect for the animal's welfare (analogous to a lost garment or a</p>
-<p>missing person's slave, which may likewise be sold to preserve its value</p>
-<p>if maintenance costs threaten to consume it).</p>
-<ul>
-<li>The judge should ideally set a fixed daily allowance for expenses; the one</li>
-</ul>
-<p>spending is believed under oath if he claims a customary amount.</p>
-<ul>
-<li>Selling part of the animal for upkeep does not dissolve the lease for that</li>
-</ul>
-<p>portion (treated as if destroyed out of necessity), and the lessor may</p>
-<p>later be able to claim a proportional refund from the owner.</p>
-<ul>
-<li>If the judge permits the lessee to advance funds from his own money with a</li>
-</ul>
-<p>right of reimbursement, this is valid per the <em>azhar</em> (more apparent) view,</p>
-<p>since it is a case of necessity. Reimbursement without the judge's</p>
-<p>permission is only recognized if witnessed with intent to be repaid;</p>
-<p>scholars differ on whether the rare case of missing witnesses defeats the</p>
-<p>claim — the accepted view is that mere intent to reclaim suffices, since</p>
-<p>such disappearances are not uncommon during travel.</p>
-<ul>
-<li>Distinguished from a case where the animal is stolen/taken away (as opposed</li>
-</ul>
-<p>to merely left behind): there, in a lease of a specific object the lessee</p>
-<p>has an option to rescind (as with a runaway riding beast); in a lease of a</p>
-<p>described type (<em>dhimma</em>), the judge hires a substitute or borrows funds,</p>
-<p>and if borrowing is not possible, the lease may be rescinded.</p>
 <h3>Referenced scholars / texts</h3>
-<p>Al-Subki, al-Adhra'i (on selling the whole of a <em>dhimma</em>-leased animal for</p>
-<p>benefit, and on advancing funds with intent of reimbursement), Mujalli (a</p>
-<p>dissenting view on the lessee's retained right).</p>
+<p>Al-Subki, al-Adhra'i (on selling the whole of a <em>dhimma</em>-leased animal for benefit, and on advancing funds with intent of reimbursement), Mujalli (a dissenting view on the lessee's retained right).</p>
 <hr>
 <h2>2. Rent Liability and Possession of the Leased Item</h2>
 <h3>Background / Question</h3>
-<p>Once the lessee takes possession of the leased item (an animal, house, or</p>
-<p>even a freed person hired out) and holds it, when does the rent become due,</p>
-<p>even if the lessee cannot use it?</p>
+<p>Once the lessee takes possession of the leased item (an animal, house, or even a freed person hired out) and holds it, when does the rent become due, even if the lessee cannot use it?</p>
 <h3>Ruling</h3>
 <ul>
-<li>Once possession occurs (including a beast being brought to and held by the</li>
+<li>Once possession occurs (including a beast being brought to and held by the lessee, or the lessee retaining it after it is presented to him), the rent becomes due once the lease term elapses — even if no actual benefit was taken, and even due to an excuse such as fear or illness — because the benefit is deemed lost while in his possession, actual or constructive.</li>
+<li>Mere presentation/offer of the item does not by itself count as possession unless it amounts to actual receipt (the view attributed to Muhammad al-Ramli, preferred over al-Qadi Abu al-Tayyib).</li>
+<li>For a lease measured by a task (e.g., riding to a specific destination) rather than a time period, rent is secured once the time needed to complete the task has elapsed, whether the object was delivered in a specific-object lease or a described-type (<em>dhimma</em>) lease.</li>
+<li>In an invalid (<em>fasid</em>) lease, the fair rental value becomes due on the same basis as the agreed rent would in a valid lease, since invalid contracts largely follow the rulings of valid ones regarding liability. Mere vacating/offering of a property is insufficient — actual possession is required.</li>
+<li>If a leased specific item is not delivered (or is usurped/withheld by a third party) until the lease term lapses, the lease is voided due to loss of the object of the contract before possession; if only part is withheld, the lease is voided for that part only, with an option for the rest.</li>
+<li>Where the lease is defined by a task rather than a period (e.g., riding to a destination) and delivery is delayed until the time to travel has passed, the correct view is that the lease is not voided and the lessee has no option, since it pertains to the (still obtainable) benefit rather than a fixed time. In a <em>dhimma</em> lease this holds definitively, since it is an outstanding debt whose fulfillment is merely delayed.</li>
 </ul>
-<p>lessee, or the lessee retaining it after it is presented to him), the rent</p>
-<p>becomes due once the lease term elapses — even if no actual benefit was</p>
-<p>taken, and even due to an excuse such as fear or illness — because the</p>
-<p>benefit is deemed lost while in his possession, actual or constructive.</p>
-<ul>
-<li>Mere presentation/offer of the item does not by itself count as possession</li>
-</ul>
-<p>unless it amounts to actual receipt (the view attributed to Muhammad</p>
-<p>al-Ramli, preferred over al-Qadi Abu al-Tayyib).</p>
-<ul>
-<li>For a lease measured by a task (e.g., riding to a specific destination)</li>
-</ul>
-<p>rather than a time period, rent is secured once the time needed to</p>
-<p>complete the task has elapsed, whether the object was delivered in a</p>
-<p>specific-object lease or a described-type (<em>dhimma</em>) lease.</p>
-<ul>
-<li>In an invalid (<em>fasid</em>) lease, the fair rental value becomes due on the</li>
-</ul>
-<p>same basis as the agreed rent would in a valid lease, since invalid</p>
-<p>contracts largely follow the rulings of valid ones regarding liability.</p>
-<p>Mere vacating/offering of a property is insufficient — actual possession</p>
-<p>is required.</p>
-<ul>
-<li>If a leased specific item is not delivered (or is usurped/withheld by a</li>
-</ul>
-<p>third party) until the lease term lapses, the lease is voided due to loss</p>
-<p>of the object of the contract before possession; if only part is withheld,</p>
-<p>the lease is voided for that part only, with an option for the rest.</p>
-<ul>
-<li>Where the lease is defined by a task rather than a period (e.g., riding to</li>
-</ul>
-<p>a destination) and delivery is delayed until the time to travel has</p>
-<p>passed, the correct view is that the lease is not voided and the lessee</p>
-<p>has no option, since it pertains to the (still obtainable) benefit rather</p>
-<p>than a fixed time. In a <em>dhimma</em> lease this holds definitively, since it</p>
-<p>is an outstanding debt whose fulfillment is merely delayed.</p>
 <hr>
 <h2>3. Transfer of Ownership During a Lease</h2>
 <h3>Background / Question</h3>
-<p>What happens to a lease when the leased person or property changes legal</p>
-<p>status during the lease term — for example, a hired slave is manumitted, or</p>
-<p>leased property is sold?</p>
+<p>What happens to a lease when the leased person or property changes legal status during the lease term — for example, a hired slave is manumitted, or leased property is sold?</p>
 <h3>Ruling</h3>
 <ul>
-<li>If an owner hires out his slave and then frees him mid-term, the correct</li>
+<li>If an owner hires out his slave and then frees him mid-term, the correct view is that the lease is <strong>not</strong> voided, since manumission only affects a person whose services were already alienated (leased out); the benefits continue to belong to the lessee, and the freed slave has no option to rescind and no claim to further wages from his former owner for the remainder of the term, since he had already validly transacted away those benefits while he owned them (analogous to a slave-woman married out then freed after consummation — she has no claim on what the husband subsequently benefits from).</li>
+<li>Distinguished from a case where manumission was contingent on a future condition that materializes during the lease term — there, the lease is voided, since the entitlement to freedom preceded the lease. The same applies to leasing out one's <em>umm walad</em> (slave-mother of one's child) who then dies.</li>
+<li>Selling a leased property during the lease term is valid for the lessor himself definitively (no obstacle, akin to a usurper's owner selling it), and the lease is not voided, because the lease pertains to usufruct while ownership pertains to the underlying property — the two do not conflict.</li>
+<li>Selling to a third party is likewise valid per the <em>azhar</em> view, without needing the lessee's consent, and the lease remains intact; the buyer receives the property stripped of usufruct for the remaining term, and the lessee's possession does not bar transfer of the underlying ownership.</li>
+<li>If the lease term is measured by time, the sale is valid even if the buyer is unaware of the remaining lease term (though some scholars, e.g. al-Adhra'i, argue the sale is void if the term is unknown to the buyer, who then has an option upon discovering it). If the lease is measured by a task (e.g., riding to a certain place), the sale is void due to the uncertainty of how long the task will take.</li>
+<li>If a leased house is later purchased by the same lessee during the term and then he sells it on while time remains, the majority view is that the remaining usufruct transfers with the sale to the new buyer, analogous to a bequeathed usufruct.</li>
 </ul>
-<p>view is that the lease is <strong>not</strong> voided, since manumission only affects a</p>
-<p>person whose services were already alienated (leased out); the benefits</p>
-<p>continue to belong to the lessee, and the freed slave has no option to</p>
-<p>rescind and no claim to further wages from his former owner for the</p>
-<p>remainder of the term, since he had already validly transacted away those</p>
-<p>benefits while he owned them (analogous to a slave-woman married out then</p>
-<p>freed after consummation — she has no claim on what the husband</p>
-<p>subsequently benefits from).</p>
-<ul>
-<li>Distinguished from a case where manumission was contingent on a future</li>
-</ul>
-<p>condition that materializes during the lease term — there, the lease is</p>
-<p>voided, since the entitlement to freedom preceded the lease. The same</p>
-<p>applies to leasing out one's <em>umm walad</em> (slave-mother of one's child) who</p>
-<p>then dies.</p>
-<ul>
-<li>Selling a leased property during the lease term is valid for the lessor</li>
-</ul>
-<p>himself definitively (no obstacle, akin to a usurper's owner selling it),</p>
-<p>and the lease is not voided, because the lease pertains to usufruct while</p>
-<p>ownership pertains to the underlying property — the two do not conflict.</p>
-<ul>
-<li>Selling to a third party is likewise valid per the <em>azhar</em> view, without</li>
-</ul>
-<p>needing the lessee's consent, and the lease remains intact; the buyer</p>
-<p>receives the property stripped of usufruct for the remaining term, and the</p>
-<p>lessee's possession does not bar transfer of the underlying ownership.</p>
-<ul>
-<li>If the lease term is measured by time, the sale is valid even if the</li>
-</ul>
-<p>buyer is unaware of the remaining lease term (though some scholars, e.g.</p>
-<p>al-Adhra'i, argue the sale is void if the term is unknown to the buyer,</p>
-<p>who then has an option upon discovering it). If the lease is measured by a</p>
-<p>task (e.g., riding to a certain place), the sale is void due to the</p>
-<p>uncertainty of how long the task will take.</p>
-<ul>
-<li>If a leased house is later purchased by the same lessee during the term</li>
-</ul>
-<p>and then he sells it on while time remains, the majority view is that the</p>
-<p>remaining usufruct transfers with the sale to the new buyer, analogous to</p>
-<p>a bequeathed usufruct.</p>
 <h3>Referenced scholars / texts</h3>
-<p>Al-Zarkashi, al-Ghazali, al-Shashi, Ibn al-Rif'a, al-Subki, al-Baghawi</p>
-<p>(various positions on ownership of remaining usufruct after a lease is</p>
-<p>voided, and validity of sales during a lease).</p>
+<p>Al-Zarkashi, al-Ghazali, al-Shashi, Ibn al-Rif'a, al-Subki, al-Baghawi (various positions on ownership of remaining usufruct after a lease is voided, and validity of sales during a lease).</p>
 <hr>
 <h2>4. Installment Rent and Related Contract Rules</h2>
 <h3>Background / Question</h3>
-<p>Brief notes on: (a) what happens when witnesses record a total rent amount</p>
-<p>that doesn't match its stated installments; (b) whether a lessor may</p>
-<p>withhold delivery of leased goods (e.g., printed volumes) pending payment.</p>
+<p>Brief notes on: (a) what happens when witnesses record a total rent amount that doesn't match its stated installments; (b) whether a lessor may withhold delivery of leased goods (e.g., printed volumes) pending payment.</p>
 <h3>Ruling</h3>
 <ul>
-<li>If the lump sum and the installment breakdown recorded by witnesses</li>
+<li>If the lump sum and the installment breakdown recorded by witnesses conflict and cannot be reconciled, both are treated as invalidated due to contradiction (illustrated with an example of a 4-year lease at a stated total that doesn't cleanly divide across months and days).</li>
+<li>A lessor may withhold what was contracted for work (e.g., bookbinding) pending payment of its own rent, but may not withhold one item to secure payment for a separate, distinct transaction (illustrated with leasing by-the-notebook binding work, where each notebook is treated as a separate item).</li>
 </ul>
-<p>conflict and cannot be reconciled, both are treated as invalidated due to</p>
-<p>contradiction (illustrated with an example of a 4-year lease at a stated</p>
-<p>total that doesn't cleanly divide across months and days).</p>
-<ul>
-<li>A lessor may withhold what was contracted for work (e.g., bookbinding)</li>
-</ul>
-<p>pending payment of its own rent, but may not withhold one item to secure</p>
-<p>payment for a separate, distinct transaction (illustrated with leasing</p>
-<p>by-the-notebook binding work, where each notebook is treated as a separate</p>
-<p>item).</p>
 <hr>
 <h2>5. Damaan al-Darak (Guarantee Against Eviction) and Rahn (Pledge)</h2>
 <h3>Background / Question</h3>
-<p>Regarding guarantees of "eviction" liability (<em>damaan al-darak</em>) in a sale,</p>
-<p>and pledges (<em>rahn</em>): is such a guarantee valid only after the price has</p>
-<p>been handed over, and can a guarantee be meaningfully given if the risk has</p>
-<p>already passed by the time of delivery?</p>
+<p>Regarding guarantees of "eviction" liability (<em>damaan al-darak</em>) in a sale, and pledges (<em>rahn</em>): is such a guarantee valid only after the price has been handed over, and can a guarantee be meaningfully given if the risk has already passed by the time of delivery?</p>
 <h3>Ruling</h3>
 <ul>
-<li>A guarantee (<em>damaan</em>) is invalid for an obligation that has not yet</li>
+<li>A guarantee (<em>damaan</em>) is invalid for an obligation that has not yet arisen — for example, guaranteeing a future loan before it is made — since a guarantee is a form of testimony to an existing right and cannot precede it. An exception is guaranteeing a wife's future daily maintenance, which is valid because such a right is treated as already established.</li>
+<li>The governing (<em>madhhab</em>) position is that <em>damaan al-darak</em> (guaranteeing return of the price if the sold item turns out to belong to someone else) is valid only after the price has been received by the seller, because only what has entered the seller's possession can be guaranteed — if the price were lost before receipt, there would be nothing to guarantee. Exception: if a judge sells a missing debtor's property to satisfy a debt and guarantees eviction, this guarantee is invalid since there is no possession to base it on.</li>
+<li>Likewise for <em>rahn</em> (pledge) offered as security for a deferred sale: valid only after the sold item is delivered — raising a practical concern that requiring delivery before the pledge exposes the seller to risk before the security takes effect. Suggested resolution: entrust the item to a trusted third party during the exchange so that delivery and securing happen effectively together.</li>
 </ul>
-<p>arisen — for example, guaranteeing a future loan before it is made — since</p>
-<p>a guarantee is a form of testimony to an existing right and cannot precede</p>
-<p>it. An exception is guaranteeing a wife's future daily maintenance, which</p>
-<p>is valid because such a right is treated as already established.</p>
-<ul>
-<li>The governing (<em>madhhab</em>) position is that <em>damaan al-darak</em> (guaranteeing</li>
-</ul>
-<p>return of the price if the sold item turns out to belong to someone else)</p>
-<p>is valid only after the price has been received by the seller, because</p>
-<p>only what has entered the seller's possession can be guaranteed — if the</p>
-<p>price were lost before receipt, there would be nothing to guarantee.</p>
-<p>Exception: if a judge sells a missing debtor's property to satisfy a debt</p>
-<p>and guarantees eviction, this guarantee is invalid since there is no</p>
-<p>possession to base it on.</p>
-<ul>
-<li>Likewise for <em>rahn</em> (pledge) offered as security for a deferred sale: valid</li>
-</ul>
-<p>only after the sold item is delivered — raising a practical concern that</p>
-<p>requiring delivery before the pledge exposes the seller to risk before the</p>
-<p>security takes effect. Suggested resolution: entrust the item to a trusted</p>
-<p>third party during the exchange so that delivery and securing happen</p>
-<p>effectively together.</p>
 <hr>
 <h2>6. Q&A: Fiqh Methodology on "Contact" vs. "Mixture" (in Purification Rulings)</h2>
-<p>A question referenced Imam al-Juwayni's discussion of water changed by</p>
-<p>contact with something like earth versus saffron, and whether the philosophers'</p>
-<p>objection (that bodies cannot truly interpenetrate) undermines the jurists'</p>
-<p>distinction between "adjacency" (<em>mujawara</em>) and "mixture" (<em>mukhalata</em>).</p>
+<p>A question referenced Imam al-Juwayni's discussion of water changed by contact with something like earth versus saffron, and whether the philosophers' objection (that bodies cannot truly interpenetrate) undermines the jurists' distinction between "adjacency" (<em>mujawara</em>) and "mixture" (<em>mukhalata</em>).</p>
 <h3>Ruling</h3>
 <ul>
-<li>Legal rulings are not derived from technical/philosophical analysis of</li>
+<li>Legal rulings are not derived from technical/philosophical analysis of physical interpenetration, but from ordinary linguistic and customary understanding. Jurists classify changes in water as due to either adjacency or mixture based on how language and custom describe them, even if philosophically "mixture" could be reduced to adjacency at a granular level. The relevant criterion is linguistic usage, not physics.</li>
+<li>This principle was extended by analogy to a related question: cessation of a woman's menstruation "without an identifiable cause" versus "with a cause" (relevant to determining whether she waits until menopause). The ruling looks to apparent, outwardly known causes (e.g., a diagnosed illness) rather than hidden/microscopic causes unknown except to medical specialists; an internal, non-apparent cause (e.g., an undetected viral factor) is treated as "without cause" for legal purposes, since rulings track apparent reality, not hidden technicalities.</li>
 </ul>
-<p>physical interpenetration, but from ordinary linguistic and customary</p>
-<p>understanding. Jurists classify changes in water as due to either</p>
-<p>adjacency or mixture based on how language and custom describe them, even</p>
-<p>if philosophically "mixture" could be reduced to adjacency at a granular</p>
-<p>level. The relevant criterion is linguistic usage, not physics.</p>
-<ul>
-<li>This principle was extended by analogy to a related question: cessation</li>
-</ul>
-<p>of a woman's menstruation "without an identifiable cause" versus "with a</p>
-<p>cause" (relevant to determining whether she waits until menopause). The</p>
-<p>ruling looks to apparent, outwardly known causes (e.g., a diagnosed</p>
-<p>illness) rather than hidden/microscopic causes unknown except to medical</p>
-<p>specialists; an internal, non-apparent cause (e.g., an undetected viral</p>
-<p>factor) is treated as "without cause" for legal purposes, since rulings</p>
-<p>track apparent reality, not hidden technicalities.</p>
 <hr>
 <h2>7. Traffic Accident Liability</h2>
 <h3>Background / Question</h3>
-<p>A car traveling correctly in its lane collided with a bicycle riding in the</p>
-<p>wrong direction (against traffic); the cyclist was injured (no amputation or</p>
-<p>major harm) and is reportedly seeking to exploit the situation for</p>
-<p>compensation. Is the driver liable, given that the cyclist was the one who</p>
-<p>entered the wrong lane?</p>
+<p>A car traveling correctly in its lane collided with a bicycle riding in the wrong direction (against traffic); the cyclist was injured (no amputation or major harm) and is reportedly seeking to exploit the situation for compensation. Is the driver liable, given that the cyclist was the one who entered the wrong lane?</p>
 <h3>Ruling</h3>
 <ul>
-<li>The position held by the questioner's local fatwa council: fault under</li>
+<li>The position held by the questioner's local fatwa council: fault under traffic law is not itself decisive in fiqh. Classical jurists treat a collision between two parties as shared liability regardless of which party was following traffic conventions, since the underlying principle is that harm resulting from mutual collision is apportioned between both parties (illustrated by the analogy of a collision between someone riding an elephant and someone riding a ram — size/position on the road doesn't change the basic rule).</li>
+<li>The party who caused harm is not obligated to provide medicine, food, or ongoing support, but rather owes <em>hukuma</em> (a proportional compensation) once healing is complete, based on any permanent residual harm — assessed as it would be for a similar diminishment in the value of a slave, then proportioned to the <em>diya</em> (blood-money) scale.</li>
+<li>A contrasting view, held by the International Islamic Fiqh Academy and reportedly by the late Shaykh Ali Salim (via IslamWeb), holds that the party who was following traffic rules bears no liability at all, with full liability falling on the party who violated traffic conventions or entered the wrong lane — analogous to someone lawfully walking in their own lane when an animal wanders into it and is struck (no liability), versus being liable if one's property is instead damaged by an intruding object.</li>
+<li>Classical texts on shared fault were also invoked from ships colliding at sea: if the collision was unavoidable (e.g., due to strong wind) and neither party was negligent, there is no liability, with each captain's denial of negligence accepted under oath; if one or both were negligent (e.g., insufficient crew/equipment, or failing to steer clear when possible), liability follows accordingly, though without criminal retaliation (<em>qisas</em>). A moored ship struck by a drifting one is likened to someone sitting in a narrow street being struck — the party creating the obstruction bears more responsibility. This principle of who was "within their lane" versus "outside it" was seen as the operative distinction for modern vehicle collisions too, alongside the general rule that <em>diya</em> applies to accidental killing and <em>hukuma</em> to accidental injury regardless of intent (since these are liabilities of consequence, not culpability).</li>
 </ul>
-<p>traffic law is not itself decisive in fiqh. Classical jurists treat a</p>
-<p>collision between two parties as shared liability regardless of which</p>
-<p>party was following traffic conventions, since the underlying principle</p>
-<p>is that harm resulting from mutual collision is apportioned between both</p>
-<p>parties (illustrated by the analogy of a collision between someone riding</p>
-<p>an elephant and someone riding a ram — size/position on the road doesn't</p>
-<p>change the basic rule).</p>
-<ul>
-<li>The party who caused harm is not obligated to provide medicine, food, or</li>
-</ul>
-<p>ongoing support, but rather owes <em>hukuma</em> (a proportional compensation)</p>
-<p>once healing is complete, based on any permanent residual harm — assessed</p>
-<p>as it would be for a similar diminishment in the value of a slave, then</p>
-<p>proportioned to the <em>diya</em> (blood-money) scale.</p>
-<ul>
-<li>A contrasting view, held by the International Islamic Fiqh Academy and</li>
-</ul>
-<p>reportedly by the late Shaykh Ali Salim (via IslamWeb), holds that the</p>
-<p>party who was following traffic rules bears no liability at all, with full</p>
-<p>liability falling on the party who violated traffic conventions or entered</p>
-<p>the wrong lane — analogous to someone lawfully walking in their own lane</p>
-<p>when an animal wanders into it and is struck (no liability), versus being</p>
-<p>liable if one's property is instead damaged by an intruding object.</p>
-<ul>
-<li>Classical texts on shared fault were also invoked from ships colliding at</li>
-</ul>
-<p>sea: if the collision was unavoidable (e.g., due to strong wind) and</p>
-<p>neither party was negligent, there is no liability, with each captain's</p>
-<p>denial of negligence accepted under oath; if one or both were negligent</p>
-<p>(e.g., insufficient crew/equipment, or failing to steer clear when</p>
-<p>possible), liability follows accordingly, though without criminal</p>
-<p>retaliation (<em>qisas</em>). A moored ship struck by a drifting one is likened</p>
-<p>to someone sitting in a narrow street being struck — the party creating</p>
-<p>the obstruction bears more responsibility. This principle of who was</p>
-<p>"within their lane" versus "outside it" was seen as the operative</p>
-<p>distinction for modern vehicle collisions too, alongside the general rule</p>
-<p>that <em>diya</em> applies to accidental killing and <em>hukuma</em> to accidental</p>
-<p>injury regardless of intent (since these are liabilities of consequence,</p>
-<p>not culpability).</p>
 <hr>
 <h2>8. Mosque Floor Markings as a Sutrah (Prayer Barrier)</h2>
 <h3>Background / Question</h3>
-<p>Many mosque prayer rugs/carpets have printed lines marking rows and</p>
-<p>individual standing spots. Can such printed lines — whether on a single</p>
-<p>large carpet or on separate mats — serve as a valid <em>sutrah</em> (barrier)</p>
-<p>when nothing higher is available?</p>
+<p>Many mosque prayer rugs/carpets have printed lines marking rows and individual standing spots. Can such printed lines — whether on a single large carpet or on separate mats — serve as a valid <em>sutrah</em> (barrier) when nothing higher is available?</p>
 <h3>Ruling</h3>
 <ul>
-<li>Yes, if the worshipper intends the marked line as a sutrah or a row</li>
+<li>Yes, if the worshipper intends the marked line as a sutrah or a row boundary, it can serve that function, even if it is merely printed on the fabric of the carpet itself, since intent-driven designation matters, not the height of the mark. Praying on a spread-out prayer mat is likewise considered its own sutrah for the person praying on it.</li>
+<li>Regarding the imam's sutrah: there is a difference of opinion between Ibn Hajar (whose view is that the imam's sutrah serves him and the first row only, and each subsequent row is a sutrah for the row behind it) and al-Ramli (the opposite view, that the imam's sutrah serves all the rows behind him). Under either view, walking between rows is prohibited except from necessity (e.g., risk of soiling the mosque); the point of disagreement only affects secondary questions such as what happens to the rows' protection if the imam's sutrah is later lost or was never properly established (an issue the discussion flagged as worth further research).</li>
 </ul>
-<p>boundary, it can serve that function, even if it is merely printed on the</p>
-<p>fabric of the carpet itself, since intent-driven designation matters, not</p>
-<p>the height of the mark. Praying on a spread-out prayer mat is likewise</p>
-<p>considered its own sutrah for the person praying on it.</p>
-<ul>
-<li>Regarding the imam's sutrah: there is a difference of opinion between Ibn</li>
-</ul>
-<p>Hajar (whose view is that the imam's sutrah serves him and the first row</p>
-<p>only, and each subsequent row is a sutrah for the row behind it) and</p>
-<p>al-Ramli (the opposite view, that the imam's sutrah serves all the rows</p>
-<p>behind him). Under either view, walking between rows is prohibited except</p>
-<p>from necessity (e.g., risk of soiling the mosque); the point of</p>
-<p>disagreement only affects secondary questions such as what happens to the</p>
-<p>rows' protection if the imam's sutrah is later lost or was never properly</p>
-<p>established (an issue the discussion flagged as worth further research).</p>
 <hr>
 <h2>Referenced scholars / texts (general)</h2>
-<p>Ibn Hajar al-Haytami, al-Ramli, al-Subki, al-Adhra'i, Ibn al-Rif'a,</p>
-<p>al-Zarkashi, al-Ghazali, al-Shashi, al-Baghawi, Imam al-Juwayni, al-Bulqini,</p>
-<p>al-Isnawi, al-Mujalli, the International Islamic Fiqh Academy (Rabitat</p>
-<p>al-'Alam al-Islami), the Indian Fiqh Academy, and the Jordanian Fatwa</p>
-<p>Department — with a closing group decision to devote roughly a quarter-hour</p>
-<p>each Tuesday to Indian Fiqh Academy resolutions and each Thursday to</p>
-<p>International Islamic Fiqh Academy resolutions, alongside continuing</p>
-<p><em>Tuhfat al-Muhtaj</em>'s chapter on marriage (<em>Nikah</em>).</p></div>
+<p>Ibn Hajar al-Haytami, al-Ramli, al-Subki, al-Adhra'i, Ibn al-Rif'a, al-Zarkashi, al-Ghazali, al-Shashi, al-Baghawi, Imam al-Juwayni, al-Bulqini, al-Isnawi, al-Mujalli, the International Islamic Fiqh Academy (Rabitat al-'Alam al-Islami), the Indian Fiqh Academy, and the Jordanian Fatwa Department — with a closing group decision to devote roughly a quarter-hour each Tuesday to Indian Fiqh Academy resolutions and each Thursday to International Islamic Fiqh Academy resolutions, alongside continuing <em>Tuhfat al-Muhtaj</em>'s chapter on marriage (<em>Nikah</em>).</p></div>
     </div>
 
     <footer>
