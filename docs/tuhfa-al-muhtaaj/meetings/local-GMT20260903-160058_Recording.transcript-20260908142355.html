@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claiming a Mosque Spot, Milk Banks & Islamic Insurance - September 03, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Claiming a Mosque Spot, Milk Banks & Islamic Insurance - September 03, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Claiming a Mosque Spot, Milk Banks & Islamic Insurance - September 03, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-09-03</span>
+          
+          <span class="meta-chip">🕐 16:00</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>This Tuhfat al-Muhtaj session concludes the discussion of claiming a spot in the mosque for teaching or worship, with an extended live discussion on tabarruk (seeking blessing) crowding at Masjid Ba'alawi in Tarim, then moves through a long sequence of Islamic Fiqh Academy (Majma' al-Fiqh al-Islami) resolutions — human milk banks, resuscitation devices, an Islamic Development Bank inquiry, commercial insurance, and interest-based banking — closing with a summary framework for evaluating Islamic financial products.</p>
+<hr>
+<h2>1. Claiming a Spot in the Mosque</h2>
+<h3>Ruling</h3>
+<ul>
+<li>Someone who habitually occupies a mosque spot to teach, recite Qur'an or religious knowledge, or a tool needed for it (like the one who claims a street spot for a trade) retains a right to that spot due to his ongoing purpose there, against a competing view (extensively argued but not the school's relied-upon position) that the right lapses the moment he stands up.</li>
+<li>No permission from the ruler is required for this, unless custom in a given place requires it (Ibn Hajar's position, opposed by al-Ramli and al-Khatib).</li>
+<li>A student's habitual spot in front of his teacher is protected only if attending genuinely benefits him or he benefits others by being there; otherwise (attending with no real profit — likened to "flood water passing over flood water," neither absorbed nor useful) he has no claim.</li>
+<li>It is absolutely forbidden to sit or spread a prayer rug behind the Maqam Ibrahim in a way that blocks pilgrims performing the sunna prayer of tawaf, or in the mihrab during the imam's prayer, or in a way that blocks a prayer row and disrupts the congregation.</li>
+<li>By extension, it is forbidden to camp for extended periods in the Rawda al-Sharifa (the blessed area in the Prophet's Mosque) or comparable revered spots (e.g., the Cave of Hira) in a way that denies other pilgrims brief access, since this amounts to unlawfully monopolizing a space intended for worship by all — one should limit one's stay to the time needed (e.g., two rak'ahs and a supplication) and yield the spot to others.</li>
+<li>Extended discussion (audience Q&A) applied this principle to the annual crowding at Masjid Ba'alawi in Tarim on the 27th night, where visitors seeking blessing (tabarruk) at this historically significant mosque (built by the ancestors of the Ba'alawi sada) sometimes occupy it from before Maghrib until Fajr, preventing others from even praying two rak'ahs. The view offered: if this leads to effectively "monopolizing" the blessed space and denying others entry, it becomes impermissible, though there is no obligation to prove the site's blessing by textual evidence — public belief in its baraka, when not contrary to the Shariah, is itself sufficient grounds to recognize the crowding concern; if it does not reach that level of exclusion, there is no harm.</li>
+<li>A companion discussion on preferring another's benefit over one's own (<em>ithar</em>) in matters of the Hereafter (e.g., yielding a first-row prayer spot in another's favor while retaining the intended reward) was described as potentially superior to ithar in worldly matters (e.g., yielding food or drink), illustrated by the hadith of the Prophet sending his blessing-water to Bilal and Abu Musa al-Ash'ari after a man asked him for worldly provision instead of the Prophet's spiritual glad tidings.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Hajar al-Haytami (Tuhfat al-Muhtaj), al-Ramli, al-Khatib al-Shirbini; a citation from al-Sayyid al-Battah's commentary on Sheikh Muhammad ibn Salih al-Ra'is's manasik.</p>
+<hr>
+<h2>2. Fiqh Academy Resolutions (continued)</h2>
+<h3>Human Milk Banks</h3>
+<p>Ruled prohibited: milk banks originated in the West and were later scaled back even there due to practical drawbacks; Islam treats breastfeeding kinship (<em>rida'</em>) like blood kinship for purposes of prohibited marriage, and milk banks risk confusing lineage or mixing milk from multiple donors in ways incompatible with reliably tracking rida' relationships; existing social/family networks in the Muslim world can meet a premature or milk-needy infant's needs through direct wet-nursing instead.</p>
+<h3>Resuscitation (Life-Support) Devices</h3>
+<p>Deferred to the next session pending further study, given the difficulty of the underlying question (defining death in relation to withdrawing life support) and in light of a prior study by the Islamic Organization for Medical Sciences in Kuwait, to which the Academy resolved to refer.</p>
+<h3>Islamic Development Bank Inquiries</h3>
+<p>A set of questions from the Islamic Development Bank were deferred pending fuller study and direct consultation with the Bank; the Bank was asked to submit a report from its own Shariah board.</p>
+<h3>Insurance and Reinsurance</h3>
+<ul>
+<li>Conventional fixed-premium commercial insurance involves excessive gharar (uncertainty) that corrupts the contract and is therefore religiously prohibited.</li>
+<li>The Shariah-compliant alternative is cooperative (takaful) insurance, based on mutual donation (tabarru'), and likewise cooperative reinsurance; Islamic states were urged to establish such cooperative insurance and reinsurance institutions.</li>
+<li>Discussion extended this to necessity-driven cases in daily life (e.g., car insurance, health insurance) where no takaful alternative exists locally: some contemporary muftis (a position the teacher leaned toward) permit entering conventional insurance to the extent of genuine need, provided it is free of an explicit riba-based component, since such insurance is not entered for speculative gain (like gambling) but out of a real need for protection against loss.</li>
+<li>However, working for, marketing, or facilitating conventional insurance contracts beyond one's own necessity-based use (e.g., drafting insurance contracts for others, or promoting policies generally) is not permitted, since this constitutes assisting in a prohibited transaction; exceptions include selling unrelated equipment/services to insurers where there's no direct tie to the prohibited element. Advising the public about a permissible-under-necessity option, framed explicitly as necessity-only, was distinguished from general promotion, which remains impermissible.</li>
+</ul>
+<h3>Interest-Based Banking and Dealing with Islamic Banks</h3>
+<p>Both charging additional interest for late repayment of a matured debt, and interest charged from the outset of a loan, are ruled as prohibited riba. The Academy called on Islamic governments to encourage and establish Islamic banks operating under Shariah rules, so Muslims need not live in tension between their economic reality and their faith. Discussion noted the practical importance of a bank's Shariah board actually being followed by staff (not merely "a certificate on paper"), citing a real dispute in Tarim over a bank's compliance, and referenced adding an explicit condition to Shariah approval letters requiring an annual Shariah-compliance audit report where no standing Shariah board/auditor already exists.</p>
+<hr>
+<h2>3. Framework for Evaluating Islamic Financial Products</h2>
+<p>The lesson closed with a discussion of criteria for vetting an Islamic financial product: absence of riba, absence of gharar (excessive uncertainty), absence of maysir (gambling/speculation), and (as a further consideration, not a strict fourth pillar) avoidance of unlawfully consuming others' wealth (akl amwal al-nas bi-l-batil) — noting these are practical starting checkpoints rather than an exhaustive list of conditions, since a transaction can pass all four and still be impermissible for another reason (e.g., the classical example of "qafiz tahhan," paying a miller with a measure of the flour he grinds, prohibited despite the absence of ambiguity). A related, more developed seven-point framework ("al-mashru'iyyat al-sab'") mentioned by a participant's teacher/mentor was cited: legitimacy of the purpose of the sale, legitimacy of contract documentation (Shariah-board approved), legitimacy of the subject matter, legitimacy of the pledge/collateral, and legitimacy of transaction sequencing (e.g., in murabaha, the financier must purchase and take possession before reselling to the client) among its elements.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>

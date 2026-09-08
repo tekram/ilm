@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Well and House Easements (Ḥarīm) & Intro to the International Islamic Fiqh Academy - August 13, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Well and House Easements (Ḥarīm) & Intro to the International Islamic Fiqh Academy - August 13, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Well and House Easements (Ḥarīm) & Intro to the International Islamic Fiqh Academy - August 13, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-08-13</span>
+          
+          <span class="meta-chip">🕐 15:59</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>This session continues the commentary on Tuhfat al-Muhtaj, covering the fiqh of <em>harim</em> (the protected easement space) attached to wells, houses, and irrigation channels (qanat) dug in unclaimed/reclaimed land (mawat). The second half of the session shifts to an introductory overview of the International Islamic Fiqh Academy (Majma' al-Fiqh al-Islami al-Dawli), its history, mission, and structure.</p>
+<hr>
+<h2>1. Ḥarīm (Protected Easement) of a Well Dug in Reclaimed Land</h2>
+<h3>Background / Question</h3>
+<p>When someone reclaims unclaimed land (mawat) and digs a well in it, how much surrounding space is reserved for the well's use, and why is this reserved space only recognized for wells dug in mawat rather than wells dug in already-owned land?</p>
+<h3>Ruling</h3>
+<ul>
+<li>A well dug in privately owned land does not need a <em>harim</em> — the concept of <em>harim</em> only applies to a well dug in reclaimed mawat land, since ownership of the mawat around it is what's being protected.</li>
+<li>The reserved space includes: the standing spot for the person drawing water by hand (for shallow wells drawn by hand), the basin/trough where the drawn water empties (which can refer to either the small immediate spill-basin or the larger collection pool — both usages are correct and not contradictory), the space for a waterwheel (<em>dulab</em>, a Persian-derived term, resembling a <em>na'ura</em>/water-wheel) if the well is worked that way, and the walking path for a draft animal that raises water if the well relies on animal power.</li>
+<li>There is no fixed measurement for any of these — the standard is customary practice ('urf) in that locality, and the amount extends as far as genuinely needed, up to the edge of the reclaimed land if it doesn't reach that far.</li>
+<li>The teacher noted that in practice today, motorized water pumps have replaced animal-drawn water raising, so the space once reserved for an animal's back-and-forth path (which could be 10-20 meters) is no longer relevant — the customary standard adapts to current practice.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn al-Rif'ah (opinion questioned regarding rainfall-heavy regions needing larger harim — the shaykh preferred no such distinction, since what matters is genuine need regardless of rainfall); al-Zarkashi.</p>
+<hr>
+<h2>2. Ḥarīm of a House</h2>
+<h3>Background / Question</h3>
+<p>What space around a house (built in mawat or owned land) is protected as its harim?</p>
+<h3>Ruling</h3>
+<ul>
+<li>Similar principles to the well's harim apply: the harim covers the house's <em>fina'</em> (surrounding open space) — around its foundations, roof drainage runoff, a spot to dispose of ash (largely obsolete today, replaced conceptually by a spot for trash/refuse), a spot for snow in cold regions, and a passageway toward the door — but this passage does not extend to the full remaining extent of the mawat; it's only as much as is needed, so as not to prevent others from reclaiming the rest.</li>
+<li>If someone needs to add an extension or a turn to the passage, that is accommodated too.</li>
+</ul>
+<hr>
+<h2>3. Ḥarīm of Wells Along a Qanat (Irrigation Channel)</h2>
+<h3>Background / Question</h3>
+<p>What is the harim for the wells/shafts dug along a qanat (a flowing water channel), which exist to inspect/maintain the channel rather than to draw drinking water from directly?</p>
+<h3>Ruling</h3>
+<ul>
+<li>The harim here is defined by what would cause the qanat's water to decrease or risk of collapse if something were dug nearby — and this varies with how soft or firm the surrounding soil is.</li>
+<li>This concern is also relevant for regular drinking wells (contrary to what some texts might suggest limiting it only to qanat wells) — the rationale is preserving the qanat and its water, not facilitating extraction, which is why the standard given for regular wells doesn't fully apply here.</li>
+<li>Sub-point (extended discussion): It is permissible to dig your own well even if it happens to reduce the water in a neighbor's existing well, since you're exercising your right in your own property — this is different from actually digging inside the harim of someone else's well (which is impermissible), because that constitutes an initial claim, not usage in one's own already-owned property. However, if someone had already reclaimed mawat by digging a well there first (establishing a harim before anyone else), a second person is barred from digging a well within that first person's now-established harim.</li>
+</ul>
+<h3>Discussion: state regulation of well-digging</h3>
+<ul>
+<li>Class discussion raised whether a government may regulate how many wells can be dug (e.g., requiring a minimum plot size before permitting a well) to prevent overuse of shared groundwater.</li>
+<li>The shaykh's view: such regulation is acceptable when its purpose is genuine organization/distribution (not monopolization or as a pretext for imposing fees/taxes or restricting a lawful, general permission). Government does not have inherent authority to prevent someone from a permissible act in their own property, though it may organize (not prohibit) related practices — for example, restricting new well-digging when there is a genuine risk of groundwater exhaustion from drought, though the shaykh noted groundwater sources can sometimes be extremely old and not truly at risk. Absent an actual necessity threshold, individuals are not obligated to follow purely restrictive regulations that go beyond organizing usage, though if a state does prohibit outright, the class discussed that ignoring such prohibition remains "violating the ruler's authority" even if the underlying ownership right persists.</li>
+</ul>
+<hr>
+<h2>4. A House Surrounded by Other Houses Has No Ḥarīm</h2>
+<h3>Ruling</h3>
+<ul>
+<li>If a house is built surrounded by other houses (or a street) because all were reclaimed simultaneously, or it is unclear who reclaimed first, then it has no dedicated harim, since there is no basis to prefer one owner's claim to the surrounding space over another's.</li>
+<li>Al-Bulqini (and others who adopted his view) clarified that every house does have <em>some</em> harim in a general sense — what's meant by "no harim" here is specifically the "entitled/protected" harim (i.e., the space one may exclusively claim as of right), not the more general principle that one must avoid causing certain harm to a neighbor.</li>
+</ul>
+<hr>
+<h2>5. The Core Principle: Customary Use of One's Own Property</h2>
+<h3>Ruling (a central rule emphasized as one of the most important in the lesson)</h3>
+<ul>
+<li>Each owner may use their own property according to customary practice (<em>al-'ada</em>), even if it harms a neighbor — for example, a wall collapsing due to normal digging, or a well's water/smell changing due to normal use — because preventing this kind of ordinary harm is itself an "unfixable harm" with no available remedy (i.e., it must be tolerated), based on the hadith "there is no harm and no reciprocating harm" (<em>la darar wa la dirar</em>), understood here to mean that a harm should not be removed by imposing another harm.</li>
+<li>Contemporary example discussed: children playing/running in an apartment disturbs downstairs neighbors — this is not something the neighbors have a right to stop, since it is ordinary/customary use of one's own space (though loud parties/gatherings at night are a separate case, where lowering noise out of consideration for neighbors becomes obligatory).</li>
+<li>If someone exceeds customary practice (e.g., digs in an unusual, non-customary way) and this directly causes harm — whether certain or strongly presumed (established via two expert witnesses) — they are liable.</li>
+<li>Cited case: a scholar's father ruled that someone is liable if they build an ammonia factory among residential houses and children inhale the fumes and die, because such factories are customarily located elsewhere, not among homes — even though ordinarily one may use one's property as one wishes.</li>
+<li>General principle as refined through discussion: one may do whatever conforms to custom even if it harms the <em>milk</em> (the physical property) or the <em>malik</em> (the owner personally) — and one may also do what deviates from custom as long as it does not harm the <em>milk</em>, even if it harms the <em>malik</em> personally (e.g., a large party that annoys a neighbor commercially but doesn't damage his property). What is <em>not</em> permitted is deviating from custom in a way that harms the <em>milk</em> itself (e.g., unusual digging that damages a neighbor's well beyond normal wear, an unusually wide excavation too close to a shared wall, or failing to properly line loose/crumbling soil).</li>
+<li>Follow-up nuance: a foul odor severe enough to justify tayammum (ritual dry ablution due to inability to use water safely, i.e., extremely harmful air quality) is an exception — even ordinary/customary use is restricted if it produces this level of harm to others.</li>
+<li>Discussed example: does a drop in a property's resale value (e.g., because a bar or disreputable shop opened nearby) count as harming the <em>milk</em> or the <em>malik</em>? After discussion, the conclusion reached was that mere loss of market value is not the kind of harm meant by "harming the milk" — true harm to the milk means physical damage or defect to the property itself, not just a price change. (An unresolved side-question was raised about a case where community custom bars raising a building's height to preserve neighbors' privacy — flagged as a topic to revisit.)</li>
+</ul>
+<hr>
+<h2>6. What May Be Built in/Alongside a House Surrounded by Neighbors</h2>
+<h3>Ruling</h3>
+<ul>
+<li>The more correct view: one may set up things like a public bath, stable, mill, oven, tannery, or various shops (e.g., blacksmith, laundry/fabric shops) even adjoining neighbors' homes, as this is normal exercise of one's ownership rights — provided one exercises due care and reinforces walls adequately so that damage to the neighbor's building is unlikely.</li>
+<li>Some scholars held that anything that could cause harm and is not customary in that specific location should be barred unless there is clear intent to cause hardship/mischief (e.g., excessively prolonging construction).</li>
+<li>Blocked: things that typically damage a neighbor's wall (e.g., forceful pounding that disturbs it), or deliberately retaining water on one's property such that dampness seeps into a neighbor's wall.</li>
+<li>Al-Zarkashi's summary rule: what is barred is what harms the <em>milk</em> (property itself), not merely the <em>malik</em> (owner) — though this is nuanced by the earlier custom/non-custom distinction (ordinary practices are permitted even if they cause harm; unusual practices are barred if they harm the property itself).</li>
+<li>Example given: lighting a lamp/candle (even one made from ritually impure fat) in one's own house that causes soot to blacken a neighbor's wall is still permitted, since this is customary use.</li>
+</ul>
+<hr>
+<h2>7. Reclaiming Land Within or Near the Sacred Precinct (al-Ḥaram)</h2>
+<h3>Ruling</h3>
+<ul>
+<li>Reclaiming unclaimed land within the developed/inhabited area of the Haram (Mecca) is definitely permissible, and such reclaimed land may be owned and sold like any other reclaimed property (some hold it is even recommended, per one view about the permissibility/dislike of selling built-up areas — excluding Arafat).</li>
+<li>Land within the Haram boundary but <em>not</em> part of the built-up/developed consensus area (e.g., certain areas near 'Arafat that are not part of the Haram by consensus) may not be reclaimed or owned, because of the rights tied to the rites of Hajj performed there — 'Arafat, Muzdalifah, and Mina all fall under this restriction (with some scholarly nuance on whether staying overnight in Muzdalifah is merely recommended or obligatory), based on the hadith where the Companions asked the Prophet ﷺ, "Shall we not build you a house at Mina to shade you?" and he replied, "No, Mina is a resting place for whoever gets there first" — similarly extended to Muzdalifah.</li>
+</ul>
+<h3>Discussion: Status of al-Mas'a (the path between Safa and Marwa) After Expansion</h3>
+<ul>
+<li>A student asked whether the modern expansion of the Grand Mosque, which brought part of al-Mas'a within the mosque's walls, changes its ruling (e.g., regarding whether a menstruating woman may enter/stay there).</li>
+<li>The shaykh's clarification: al-Mas'a itself is not a mosque and does not take on the mosque's ruling merely by being enclosed within the mosque's walls — however, if the physical expansion literally extended the <em>mosque itself</em> into what was previously outside it, then that specific added area genuinely becomes part of the mosque (since a mosque, once endowed as such, cannot later be un-endowed). The determining factor is the actual physical boundary/waqf status of the specific spot, not merely whether it now sits within the surrounding walls.</li>
+<li>Practical guidance given: if there is doubt about whether a specific spot is truly part of the mosque, the default is no prohibition unless one is certain it is part of the consecrated mosque; a menstruating woman merely passing through (not lingering) is not problematic in any case, and if she enters through a door leading directly into al-Mas'a without passing through the mosque itself, there is no issue at all.</li>
+</ul>
+<hr>
+<h2>8. Introduction to the International Islamic Fiqh Academy (Majma' al-Fiqh al-Islami al-Dawli)</h2>
+<p>A shift to a new text/document being studied: an introductory profile of the International Islamic Fiqh Academy.</p>
+<h3>Background</h3>
+<ul>
+<li>A global scholarly body affiliated with the Organization of Islamic Cooperation (OIC), established in Mecca pursuant to Resolution No. 3/8 of the Third Islamic Summit Conference, founded between 19–20 Rabi' al-Awwal 1401 AH (corresponding to January 25–28, 1981 CE). Its main headquarters is in Jeddah, Saudi Arabia, distinguishing it from the (Mecca-based) Muslim World League's fiqh council — the two are separate bodies under different parent organizations (OIC vs. Muslim World League), even though this Academy was originally founded/inaugurated in Mecca for the blessing of the location before its headquarters was set in Jeddah.</li>
+<li>It has independent legal personality, and its membership draws jurists, scholars, and thinkers across fiqh, cultural, educational, scientific, economic, and social fields from across the Muslim world.</li>
+<li>Over four decades, it has held 24 sessions and issued 238 resolutions on contemporary issues.</li>
+</ul>
+<h3>Vision, Mission, Values, Goals (distinguished in class discussion)</h3>
+<ul>
+<li><strong>Vision</strong> (future-oriented aspiration): to become the foremost fiqh reference body that Muslim-majority states and Muslim communities outside the Muslim world turn to for religious rulings on contemporary matters.</li>
+<li><strong>Mission</strong> (present, ongoing activity): to present Islamic law in an accurate, balanced manner, demonstrating its full capacity to address life's problems and secure happiness, stability, and security in this life and the next, based on a comprehensive, integrated view of Islam's foundations, sources, objectives (maqasid), principles, and rulings.</li>
+<li><strong>Values</strong>: moderation (wasatiyyah), discipline, transparency (explained as clarity — not concealing or obscuring rulings, based on the Qur'anic injunction against mixing truth with falsehood and concealing truth knowingly), justice, fairness, cooperation, integration, creativity/innovation, productivity, precision, and achievement (these values are also described as benchmarks against which the Academy evaluates its own performance).</li>
+<li><strong>Goals</strong> include: achieving intellectual convergence and integration among jurists of the recognized schools (madhahib) and specialists in other human/scientific fields to clarify the religious ruling on contemporary problems; giving legal opinions on real-world matters to help shape legislation consistent with Shari'ah; encouraging collective ijtihad on contemporary issues, favoring positions that serve the interest (maslaha) of Muslims individually and collectively in line with evidence and Shari'ah objectives; rejecting sectarian fanaticism, extremism, and excessive multiplication of sects by spreading a spirit of moderation and tolerance among different schools and sects; responding to fatwas that contradict settled principles of the religion and recognized ijtihad without valid basis; issuing rulings for Muslim minority communities outside the Muslim world in a way that preserves their Islamic identity while upholding the obligations of citizenship and residency in non-Muslim societies; encouraging cooperation among the various schools regarding matters that are unanimously agreed upon (glorifying points of consensus while respecting genuine differences per the etiquette of fiqh disagreement); coordinating between fatwa bodies worldwide to avoid contradictory rulings on the same widely-relevant issue; renewing Islamic jurisprudence by developing it from within, through the disciplined tools of derivation (istinbat), legal principles, evidence, and objectives; and constructive dialogue with other religions/cultures for the common good of humanity.</li>
+</ul>
+<h3>Discussion: fanaticism (ta'assub) vs. legitimate adherence to a school</h3>
+<ul>
+<li>The shaykh clarified that holding to one's own school of fiqh (e.g., the Shafi'i school) is not itself "sectarian fanaticism" — fanaticism specifically means rejecting the other recognized, established schools as having no valid basis and effectively declaring them false, without genuine grounds.</li>
+<li>On takfir (excommunication): one may not declare a fellow Muslim an unbeliever except for something explicit and unambiguous — denying the Qur'an, denying the Prophet's ﷺ prophethood, or contradicting something established by consensus and known necessarily as part of the religion. Otherwise, declaring a Muslim an unbeliever falls into the error historically associated with the Khawarij, who originally were characterized by excommunicating grave sinners — and if even grave sinners are not to be excommunicated, it follows a fortiori that lesser matters (e.g., seeking intercession/tawassul, or being Ash'ari in theology) do not warrant it either. The shaykh criticized the modern practice of mutual "mubahala" (mutual imprecation/cursing challenges) between disputants as foolish and needlessly risky, noting the Prophet's ﷺ description of "young in years, foolish in judgment" applies to this behavior — since risking oneself or one's family in such a challenge serves no real purpose when both parties already recognize each other as fellow Muslims.</li>
+</ul>
+<h3>Means</h3>
+<ul>
+<li>Issuing fatwas on general issues of concern to Muslims and translating and disseminating them widely to promote the Academy's moderate, middle-path methodology, steering Muslims away from extremism, negligence, or following anomalous opinions.</li>
+<li>Holding specialized conferences and seminars to discuss specific issues or complex topics.</li>
+<li>Presenting the Shari'ah position on documents issued by the OIC and other international (including non-Islamic) organizations whenever requested.</li>
+<li>Coordinating with fatwa bodies, fiqh academies, and Islamic institutions worldwide.</li>
+<li>Establishing centers for Islamic studies in key regions outside the Muslim world, cooperating with existing centers, monitoring what is published about Islam in those regions, and addressing misconceptions raised there.</li>
+<li>Producing an accessible, three-language (presumably Arabic/English/French) simplified fiqh encyclopedia addressing contemporary issues in accessible language for the general public and media professionals (the shaykh noted the Kuwaiti Fiqh Encyclopedia has already done much similar work).</li>
+<li>Encouraging serious fiqh research through the Academy's committees, universities, and other scholarly institutions on contemporary challenges.</li>
+<li>Drafting three-language model laws in areas needing Shari'ah-compliant codification, to assist legislatures in reforming existing laws.</li>
+<li>Reviving the Islamic fiqh heritage, especially works on usul al-fiqh, maqasid al-Shari'ah, and comparative fiqh, publishing previously unpublished works after verification, and translating classic works into major languages.</li>
+<li>Compiling a comprehensive three-language glossary of fiqh and usul terminology with precise definitions.</li>
+<li>Publishing all of the Academy's work, resolutions, fatwas, and key submitted research via its journal and website, and translating them into major languages.</li>
+</ul>
+<h3>Discussion: is the Academy still active/visible today?</h3>
+<ul>
+<li>A student asked whether it's easy today to access the Academy's resolutions, noting it seems less prominent than in past years, with fewer new resolutions reaching public attention recently, and asked whether this is due to reduced output or just reduced awareness on the students' part.</li>
+<li>The shaykh's assessment: the Academy's output does seem reduced compared to earlier years, but it remains active with material published on its website; he offered to have the website link shared with the class.</li>
+<li>Brief biographical note on the Secretary-General, Dr. Koutoub Moustapha Sano — an African scholar (the shaykh recalled he was born in Guinea, roughly 1966), noting that in principle Academy membership balances representation across Muslim-majority states (with Saudi Arabia naturally prominent as the host country) alongside a body of subject-matter experts; there remains one vacant seat reserved for representing Muslim minorities in America, unfilled since the passing of Dr. Taha Jabir al-Alwani, who had done significant work on that front.</li>
+</ul>
+<h3>Departments (Organizational Structure of the General Secretariat)</h3>
+<p>The General Secretariat is organized into seven main departments, each with three subordinate sections: (1) Office of Protocol and Ceremonies — sections for Protocol, Family/Women/Children/Elderly Affairs, and Translation; (2) Planning and International Cooperation — sections for Planning & Development, International Cooperation & External Relations, and Archives/Follow-up/Evaluation; (3) Administrative and Financial Affairs — sections for Administrative Affairs & Training, Financial Affairs & Accounting, and Warehouses/Libraries; (4) Media, Public Relations, and IT — sections for Media, Public Relations, and Information Technology; (5) Endowment, Investment, and Projects Affairs — sections for Waqf Affairs, Financing & Investment, and Projects; (6) Research, Studies, Fatwas, Encyclopedias, and Publishing — sections for Research & Encyclopedias, Fatwa/Studies Monitoring, and Printing & Publishing; (7) Sessions, Conferences, and Seminars — sections for Sessions, Conferences/Seminars, and Workshops/Lectures.</p>
+<hr>
+<h2>Next Session</h2>
+<p>The class will continue next week with the Academy's resolutions and recommendations, and will pick up the topic of <em>zakat on debts</em> (zakat al-duyun) from the beginning.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>

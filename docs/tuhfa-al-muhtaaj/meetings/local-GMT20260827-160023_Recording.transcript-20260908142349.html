@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rights of the Public Street, Qadianis & Test-Tube Babies - August 27, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Rights of the Public Street, Qadianis & Test-Tube Babies - August 27, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Rights of the Public Street, Qadianis & Test-Tube Babies - August 27, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-08-27</span>
+          
+          <span class="meta-chip">🕐 16:00</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>This Tuhfat al-Muhtaj session covers the fiqh of using public streets and roads (huquq al-tariq), then turns to readings from Islamic Fiqh Academy (Majma' al-Fiqh al-Islami) resolutions on the Qadiani/Ahmadi movement and test-tube babies, closing with two Q&A items on prayer (the validity of praying behind an imam who mispronounces Arabic letters, and standing before ruku' for one who prays sitting).</p>
+<hr>
+<h2>1. Rulings on the Public Street (Manfa'at al-Shari')</h2>
+<h3>Background / Question</h3>
+<p>The street's primary purpose is passage (<em>murur</em>); the text examines what secondary uses (sitting, resting, trading, building) are permitted without infringing on that purpose.</p>
+<h3>Ruling</h3>
+<ul>
+<li>Sitting, resting, and trading (by a Muslim or a non-Muslim dhimmi) in the street is allowed as a secondary use, as long as it does not obstruct passersby ("no harm and no reciprocating harm").</li>
+<li>One occupying a spot must give the road "its due": lowering the gaze, refraining from harm, and enjoining good; no permission from the ruler (imam) is required for this common use, unlike custom-based claims in a mosque.</li>
+<li>It is unlawful for anyone to charge a fee for sitting in the street; officials who sell off portions of state-controlled roadside land or riverbank access as if it were surplus commit a serious wrong (Ibn al-Rif'ah and al-Adhra'i condemned this practice); such land is a communal amenity, not something that may be granted as private property, only as temporary usufruct (<em>iqta' irtifaq</em>) if it causes no harm.</li>
+<li>Wide open spaces between houses (<em>rihab</em>) are likewise communal amenities that may not be built upon or privatized, though minor, non-harmful usufruct (e.g., a temporary lean-to shoring up a wall in danger of collapse) is tolerated by necessity.</li>
+<li>A live discussion addressed a contemporary case: closing one residential street entirely for a wedding tent when a parallel street offers an easy alternate route. The class leaned toward permissibility given genuine need, provided passersby are not actually inconvenienced by the closure (the operative legal cause being obstruction, not the technical fact of "closing a street"), while noting this differs from a total blockage with no alternate route, or blocking access purely for a mosque's overflow crowd at prayer time (impermissible, since it obstructs general traffic).</li>
+<li>Who establishes a road: (1) an owner endows his land as a road, (2) a community agrees, while building homes, to leave a passage, or (3) people simply come to habitually use a path as a road by custom; a government designation of streets was not addressed in the classical texts.</li>
+<li>Selling produce or occupying part of the street for trade is permitted if passersby are not obstructed; the same logic determines priority disputes over a spot (drawn by lot if two claim it simultaneously and neither can be preferred by priority; a Muslim is given priority over a dhimmi in a tie).</li>
+<li>A claimed spot lapses when the person leaves for good (e.g., abandoning the trade), even if it was formally granted by the ruler; it does not lapse if left temporarily meaning to return (as per the hadith, "whoever rises from his seat and returns to it has more right to it"), unless the absence is prolonged enough that his regular customers stop coming to him and become accustomed to someone else.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Hajar al-Haytami (Tuhfat al-Muhtaj), al-Adhra'i, Ibn al-Rif'ah, al-Rawyani, al-Ruwyani (al-Bahr), the Shamil.</p>
+<hr>
+<h2>2. Fiqh Academy Resolutions</h2>
+<h3>On the Qadiani/Ahmadi Movement</h3>
+<p>The Islamic Fiqh Academy (OIC), responding to a query from the Cape Town fiqh council, ruled that Mirza Ghulam Ahmad's claim of prophethood and revelation is an explicit denial of the finality of Muhammad's prophethood (a matter of certain religious knowledge), making him and his followers apostates; the "Lahori" offshoot, despite calling him only a shadow/reflection (<em>zill</em>) of the Prophet rather than a prophet himself, receives the same ruling. The resolution further states that no non-Muslim court or judge has authority to rule on someone's Islam or apostasy, since such rulings require a Muslim scholar's competence in Islamic law. (Discussion touched on the historical spread of the movement from British India, and distinguished the Qadianis/Ahmadis from the Bohra Isma'ilis, who are a separate, older sect with their own doctrinal deviations.)</p>
+<h3>On Test-Tube Babies</h3>
+<p>The Academy deferred its ruling, judging the matter needed further medical and fiqh study, and assigned Sheikh Bakr Abu Zayd to prepare a comprehensive study for the next session.</p>
+<hr>
+<h2>3. Prayer Q&A</h2>
+<ul>
+<li><strong>Praying behind an "ummi" (illiterate) reciter who mispronounces letters</strong> (e.g., pronouncing the dhal as za): per the old (qadim) Shafi'i position, following such an imam is valid if the mispronunciation is confined to letters commonly hard to distinguish (like dhad/za or dhal/za); per the new (jadid) position it is invalid, though this depends on whether the person could have learned correct pronunciation and simply did not — someone truly unable to learn is excused, one who could learn but didn't is not.</li>
+<li><strong>Standing to bow (ruku') when one prays sitting</strong>: someone unable to remain standing but able to stand briefly and walk must still rise fully to a standing position before descending into ruku' (rather than bowing directly from a seated posture), since transitioning to ruku' from qiyam is itself a required element distinct from the ruku' posture itself — to be revisited for final confirmation next lesson.</li>
+</ul></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
