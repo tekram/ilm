@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prayer Spot Rights, Religious Institutions & Waqf Custom - Sep 10, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Prayer Spot Rights, Religious Institutions & Waqf Custom - Sep 10, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Prayer Spot Rights, Religious Institutions & Waqf Custom - Sep 10, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-09-10</span>
+          
+          <span class="meta-chip">🕐 16:00</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>This session from Tuhfat al-Muhtaj continues the discussion of sacred spaces and their usage rules. The sheikh covers three main areas: the rights of someone who claims a prayer spot in the mosque before leaving, the ruling on teaching children in the mosque, and the detailed rules governing rights of residence in religious institutions (ribat, madrasa, khanqah) under Islamic endowment (waqf) law. A special note was made at the end of the session condoling on the passing of Sheikh Muhammad al-Hasan Ahmadu al-Khadim (rahimahu Allah).</p>
+<hr>
+<h2>1. Rights to a Claimed Prayer Spot in the Mosque</h2>
+<h3>Background / Question</h3>
+<p>If someone occupies a spot in the mosque intending to pray there, then leaves before the prayer time — whether to answer a call, renew their wudu, or even without any specific intention — does their right to that spot remain?</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>Right is retained</strong> whether the person left with or without intention to return, for a valid reason or not, as long as the prayer time has not yet passed.</li>
+<li>It is <strong>haram</strong> for someone who knows that another person previously claimed a spot to sit in it without that person's permission or presumed consent.</li>
+<li>This applies whether or not the original occupant left their prayer mat (sajjada) as a marker — if informed and verified, the prohibition still stands.</li>
+<li>Exception per al-Adra'i's research: if the prayer rows fill up and the person has not returned, the gap <strong>must be filled</strong> to prevent a break in the row.</li>
+<li><strong>Moving the prayer mat</strong>: if the spot is needed to fill the row, the mat should be pushed aside with the foot (not lifted), to avoid it entering one's liability (dhaman).</li>
+<li>Al-Baghawi: placing one's foot on an item with full control = liable for it.</li>
+<li>Al-Mutawalli: lifting it merely to identify it without taking it = not liable.</li>
+<li>Discussion: the mosque case differs from private property — the prior occupant has a right (haqq), not ownership (milk), so the rules of liability differ.</li>
+</ul>
+<h3>Exception: Sitting Behind the Imam</h3>
+<ul>
+<li>If someone sits directly behind the imam but is <strong>not qualified for succession</strong> (istikhlaf) — e.g., they cannot lead prayer due to illiteracy in Fatiha or a more qualified person is present — they should be displaced.</li>
+<li>Referenced hadith: "Let those of maturity and reason stand directly behind me" (Muslim).</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Hajar al-Haytami (Tuhfa), al-Baghawi, al-Mutawalli, al-Adra'i, al-Zarkashi</p>
+<hr>
+<h2>2. Teaching Children in the Mosque</h2>
+<h3>Background / Question</h3>
+<p>Al-Qaffal issued a fatwa prohibiting teaching children in the mosque due to the likelihood of harm. What are the conditions and exceptions?</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>General prohibition</strong>: teaching pre-discernment (non-tamyiz) children in the mosque is disliked (makruh) because of the harm they typically cause.</li>
+<li><strong>Exception</strong>: permissible for older, discerning children if the teacher ensures they observe mosque etiquette.</li>
+<li>Ibn al-Husain al-Faqih's position: broadly dislikes bringing pre-discernment children to the mosque, though necessity (e.g., a father who has his child with him when prayer time comes and cannot leave the child outside) removes the dislike.</li>
+<li>Also prohibited: using a mosque spot for buying/selling or a trade, or monopolizing space in a study circle.</li>
+</ul>
+<h3>Referenced scholars / texts</h3>
+<p>Al-Qaffal, Ibn al-Husain al-Faqih (Adab al-Masjid)</p>
+<hr>
+<h2>3. Rights of Scholars, Students & Sufis in Waqf Institutions</h2>
+<h3>Background / Question</h3>
+<p>If a scholar in a madrasa, a student in a ribat, or a Sufi in a khanqah leaves their assigned place, does their right to it remain? What role does custom ('urf) play?</p>
+<h3>Ruling</h3>
+<ul>
+<li><strong>Right is retained</strong> when leaving for a valid excuse (illness, purchasing necessities, etc.), even without leaving belongings or a deputy — based on the general hadith "Whoever arrives first at something not previously claimed, they have the greater right" (Muslim).</li>
+<li><strong>Ibn al-Rif'ah's qualification</strong>: the right holds only if there is no supervisor (nazir), or if they have obtained the nazir's permission.</li>
+<li><strong>Custom ('urf)</strong> governs disputes: if it is customary to not require the nazir's permission, no permission is needed. If the waqf founder specified conditions, those are followed.</li>
+<li>A student who <strong>abandons study</strong> may be evicted; a Sufi who <strong>abandons worship</strong> may be evicted.</li>
+<li><strong>Travelers' ribat</strong>: maximum stay is 3 days, extendable only in emergencies (danger, snow, etc.).</li>
+<li>Non-residents may eat, drink, and sleep in madrasas per custom — but may not take up permanent residence unless they are scholars (fuqaha) or the waqf conditions allow it.</li>
+<li>The <strong>'urf at the time of the waqf endowment</strong> has the status of the founder's condition: practices that were customary and known to the founder are deemed incorporated into the waqf terms.</li>
+<li>Vacation periods (e.g., Ramadan breaks): if such breaks were established custom at the time of waqf, stipends still apply during them; if not customary, stipends may be suspended.</li>
+</ul>
+<h3>Key terminological notes</h3>
+<ul>
+<li><strong>Ribat</strong>: residential institution for traveling students or the needy; locally may mean a building with both teaching and accommodation.</li>
+<li><strong>Zawiya</strong>: smaller; locally used to mean mosque or teaching space without accommodation.</li>
+<li><strong>Khanqah</strong>: the Sufi equivalent of the madrasa — a large building for a sheikh and his disciples for prayer, study, and seclusion.</li>
+<li><strong>Misbil</strong>: donated consumable items (e.g., water), distinct from the waqf property (e.g., water basin) itself.</li>
+</ul>
+<h3>Practical question raised</h3>
+<p>Can a non-Muslim (dhimmi) use the ablution facilities (faskiyya) outside a mosque? The sheikh replied: <strong>permissible</strong>, by analogy from the principle that the customary practice at the time of waqf is treated as the founder's condition — and non-Muslims using external mosque facilities was commonly tolerated.</p>
+<h3>Referenced scholars / texts</h3>
+<p>Ibn Hajar al-Haytami, Ibn al-Rif'ah, al-Mutawalli, Ibn 'Abd al-Salam, al-Mughni</p>
+<hr>
+<h2>Session Note</h2>
+<p>The session concluded with condolences for the passing of <strong>Sheikh Muhammad al-Hasan Ahmadu al-Khadim</strong> (rahimahu Allah), whose commentary on Jam' al-Jawami' and other works (including Maharim al-Lisan and Nukhbat al-Matlub) the sheikh praised for their scholarship and elegance.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
