@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ihya al-Mawat: Minerals & Shared Property (Tuhfa) + Fiqh Academy Fatawa - September 17, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Ihya al-Mawat: Minerals & Shared Property (Tuhfa) + Fiqh Academy Fatawa - September 17, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Ihya al-Mawat: Minerals & Shared Property (Tuhfa) + Fiqh Academy Fatawa - September 17, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-09-17</span>
+          
+          <span class="meta-chip">🕐 16:00</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p>This session opens with Tuhfat al-Muhtaj's Kitab Ihya' al-Mawat (reviving</p>
+<p>barren/dead land), covering the section on jointly-owned/shared property</p>
+<p>(al-a'yan al-mushtaraka) -- apparent minerals (ma'din zahir) and hidden</p>
+<p>minerals (ma'din batin), and their modern application to oil and mining rights.</p>
+<p>The second half of the session leaves Tuhfa and moves to reading and discussing</p>
+<p>resolutions (fatawa/qararat) of the Majma' al-Fiqh al-Islami al-Duwali (the</p>
+<p>International Islamic Fiqh Academy) -- covering the Islamic calendar, letters</p>
+<p>of guarantee, and several rulings issued in response to the Islamic</p>
+<p>Development Bank's inquiries.</p>
+<hr>
+<h2>1. Apparent Minerals (al-Ma'din al-Zahir) -- Tuhfat al-Muhtaj, Kitab Ihya' al-Mawat</h2>
+<h3>Background</h3>
+<p>Apparent minerals are those extracted without labor beyond the initial find --</p>
+<p>naphtha, sulfur, tar (qar), mummiya, millstone rock, kohl stone, salt (natural</p>
+<p>water/mountain salt), and stray gold nuggets exposed by a flood.</p>
+<h3>Ruling</h3>
+<ul>
+<li>Not owned merely by land reclamation (ihya'), nor by staking a claim</li>
+</ul>
+<p>(tahajjur), nor by a ruler's grant (iqta') -- these remain shared among</p>
+<p>Muslims and non-Muslims alike, by analogy to the Prophetic hadith</p>
+<p>forbidding exclusive grants over water-access points (mashari' al-ma').</p>
+<ul>
+<li>Exception: if someone reclaims land for habitation/farming without knowing</li>
+</ul>
+<p>it contains such a mineral, he owns the reclaimed plot and whatever mineral</p>
+<p>is later found in it.</p>
+<ul>
+<li>If the mineral requires some processing to extract (e.g., salt made by</li>
+</ul>
+<p>digging a basin and channeling seawater), it is ownable by reclamation, and</p>
+<p>the ruler may grant it.</p>
+<ul>
+<li>Where the yield (nayl) is insufficient for multiple claimants: whoever</li>
+</ul>
+<p>arrived first is given priority, but only to the extent of his customary</p>
+<p>need (as judged by 'urf); if he demands more than his need while it harms</p>
+<p>others, he may be forcibly restrained. If several arrive together, or</p>
+<p>priority is unknown, they draw lots.</p>
+<ul>
+<li>Similarly barred from exclusive grant: land claimed merely to take its</li>
+</ul>
+<p>firewood or hunting, ponds claimed for their fish, wild trees/thickets</p>
+<p>(al-ayka) growing on unowned land, sea/land game, and ambergris cast up by</p>
+<p>the sea (belongs to whoever finds it -- rulers have no claim to it).</p>
+<h3>Discussion note</h3>
+<p>The class extended this to modern petroleum: since oil requires effort</p>
+<p>(hafr/processing) to extract, land is owned by reclamation, and companies</p>
+<p>that develop a field acquire real rights over what they extract -- not "the</p>
+<p>oil belongs to all Muslims" as some claim.</p>
+<hr>
+<h2>2. Hidden Minerals (al-Ma'din al-Batin) -- Tuhfat al-Muhtaj, Kitab Ihya' al-Mawat</h2>
+<h3>Ruling</h3>
+<ul>
+<li>Gold, silver, iron, copper, turquoise, ruby, and similar buried minerals</li>
+</ul>
+<p>are never owned merely by digging/labor at the site, nor by reclaiming</p>
+<p>barren land generally.</p>
+<ul>
+<li>The extracted yield (nayl) itself becomes owned upon actual taking, not</li>
+</ul>
+<p>merely upon discovery, and no ruler's permission is required to take it</p>
+<p>(though the ruler may still grant rights of usufruct, not ownership, over</p>
+<p>the site).</p>
+<ul>
+<li>If someone reclaims barren land not knowing it contains a hidden mineral,</li>
+</ul>
+<p>he owns both the plot and the mineral extracted from it. If he knew</p>
+<p>beforehand and built something there anyway, he owns only the mineral</p>
+<p>extracted, not the land (since the site is unsuited to habitation and his</p>
+<p>reclamation intent was invalid for that purpose).</p>
+<ul>
+<li>The buried yield may not be sold before extraction, since its quantity is</li>
+</ul>
+<p>unknown (jahala); after extraction the specific find may be sold.</p>
+<h3>Discussion note</h3>
+<p>Applied to a real-world istifta' (fatwa request) about a mining company that</p>
+<p>surveys land with geological equipment, marks out plots (awtad) with</p>
+<p>estimated gold content, and wants to sell rights to those plots. Conclusion:</p>
+<p>the company may only sell/transfer its right to search and extract in a</p>
+<p>plot it has already staked (a "waiver" of its priority), not the gold itself</p>
+<p>(which remains unknown/jahala) nor the land.</p>
+<hr>
+<h2>3. Fatawa al-Majma' al-Fiqhi al-Duwali (International Islamic Fiqh Academy Resolutions)</h2>
+<h3>Resolution 10/2 -- Unifying the start of lunar months</h3>
+<p>Tasked the Academy's General Secretariat with commissioning documented</p>
+<p>scientific studies from experts in astronomical calculation and</p>
+<p>meteorology, and placed the issue on the agenda of the next session for</p>
+<p>further technical and juristic study.</p>
+<h3>Resolution 12/6/2 -- Letters of guarantee (khitab al-daman)</h3>
+<ul>
+<li>An unsecured (bila ghita') letter of guarantee is a suretyship (daman/</li>
+</ul>
+<p>kafala); a secured one, where the requester has covering funds, is a</p>
+<p>wakala (agency), which may be paid or unpaid, alongside a kafala for the</p>
+<p>beneficiary's benefit.</p>
+<ul>
+<li>Kafala is a gratuitous contract; charging a fee for it is not permitted,</li>
+</ul>
+<p>since it resembles a loan that draws a benefit to the lender (forbidden).</p>
+<ul>
+<li>Ruling: charging a fee for the guarantee operation itself is impermissible;</li>
+</ul>
+<p>but actual administrative costs of issuing the letter are permissible,</p>
+<p>provided they do not exceed the customary fee (ajr al-mithl) for such</p>
+<p>services.</p>
+<ul>
+<li>Class discussion: on the Shafi'i view this may be tolerated as a shubha</li>
+</ul>
+<p>(doubtful matter) rather than outright riba unless explicitly stipulated</p>
+<p>as a condition of the guarantee itself.</p>
+<h3>Resolution (IDB inquiries) -- Loan service fees</h3>
+<p>Charging fees for loan-related services is permitted only within the bounds</p>
+<p>of actual expenses; any amount beyond actual cost is forbidden as riba.</p>
+<p>Class discussion distinguished "actual transfer costs" (e.g., wire fees)</p>
+<p>from general administrative/staff overhead, which the class leaned toward</p>
+<p>excluding on the Shafi'i method (a loan may not carry any conditioned</p>
+<p>benefit to the lender).</p>
+<h3>Resolution -- Leasing operations (ijara muntahiya bi-tamlik)</h3>
+<ul>
+<li>A bank's promise to lease equipment to a client after acquiring it is</li>
+</ul>
+<p>permissible.</p>
+<ul>
+<li>The bank appointing the client (or, preferably, someone else) as its agent</li>
+</ul>
+<p>to purchase specified equipment on the bank's behalf, intending to then</p>
+<p>lease it to the client, is a valid agency.</p>
+<ul>
+<li>The lease contract must follow real transfer of ownership to the bank and</li>
+</ul>
+<p>be a separate contract from the agency/promise.</p>
+<ul>
+<li>A promise of a gift (hiba) of the equipment at lease end is valid via a</li>
+</ul>
+<p>separate contract; a promise cannot validly be delegated as a vow (nadhr).</p>
+<ul>
+<li>Risk of loss/defect lies with the bank as owner, barring tenant misuse;</li>
+</ul>
+<p>insurance costs on the equipment fall on the bank, ideally through Islamic</p>
+<p>(takaful-style) insurance companies.</p>
+<h3>Resolution -- Deferred sale with installments / foreign trade financing</h3>
+<p>Same principles as the leasing resolution apply: a promise to sell after</p>
+<p>the bank takes ownership is valid; agency to purchase on the bank's behalf</p>
+<p>is valid; the sale contract must follow actual possession. The same</p>
+<p>framework applies to foreign trade financing.</p>
+<h3>Resolution -- Disposal of interest earned on foreign bank deposits</h3>
+<p>The Islamic Development Bank may not protect the real value of its funds</p>
+<p>via interest earned on deposits in foreign banks; such interest must be</p>
+<p>spent on public benefit purposes (training, research, relief, financial and</p>
+<p>technical assistance to member states, educational institutions, and</p>
+<p>propagation of Islamic knowledge) rather than retained.</p></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
