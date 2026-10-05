@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitab al-Waqf: Waqif & Endowed Property (Tuhfa) + Fiqh Academy: Resuscitation Devices - October 1, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Kitab al-Waqf: Waqif & Endowed Property (Tuhfa) + Fiqh Academy: Resuscitation Devices - October 1, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Kitab al-Waqf: Waqif & Endowed Property (Tuhfa) + Fiqh Academy: Resuscitation Devices - October 1, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-10-01</span>
+          
+          <span class="meta-chip">🕐 16:01</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p><strong>Book 1 (Tuhfat al-Muhtaj, Kitab al-Waqf):</strong> a new chapter begins. The class covers the definition and evidence of waqf, the first waqfs in Islam, the pillars, the conditions on the waqif (endower), and the conditions on the endowed property (mawquf). <strong>Book 2 (Fatawa al-Majma' al-Fiqhi al-Islami al-Duwali, International Islamic Fiqh Academy):</strong> Resolution 17 (5/3) on resuscitation devices and the determination of death, with discussion of cost and obligation. A short Q&A on a latecomer (masbuq) sitting with the imam closes the session.</p>
+<hr>
+<h2>Book 1: Tuhfat al-Muhtaj, Kitab al-Waqf</h2>
+<p>The teacher stressed that waqf is among the most important chapters, especially in Hadramawt, where farms endowed hundreds of years ago still yield. A waqf cannot be sold, so it survives, unlike land divided among heirs which dissolves over time.</p>
+<h3>1. Definition and Evidence</h3>
+<ul>
+<li><strong>Linguistically:</strong> habs (withholding). Synonyms: tasbil, tahbis, ihtibas. "Awqafa" is a poor usage and "waqf" is the common word among people; the narrations use "habs."</li>
+<li><strong>Technically:</strong> withholding property that can be benefited from while its substance remains, by cutting off disposal of its raqaba, for a permitted purpose. The teacher noted it must be a property that benefits "with its substance remaining" (usufruct alone does not count).</li>
+<li><strong>Evidence:</strong> "You will never attain righteousness until you spend of what you love" (3:92). Abu Talha endowed his most beloved property, Bayruha'.</li>
+<li><strong>Ibn Hajar's objection:</strong> in the hadith, he said "it is a sadaqa for Allah," which is an implicit expression (kinaya) needing intention, and moreover the school requires naming the beneficiary, so "for Allah" alone is insufficient. This is the relied-upon position in al-Tuhfa, al-Nihaya and al-Mughni; 'Abd Allah b. 'Umar Ba Makrama held that "for Allah" suffices as it points to pious causes. Ibn Hajar says either scholars overlooked this or based it on waqf being like a bequest.</li>
+<li><strong>Hadith:</strong> "When a person dies his deeds cease except for three: continuing charity, beneficial knowledge, or a righteous child who prays for him." The teacher explained "his deeds" means his reward; "righteous" in the sense of a Muslim child suffices for the supplication to be answered, though the perfect meaning is one who fulfills the rights of Allah and people. He preferred the grammatical reading "sadaqatin jariyatin" as a substitution, avoiding the need for a hidden word.</li>
+<li>"Continuing charity" is read as waqf, not a bequest of benefit (which is rare). The teacher's example: a poor man's house wiring given as charity is not "continuing," since it can be sold with the house; likewise land given to a mosque as a gift can be sold, whereas waqf cannot.</li>
+</ul>
+<h3>2. 'Umar's Waqf and the First Waqfs</h3>
+<ul>
+<li>'Umar's land in Khaybar, by the Prophet's command, with conditions: not sold, inherited or given; whoever administers it may eat from it in a customary manner, or feed a friend who is not "mutamawwil" (hoarding it as property).</li>
+<li>A long exchange with a student on "ghayr mutamawwil" using the glosses of al-Kurdi and Shabramallisi: it means he does not treat it as his property (tasarruf dhawi al-amwal); he may let someone eat from it as hospitality, not take it away or accumulate it. The teacher also noted the gloss text needed correction.</li>
+<li>Which was first in Islam: 'Umar's, or the Prophet's endowment of the seven orchards of Mukhayriq (a learned man of Banu al-Nadir who accepted Islam and bequeathed them to the Prophet, in year 3). Jabir: every Companion with means endowed something. Armies were once equipped from awqaf. The teacher encouraged group endowments today (shares pooled to buy land for a school or students of knowledge), and mentioned the hadith of whoever builds a mosque "even like a sandgrouse's nest," understood as a shared contribution.</li>
+<li>Al-Shafi'i: waqf as known is a shar'i reality unknown to the Jahiliyya.</li>
+<li>Abu Yusuf retracted Abu Hanifa's position on selling a waqf when he heard 'Umar's hadith. Ibn Hajar says this refutation works only if Abu Hanifa permitted replacing (istibdal) even when the waqif stipulated against it. The teacher explained Abu Hanifa's position with strict conditions, including that the seller be a "judge of Paradise" (of the three judges), whom no one can confidently identify.</li>
+</ul>
+<h3>3. Pillars and the Waqif</h3>
+<p><strong>Pillars:</strong> the endowed property (mawquf), the beneficiary (mawquf 'alayh), the wording (sigha), and the waqif. He begins with the waqif as the source.</p>
+<p><strong>Conditions of the waqif:</strong> valid speech and the capacity to donate in life.</p>
+<ul>
+<li>Excludes a child and an insane person.</li>
+<li>The safih (interdicted spendthrift): his speech is valid (his divorce counts) but he has no capacity to donate, so his waqf is invalid, though his bequest is valid since the interdiction ends at death. The teacher explained why "capacity to donate" is narrower than "valid speech," so the text mentions both for clarity.</li>
+<li>The coerced: not valid when coerced unlawfully. If coerced lawfully (e.g. the judge compels him after he refused to endow what he owes), it is valid; if he persists, the judge endows on his behalf.</li>
+<li>Mukatab, bankrupt (even if his wealth later exceeds his debts or prices rise after the interdiction), and a guardian (wali) cannot endow.</li>
+<li>Valid from a partly free person, and from a non-Muslim, even for a mosque. A non-Muslim may own a Qur'an (by writing it or inheriting from a non-Muslim father) and endow it.</li>
+<li><strong>Case:</strong> a non-Muslim endows on his children "except whoever becomes Muslim." Al-Subki: the waqf stands and the condition is dropped. Al-Ramli: the waqf itself is void, perhaps because it may encourage them to stay in disbelief. The teacher noted al-Subki's view leaves the waqf as is, since the feared harm falls away.</li>
+</ul>
+<h3>4. Conditions of the Mawquf (the endowed property)</h3>
+<p>It must be a specific, owned object transferable in ownership that yields a benefit or usufruct allowing a lease while its substance remains.</p>
+<ul>
+<li><strong>Not valid:</strong> usufruct alone (even if owned perpetually through a bequest); an obligation in the dhimma ("I endow what is in my dhimma"); one of two unspecified slaves; what he does not own (a dog).</li>
+<li><strong>Valid:</strong> the Imam may endow state land (bayt al-mal) for a general cause like a school or ribat, if he sees benefit, since his disposal depends on benefit like an orphan's guardian (so not for his own children or emirs, per 'Izz al-Din as quoted by al-Kurdi). The teacher discussed the wording "yasihhu waqf al-imam" and, with a student, the grammatical reading that "nahwa arazi bayt al-mal" is the object ("the Imam's endowing of things like state lands"), which he accepted as clear.</li>
+<li><strong>Not valid:</strong> an umm walad, a mukatab, a fetus alone, an item with a non-rentable benefit like musical instruments, and food (its benefit is only in consuming it).</li>
+<li><strong>Exception:</strong> a stud animal may be endowed, though it cannot be hired, since "in an act of devotion (qurba) what is not tolerated in a commercial exchange is tolerated." Liability for damage by such an animal rests on whoever has it, if negligent.</li>
+</ul>
+<p><strong>Extended discussion: "Qurba tolerates what mu'awada does not."</strong> The teacher raised a fatwa that Habib Muhammad b. Salim b. Hafiz quotes from Habib Tahir b. Husayn: someone who says "I vowed and bequeathed" (or the reverse) invalidates both, because he combined a binding contract (nadhr) with a non-binding one (wasiyya), and such a mix is not permitted. The teacher's objection, which he put forward for research:</p>
+<ul>
+<li>The rule against combining binding and non-binding comes from sales (mu'awadat), where it makes sense. In acts of devotion more is tolerated, so this looks like analogy with a difference.</li>
+<li>Practically, a bequest is weaker and can be retracted; the nadhr is stronger and cannot. If the person said "I bequeathed and vowed," he has moved from bequest to vow; if "I vowed and bequeathed," the weaker bequest does not cancel the stronger vow, and the rule that giving effect is better than ignoring would support the vow.</li>
+<li>The fatwa was by a group of respected scholars and was accepted; he suggested possible reasons (an unwritten text, or reliance on the general rule), and that the question needs a stronger text before overturning.</li>
+<li>A student suggested reasoning by shared meaning: the vow and bequest are both a transfer of ownership to another, and by analogy with someone who says "zakat and sadaqa" (the weaker sadaqa remains and the zakat is voided or both treated as sadaqa), the common ground can be adopted. The teacher agreed that it gave the reasoning some weight and mentioned the analogy with immediate-connected qualifications (istithna'), noting a difference. He left it open.</li>
+</ul>
+<h3>5. Permanence of Benefit</h3>
+<p>Benefit must be lasting, at least "potentially": for a period that is commonly rented. Qadi Abu al-Tayyib: three days does not suffice.</p>
+<ul>
+<li>Included: an object bequeathed for its usufruct for a term; a leased object (however long its term); a young foal; dirhams endowed to be made into jewelry; a usurped item, even if the waqif cannot retrieve it; a mudabbar slave and one whose freedom is conditioned on an event (the waqf lasts until the event or the master's death, a "relative permanence"); building and trees on rented land, even though the owner may later require removal.</li>
+<li>Excluded: currency kept for adornment or trading and giving the profit to the poor; an object with no benefit (e.g. a hopelessly sick animal); food. Ibn al-Salah's claim for endowing water is rejected; wells or water coolers are what is endowed. Cut basil (rayhan) is excluded for quick spoilage, but growing basil may be endowed for its scent.</li>
+<li>The teacher explained the case of a thing bequeathed for usufruct "forever" versus for a term: the former cannot be endowed, as the usufruct belongs to the legatee.</li>
+</ul>
+<hr>
+<h2>Book 2: Fatawa al-Majma' al-Fiqhi al-Islami al-Duwali (International Islamic Fiqh Academy)</h2>
+<h3>Resolution 17 (5/3) — Resuscitation devices</h3>
+<p><em>Third Session, Amman, October 1986.</em></p>
+<p><strong>Resolution:</strong> a person is considered legally dead, with all rulings of death applying, if one of two signs is established:</p>
+<p>1. Heart and breathing have stopped completely and doctors rule that this is irreversible.</p>
+<p>2. All brain functions have ceased irreversibly, specialist doctors rule it irreversible, and the brain has begun to decompose.</p>
+<p>In either case it is permissible to remove the resuscitation devices, even though some organs, such as the heart, may continue to work mechanically because of the devices.</p>
+<p><strong>Class discussion:</strong></p>
+<ul>
+<li>The teacher explained that the heart in this case beats because of the machine pumping air, not by itself, and treated "begins to decompose" as a confirming condition.</li>
+<li>A common question: a family cannot afford the cost, can they remove the device when not certain? The teacher's answer (tentative): if there is a strong presumption that death occurred and removal does not itself kill, it is permitted; ordinary hospitals often lack the means to confirm brain death.</li>
+<li><strong>If not dead but with no hope of recovery</strong> (staying on support for years at, say, $10,000/year): continuing is not obligatory beyond the legally required maintenance (nafaqa); a family doing so is acting on noble character, not obligation. Where such a person has his own property, the matter passes to the judge or guardian.</li>
+<li>A student said that at a Fiqh Academy meeting in America he heard some push to broaden the cases where devices may be removed beyond the resolution, while his father held to the resolution, noting a very small chance of recovery.</li>
+<li><strong>The judge:</strong> since the judge must act in the person's interest and being alive is his best interest, the teacher accepted that the judge must continue treatment, even spending all the money, if recovery is possible, because this is a type of maintenance prior to gifts and bequests. A different matter is the heirs, who need not spend beyond what is obligatory. A man's own wishes may differ (some prefer to die rather than exhaust the estate), but that does not change the ruling.</li>
+<li><strong>Is medical treatment obligatory?</strong> The teacher: recommended for oneself, but obligatory for someone responsible for dependents (e.g. a child with a fever), and obligatory when death is imminent without it (e.g. a stab wound).</li>
+</ul>
+<hr>
+<h2>Q&A: A Latecomer (Masbuq) Who Sits With the Imam in a Non-Sitting Position</h2>
+<p><strong>Question:</strong> a masbuq joins when the imam is in the final tashahhud, but it is not his own sitting place (his first or third rak'a). He follows the imam in the words as a sunna, then the imam gives salam. How long may he continue, given that Ibn Hajar's limit is the length of the tashahhud and al-Ramli's is the length of the tuma'nina?</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>If it is his sitting place (his second rak'a), he completes the tashahhud and rises with takbir.</li>
+<li>If it is not his sitting place, he does not say takbir when rising (on the sounder view), and he must stand promptly after the imam's salam. The sitting was only for following the imam.</li>
+<li>Both Ibn Hajar and al-Ramli agree he must stand promptly; they differ on when the prayer is invalidated. Per Ibn Hajar, if after the imam's salam he sat for as long as the shortest tashahhud (extra beyond what is permitted), the prayer is invalid; per al-Ramli, even sitting beyond the length of tuma'nina invalidates.</li>
+<li>A student argued this seems to cancel the follow-the-imam sitting. The teacher: the following ended with the imam's salam, and an extra sitting is a sitting in the wrong place.</li>
+</ul></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>

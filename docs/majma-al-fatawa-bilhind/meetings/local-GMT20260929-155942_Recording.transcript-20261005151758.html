@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitab al-Nikah: Medical Gaze, Testimony & Imagining Another Woman (Tuhfa) - September 29, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { background: #fafaf9; color: #37352f; color-scheme: light; }
+      body {
+        font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #37352f;
+        background: #fafaf9;
+      }
+
+      /* ── Site Header ── */
+      .site-header {
+        background: #0a1530;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-header a {
+        color: #a4a0c8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.12s;
+      }
+      .site-header a:hover { color: #ffffff; }
+      .site-header .sep { color: #3a4a72; font-size: 14px; }
+      .site-header .current {
+        color: #d0ccf0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 320px;
+      }
+
+      /* ── Page Header ── */
+      .page-header {
+        background: #0a1530;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid #1a2a52;
+      }
+      .page-header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(22px, 3.5vw, 32px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      .session-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #a4a0c8;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 9999px;
+        padding: 3px 10px;
+      }
+
+      /* ── Content ── */
+      .content-wrapper {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 32px 80px;
+      }
+
+      /* Markdown content typography */
+      .summary-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #37352f;
+      }
+      .summary-content h1 {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #1a1a1a;
+        margin-top: 2.2em;
+        margin-bottom: 0.7em;
+        padding-bottom: 0.3em;
+        border-bottom: 2px solid #e5e3df;
+      }
+      .summary-content h2 {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #1a1a1a;
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid #e5e3df;
+      }
+      .summary-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      .summary-content h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d5b54;
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .summary-content p {
+        margin: 1em 0;
+      }
+      .summary-content ul,
+      .summary-content ol {
+        margin: 1em 0;
+        padding-left: 1.8em;
+      }
+      .summary-content li {
+        margin: 0.45em 0;
+      }
+      .summary-content strong {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .summary-content em {
+        color: #5d5b54;
+      }
+      .summary-content blockquote {
+        border-left: 3px solid #5645d4;
+        padding: 0.6em 0 0.6em 1.2em;
+        margin: 1.2em 0;
+        color: #5d5b54;
+        background: #f4f0fc;
+        border-radius: 0 8px 8px 0;
+      }
+      .summary-content hr {
+        border: none;
+        border-top: 2px solid #e5e3df;
+        margin: 2.5em 0;
+      }
+      .summary-content code {
+        background: #f0eeec;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      .summary-content pre {
+        background: #f0eeec;
+        padding: 1.2em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.2em 0;
+      }
+      .summary-content pre code {
+        background: none;
+        padding: 0;
+      }
+      /* first h1/h2 shouldn't have a huge top margin */
+      .summary-content > h1:first-child,
+      .summary-content > h2:first-child,
+      .summary-content > h3:first-child {
+        margin-top: 0;
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #e5e3df;
+        padding: 28px 32px;
+        text-align: center;
+        font-size: 13px;
+        color: #a4a097;
+      }
+
+      @media (max-width: 560px) {
+        .site-header, .page-header { padding-left: 20px; padding-right: 20px; }
+        .content-wrapper { padding-left: 20px; padding-right: 20px; }
+        .site-header .current { max-width: 160px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="../../index.html">Islamic Learning Materials</a>
+      <span class="sep">/</span>
+      <a href="../index.html">Sessions</a>
+      <span class="sep">/</span>
+      <span class="current">Kitab al-Nikah: Medical Gaze, Testimony & Imagining Another Woman (Tuhfa) - September 29, 2026</span>
+    </header>
+
+    <div class="page-header">
+      <div class="page-header-inner">
+        <h1>Kitab al-Nikah: Medical Gaze, Testimony & Imagining Another Woman (Tuhfa) - September 29, 2026</h1>
+        <div class="session-meta">
+          <span class="meta-chip">📅 2026-09-29</span>
+          
+          <span class="meta-chip">🕐 15:59</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="summary-content"><h2>Overview</h2>
+<p><strong>Book 1 (Tuhfat al-Muhtaj, Kitab al-Nikah):</strong> the session continues the rulings on looking at and touching a foreign (ajnabi) person: medical treatment and who may be present or preferred, looking for transactions, testimony and teaching, the question of imagining another woman during intercourse with one's wife, what a husband may look at, and the rules of lying together and separating children. <strong>Book 2:</strong> no second book was read in this session; the class ran to the end of the chapter material and then moved to Q&A on prayer (the salawat in the first tashahhud, and sitting between the two prostrations for those who cannot sit normally).</p>
+<hr>
+<h2>Book 1: Tuhfat al-Muhtaj, Kitab al-Nikah</h2>
+<h3>1. Looking and Touching for Medical Need</h3>
+<p><strong>Ruling:</strong></p>
+<ul>
+<li>Looking at and touching are permitted for phlebotomy (fasd), cupping (hijama) and treatment, when needed, but in the presence of someone who prevents khalwa: a mahram, a husband, or a trustworthy woman. A man alone with two trustworthy women is not khalwa if they are such that he is shy before them. The teacher stressed that number alone is not enough: they must be trustworthy and he must be restrained before them (unlike two women riding with a taxi driver).</li>
+<li>A beardless youth (amrad) is not like two women: even several together do not remove khalwa, since each woman is shy before the other whereas several men may gang up. This applies to bloodletting and cupping, and to a midwife looking at a woman giving birth.</li>
+<li>Conditions: no woman proficient in the treatment (and vice versa, for a woman seeking a man); a trustworthy practitioner rather than an untrustworthy one (the teacher: untrustworthy in his conduct toward women, not in medicine); a Muslim over a dhimmi, a Muslim woman over a dhimmiyya.</li>
+<li><strong>Al-Bulqini's order of preference for a female patient:</strong> Muslim woman, non-pubescent Muslim boy, pubescent Muslim boy, non-pubescent non-Muslim, pubescent non-Muslim, non-Muslim woman, Muslim mahram, non-Muslim mahram, Muslim stranger, non-Muslim stranger. Al-Adhra'i agreed on putting the non-Muslim woman before the Muslim man. Ibn Hajar objects to putting her before the mahram. The teacher pointed out via the gloss of al-Sayyid 'Umar al-Basri (in Hashiyat 'Abd al-Hamid) that several elements of the order are not relied upon, e.g. ranking mahrams by religion although they are equal in looking, and putting a pubescent boy before a mahram who may look at more. Ibn Hajar only reported it.</li>
+<li>The more skilled (amhar), even of another sex or religion, takes precedence, and one who demands more than the fair wage is as if absent. The teacher said "amhar" applies only where skill matters; for a simple wound dressing or injection any competent person may do it. Yasin's gloss: a more knowledgeable non-Muslim goes before even a Muslim woman where the skill is needed.</li>
+</ul>
+<h3>2. How Much May Be Seen</h3>
+<ul>
+<li>Face and hands: the least need suffices.</li>
+<li>Other body parts: a need that would permit tayammum.</li>
+<li>Genitals and what is near them: more than that, namely severe necessity such that uncovering would not be seen as a breach of dignity (muru'a).</li>
+<li><strong>Discussion:</strong> identity checks by security staff (face): needs only the lowest level. Postpartum stitching: the teacher said to ask the doctor what the reason is; if it is to restore the tone of the area (so that it is not repulsive to the husband, or to avoid prolapse with age or harm to her mental state), it approaches necessity; if it makes no difference, it is unnecessary. He criticized medical staff being lax: several staff looking one after another, or patients being stripped when not needed (a story of a man stripped before surgery and rolled out in view). A student noted gowns that snap open. Shaving pubic hair before surgery was accepted as permissible when it affects the operation (hair in the wound slows healing).</li>
+</ul>
+<h3>3. Looking for Transactions, Testimony and Other Needs</h3>
+<ul>
+<li><strong>Face only</strong> for a transaction (buying, selling, claiming the warranty, demanding the price). The teacher discussed a woman already unveiled: lowering one's eyes is not required for the ordinary exchange, but the practical experience is that when a man lowers his gaze to the ground she becomes shy, and it is a form of dawa.</li>
+<li><strong>Testimony</strong> (bearing or giving it): looking at the face; at the genitals to testify to zina, birth, a defect (e.g. a wife claiming her husband is too large), or healing of a fistula (iltiham al-ifda'); the breast for breastfeeding, as needed. Repeated looking is allowed if needed again. Deliberately looking in order to testify does not harm his integrity even if women or mahrams are available to witness.</li>
+<li>Looking for other than testimony: al-Mawardi calls it fisq (and so a major sin), al-Mughni (the Khatib) follows him. But Ibn Hajar and al-Ramli hold it is a minor sin and does not make one a fasiq, even if one insists.</li>
+<li>If the witnesses recognize her in her niqab, unveiling is not allowed since there is no need. If he fears fitna or desire, he does not look unless it is necessary. Al-Subki: he is still sinful with desire although rewarded for the testimony (an act with two aspects); others say it is permitted outright because desire is natural and not controllable. Ibn Hajar: the first applies where it was by choice or indulgence, the second otherwise. The teacher gave the analogy of permitted looking at a fiancee even with desire; blame lies in continuing or in intending disobedience.</li>
+</ul>
+<h3>4. Looking for Teaching</h3>
+<ul>
+<li>Teaching an amrad or a woman. Ibn Hajar restricts it to what must be learned (e.g. al-Fatiha, necessary crafts) with absent same-sex teacher, no mahram, impossibility behind a screen, and a barrier to khalwa; others say it is not limited to obligatory matters. The teacher adopted: permitted whether obligatory or recommended.</li>
+<li>Not permitted to teach one's divorced wife, because of past attachment.</li>
+<li>Online lessons or WhatsApp can count as khalwa, since private talk is possible; there must be someone who prevents it, such as her father or husband in a group. The teacher said it is safest not to teach women where it can be avoided; if necessary, in a group.</li>
+<li>If many men attend one woman and custom makes it implausible that they would collude, it is not khalwa.</li>
+<li>Also a female slave to be bought: look at what is not her awra; a judge ruling for or against her, or taking an oath from her. Always only to the extent of need: al-Mawardi says a second glance is not permitted if the first identified her; if part of the face suffices, not all of it. Ibn Hajar rejects the broader view in al-Bahr.</li>
+</ul>
+<h3>5. Imagining Another Woman During Intercourse With One's Wife</h3>
+<p>This case (important, said the teacher) is not narrated from the Imam or the early companions, and later scholars differed in four views:</p>
+<p>1. <strong>Permitted:</strong> Ibn al-Firkah, Jamal al-Islam Ibn al-Bazri, Kamal al-Radad, al-Suyuti, and others, citing the hadith "Allah has overlooked for my Umma what their souls whisper." Ibn Hajar rejects the proof: that hadith is about passing thoughts, whereas this is a deliberate image. The teacher gave background on Kamal al-Radad, a Yemeni (Zabid) scholar of the 10th century, author of two commentaries on al-Irshad.</p>
+<p>2. <strong>Recommended:</strong> reported by Ibn al-Hajj al-Maliki from some scholars, based on the hadith of the man who sees a woman who attracts him and goes to his wife; some later scholars favored it. Ibn Hajar objects: habitual imagining attaches him to the image; what cures attachment is forgetting.</p>
+<p>3. <strong>Makruh:</strong> answered that makruh needs a specific prohibition (or qiyas, or strong disagreement); the teacher listed how makruh is established, including leaving an emphasized sunna.</p>
+<p>4. <strong>Haram:</strong> Ibn al-Hajj al-Maliki, who says he puts her image between his eyes, likened to someone who imagines a cup of water is wine. Ibn Hajar says this is far-fetched, built on the Maliki principle of blocking the means (sadd al-dhara'i), which Shafi'is do not accept.</p>
+<ul>
+<li><strong>Ibn Hajar's conclusion:</strong> no sin in the imagining itself, unless he is resolved to commit sin with the imagined woman if he got hold of her; and it is definitely haram if combined with wishing for zina with her, or wishing her to be taken from her husband (al-Qadi Husayn's argument from Qur'an 4:32, "do not covet"). The teacher: imagining that his wife is that woman is not the same as imagining committing zina with her. He suggested checking Ibn Hajar's al-Fatawa for more.</li>
+<li><strong>Discussion:</strong> a student asked about the original look being unlawful and whether recalling the image continues the sin or needs fresh repentance. The teacher: the original sin has ended; recalling is tolerated imagining, unlike keeping her photo and continuing to look at it. Renewing repentance on remembering a sin is disputed between obligatory and recommended, and becomes obligatory if he is pleased by it. Thoughts one resolves on are accounted for.</li>
+<li>The teacher also noted the cure for passion: either death, or never letting her cross his mind and moving away until he forgets.</li>
+</ul>
+<h3>6. What Husbands May Look At</h3>
+<ul>
+<li>The husband may look at his wife's whole body (and a master at his slave woman) and the reverse; there is no awra between spouses ("guard your awra except from your wife and what your right hand possesses"). Looking at the private part without need is disliked; if there is a need or he derives enjoyment, the dislike may be lifted. Another view makes it haram, citing the hadith that it brings blindness (weak, in Ibn al-Jawzi's mawdu'at).</li>
+<li>Touch is not disputed. Enjoyment is allowed without intercourse and, as the teacher noted, without full penetration (what is forbidden is penetration requiring ghusl, in the sense of the text).</li>
+<li>After death she is like a mahram. For a wife in 'idda for shubha, or a Magian slave woman, only between navel and knee.</li>
+</ul>
+<h3>7. Detached Parts</h3>
+<p>Anything whose looking is forbidden while attached is also forbidden when detached (hair, pubic hair), as held by Ibn Hajar and apparently al-Ramli. The Khatib disagrees, citing the common practice in bathhouses and the Adhra'i view that the obligation is unlikely. The teacher described how women dispose of hair (e.g. burying it in a remote farm, since hair takes long to decompose).</p>
+<h3>8. Lying Together and Separating Children</h3>
+<ul>
+<li>Two men or two women lying naked under one garment is forbidden even without contact. Also in a shared bathing tub where sight or touch is feared.</li>
+<li>When a boy or girl reaches ten they must be separated from mother, father, sister and brother (Ibn Hajar: lying together is forbidden even without nakedness, because the child's weak mind combined with the possibility of arousal; al-Ramli, al-Nihaya and al-Mughni: only if naked). The teacher worked through the text of al-Shihab al-Ramli's gloss on whether "separation" refers to nakedness only, and concluded the difference is real: Ibn Hajar is absolute, al-Ramli limits it to nakedness, and for two adults sharing a bed without nakedness there is no sin (like the crowding at Mina).</li>
+<li>On "one bed" the test is custom: two mattresses with a small gap are two beds, but if joined they are one. Separating the beds suffices for siblings of different sexes sharing a room.</li>
+<li><strong>Ibn al-Hajj (via al-Subki):</strong> that sleeping in clothes is disliked and the sunna is to sleep bare. The teacher found this very problematic, since the sunna is to cover, citing the adab of sleep in Bidayat al-Hidaya and the Imam al-Haddad and al-Ghazali (undress and cover with one's clothes), and since scholars' practice favored modesty.</li>
+<li>Kissing on the head and face is disliked even for a pious person, except for one returning from a journey or after a long absence, when it is sunna (without desire).</li>
+</ul>
+<hr>
+<h2>Q&A (Prayer)</h2>
+<p><strong>1. Reciting the full salawat (Ibrahimiyya) in the first tashahhud:</strong> not sunna on the relied-upon view. Al-Nawawi and others favored including the family in a short form, but the school's view is that it is makruh in the first tashahhud. It is not counted as moving a pillar to the wrong place (and so no prostration of forgetfulness), since it is not a pillar on the relied view.</p>
+<p><strong>2. Sitting between the two prostrations when someone cannot sit on the ground</strong> (sits at an angle or on a small chair):</p>
+<ul>
+<li>The two criteria: (a) the forehead does not go ahead of the knees (otherwise it counts as bowing, ruku'), and (b) it counts as sitting by custom. Touching the floor or a seat is not a condition, so a chair is fine.</li>
+<li>If he can only meet that by a chair or aid, and it is available, he must use it, as with a stick for standing. If he can't reach knee level, a position level with the knees is fine.</li>
+<li>A student asked whether he should instead stand. The teacher was inclined not to require it, as bowing is closer to sitting than standing is. The class compared Shabramallisi's gloss (one unable to sit but able to stand or lie down: standing is closer as it includes sitting and more) and al-Ramli's on prostration with a cushion (no obligation if it brings no real lowering of the head). The teacher asked a student to summarize the findings.</li>
+</ul></div>
+    </div>
+
+    <footer>
+      <a href="../index.html" style="color:#5645d4;text-decoration:none;font-weight:500;">← Back to sessions</a>
+    </footer>
+
+  </body>
+</html>
